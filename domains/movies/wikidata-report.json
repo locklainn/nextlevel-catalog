@@ -1,0 +1,1705 @@
+[
+ {
+  "id": "cabinet-of-dr-caligari-1920",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q153886"
+ },
+ {
+  "id": "nosferatu-1922",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q151895"
+ },
+ {
+  "id": "dracula-1931",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q279378"
+ },
+ {
+  "id": "frankenstein-1931",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q546829"
+ },
+ {
+  "id": "the-mummy-1932",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q909071"
+ },
+ {
+  "id": "freaks-1932",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1133723"
+ },
+ {
+  "id": "vampyr-1932",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q304923"
+ },
+ {
+  "id": "the-invisible-man-1933",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q135932"
+ },
+ {
+  "id": "bride-of-frankenstein-1935",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q875904"
+ },
+ {
+  "id": "son-of-frankenstein-1939",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1077374"
+ },
+ {
+  "id": "the-wolf-man-1941",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q431873"
+ },
+ {
+  "id": "cat-people-1942",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1542184"
+ },
+ {
+  "id": "creature-from-the-black-lagoon-1954",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q124612"
+ },
+ {
+  "id": "them-1954",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q578809"
+ },
+ {
+  "id": "godzilla-1954",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q860461"
+ },
+ {
+  "id": "les-diaboliques-1955",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q739046"
+ },
+ {
+  "id": "invasion-of-the-body-snatchers-1956",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q45386"
+ },
+ {
+  "id": "horror-of-dracula-1958",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q642842"
+ },
+ {
+  "id": "the-blob-1958",
+  "verdict": "director",
+  "ours": "Irvin S. Yeaworth Jr.",
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q224964",
+    "dirs": [
+     "Irvin Yeaworth"
+    ],
+    "years": [
+     1958
+    ]
+   }
+  ]
+ },
+ {
+  "id": "house-on-haunted-hill-1959",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q263583"
+ },
+ {
+  "id": "psycho-1960",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q163038"
+ },
+ {
+  "id": "peeping-tom-1960",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q478395"
+ },
+ {
+  "id": "eyes-without-a-face-1960",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q760244"
+ },
+ {
+  "id": "black-sunday-1960",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1216566"
+ },
+ {
+  "id": "the-innocents-1961",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q666082"
+ },
+ {
+  "id": "carnival-of-souls-1962",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1852671"
+ },
+ {
+  "id": "the-birds-1963",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q110043"
+ },
+ {
+  "id": "the-haunting-1963",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q865987"
+ },
+ {
+  "id": "kwaidan-1964",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q133488"
+ },
+ {
+  "id": "onibaba-1964",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1190090"
+ },
+ {
+  "id": "rosemarys-baby-1968",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q607179"
+ },
+ {
+  "id": "night-of-the-living-dead-1968",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q623051"
+ },
+ {
+  "id": "witchfinder-general-1968",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1194311"
+ },
+ {
+  "id": "the-blood-on-satans-claw-1971",
+  "verdict": "notfound",
+  "ours": "1971 · Piers Haggard"
+ },
+ {
+  "id": "a-bay-of-blood-1971",
+  "verdict": "notfound",
+  "ours": "1971 · Mario Bava"
+ },
+ {
+  "id": "the-exorcist-1973",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q274167"
+ },
+ {
+  "id": "the-wicker-man-1973",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1140649"
+ },
+ {
+  "id": "dont-look-now-1973",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q660245"
+ },
+ {
+  "id": "the-texas-chain-saw-massacre-1974",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q886597"
+ },
+ {
+  "id": "black-christmas-1974",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q783069"
+ },
+ {
+  "id": "young-frankenstein-1974",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q651923"
+ },
+ {
+  "id": "jaws-1975",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q189505"
+ },
+ {
+  "id": "deep-red-1975",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1516994"
+ },
+ {
+  "id": "carrie-1976",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q162672"
+ },
+ {
+  "id": "the-omen-1976",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q836298"
+ },
+ {
+  "id": "suspiria-1977",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q546900"
+ },
+ {
+  "id": "hausu-1977",
+  "verdict": "notfound",
+  "ours": "1977 · Nobuhiko Obayashi"
+ },
+ {
+  "id": "the-hills-have-eyes-1977",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q994724"
+ },
+ {
+  "id": "eraserhead-1977",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q11618"
+ },
+ {
+  "id": "halloween-1978",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q221103"
+ },
+ {
+  "id": "dawn-of-the-dead-1978",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q219155"
+ },
+ {
+  "id": "invasion-of-the-body-snatchers-1978",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q598818"
+ },
+ {
+  "id": "alien-1979",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q103569"
+ },
+ {
+  "id": "phantasm-1979",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q612740"
+ },
+ {
+  "id": "the-amityville-horror-1979",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q472512"
+ },
+ {
+  "id": "the-brood-1979",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q389911"
+ },
+ {
+  "id": "the-shining-1980",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q186341"
+ },
+ {
+  "id": "friday-the-13th-1980",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1243029"
+ },
+ {
+  "id": "the-fog-1980",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q500403"
+ },
+ {
+  "id": "the-changeling-1980",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1168623"
+ },
+ {
+  "id": "cannibal-holocaust-1980",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q832093"
+ },
+ {
+  "id": "an-american-werewolf-in-london-1981",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q467290"
+ },
+ {
+  "id": "the-evil-dead-1981",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q327604"
+ },
+ {
+  "id": "the-howling-1981",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1170554"
+ },
+ {
+  "id": "scanners-1981",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q551823"
+ },
+ {
+  "id": "wolfen-1981",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1754829"
+ },
+ {
+  "id": "my-bloody-valentine-1981",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q886675"
+ },
+ {
+  "id": "the-burning-1981",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q909179"
+ },
+ {
+  "id": "the-beyond-1981",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q330982"
+ },
+ {
+  "id": "halloween-ii-1981",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q850312"
+ },
+ {
+  "id": "friday-the-13th-part-2-1981",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1243009"
+ },
+ {
+  "id": "the-thing-1982",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q210756"
+ },
+ {
+  "id": "poltergeist-1982",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q497622"
+ },
+ {
+  "id": "creepshow-1982",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q744102"
+ },
+ {
+  "id": "halloween-iii-1982",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q203705"
+ },
+ {
+  "id": "friday-the-13th-part-iii-1982",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1243013"
+ },
+ {
+  "id": "videodrome-1983",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q747551"
+ },
+ {
+  "id": "christine-1983",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q753449"
+ },
+ {
+  "id": "cujo-1983",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q829996"
+ },
+ {
+  "id": "the-dead-zone-1983",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q466792"
+ },
+ {
+  "id": "sleepaway-camp-1983",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q886669"
+ },
+ {
+  "id": "a-nightmare-on-elm-street-1984",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q329434"
+ },
+ {
+  "id": "gremlins-1984",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q241958"
+ },
+ {
+  "id": "children-of-the-corn-1984",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q467953"
+ },
+ {
+  "id": "the-company-of-wolves-1984",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q609936"
+ },
+ {
+  "id": "friday-the-13th-the-final-chapter-1984",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1243019"
+ },
+ {
+  "id": "re-animator-1985",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1537343"
+ },
+ {
+  "id": "the-return-of-the-living-dead-1985",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1475119"
+ },
+ {
+  "id": "day-of-the-dead-1985",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q219170"
+ },
+ {
+  "id": "fright-night-1985",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q371456"
+ },
+ {
+  "id": "silver-bullet-1985",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1198033"
+ },
+ {
+  "id": "a-nightmare-on-elm-street-2-1985",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1145824"
+ },
+ {
+  "id": "friday-the-13th-a-new-beginning-1985",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q286830"
+ },
+ {
+  "id": "aliens-1986",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q104814"
+ },
+ {
+  "id": "the-fly-1986",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q468700"
+ },
+ {
+  "id": "little-shop-of-horrors-1986",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1199259"
+ },
+ {
+  "id": "friday-the-13th-part-vi-1986",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1454799"
+ },
+ {
+  "id": "evil-dead-ii-1987",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q750028"
+ },
+ {
+  "id": "hellraiser-1987",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1162728"
+ },
+ {
+  "id": "near-dark-1987",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q386164"
+ },
+ {
+  "id": "the-lost-boys-1987",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q506403"
+ },
+ {
+  "id": "prince-of-darkness-1987",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q601013"
+ },
+ {
+  "id": "predator-1987",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q200804"
+ },
+ {
+  "id": "a-nightmare-on-elm-street-3-1987",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q373362"
+ },
+ {
+  "id": "childs-play-1988",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q935945"
+ },
+ {
+  "id": "they-live-1988",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q72909"
+ },
+ {
+  "id": "beetlejuice-1988",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q320384"
+ },
+ {
+  "id": "dead-ringers-1988",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q635569"
+ },
+ {
+  "id": "a-nightmare-on-elm-street-4-1988",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1364051"
+ },
+ {
+  "id": "halloween-4-1988",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q959853"
+ },
+ {
+  "id": "friday-the-13th-part-vii-1988",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1454798"
+ },
+ {
+  "id": "pet-sematary-1989",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q908213"
+ },
+ {
+  "id": "society-1989",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q664773"
+ },
+ {
+  "id": "tetsuo-the-iron-man-1989",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q185884"
+ },
+ {
+  "id": "a-nightmare-on-elm-street-5-1989",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1410735"
+ },
+ {
+  "id": "halloween-5-1989",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q976728"
+ },
+ {
+  "id": "friday-the-13th-part-viii-1989",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1454794"
+ },
+ {
+  "id": "misery-1990",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q725552"
+ },
+ {
+  "id": "tremors-1990",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q835650"
+ },
+ {
+  "id": "jacobs-ladder-1990",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q482626"
+ },
+ {
+  "id": "arachnophobia-1990",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q624609"
+ },
+ {
+  "id": "childs-play-2-1990",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1089281"
+ },
+ {
+  "id": "the-silence-of-the-lambs-1991",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q133654"
+ },
+ {
+  "id": "childs-play-3-1991",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1089283"
+ },
+ {
+  "id": "freddys-dead-1991",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q748614"
+ },
+ {
+  "id": "candyman-1992",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1033108"
+ },
+ {
+  "id": "dead-alive-1992",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q897429"
+ },
+ {
+  "id": "bram-stokers-dracula-1992",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q107325"
+ },
+ {
+  "id": "army-of-darkness-1992",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q471992"
+ },
+ {
+  "id": "alien-3-1992",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q108543"
+ },
+ {
+  "id": "death-becomes-her-1992",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1160186"
+ },
+ {
+  "id": "cronos-1993",
+  "verdict": "ok",
+  "note": "Wikidata's earliest year 1992",
+  "u": "http://www.wikidata.org/entity/Q1140945"
+ },
+ {
+  "id": "jason-goes-to-hell-1993",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1683918"
+ },
+ {
+  "id": "in-the-mouth-of-madness-1994",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1214972"
+ },
+ {
+  "id": "interview-with-the-vampire-1994",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q318910"
+ },
+ {
+  "id": "wes-cravens-new-nightmare-1994",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q636166"
+ },
+ {
+  "id": "se7en-1995",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q190908"
+ },
+ {
+  "id": "halloween-the-curse-of-michael-myers-1995",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1138055"
+ },
+ {
+  "id": "scream-1996",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q27411"
+ },
+ {
+  "id": "from-dusk-till-dawn-1996",
+  "verdict": "year",
+  "ours": 1996,
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q27696200",
+    "years": [
+     1963
+    ]
+   },
+   {
+    "u": "http://www.wikidata.org/entity/Q109464545",
+    "years": []
+   }
+  ]
+ },
+ {
+  "id": "scream-2-1997",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q270599"
+ },
+ {
+  "id": "cube-1997",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q467840"
+ },
+ {
+  "id": "event-horizon-1997",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q849162"
+ },
+ {
+  "id": "i-know-what-you-did-last-summer-1997",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q302174"
+ },
+ {
+  "id": "alien-resurrection-1997",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q458314"
+ },
+ {
+  "id": "ringu-1998",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q531328"
+ },
+ {
+  "id": "the-faculty-1998",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q373267"
+ },
+ {
+  "id": "urban-legend-1998",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q747940"
+ },
+ {
+  "id": "bride-of-chucky-1998",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1089303"
+ },
+ {
+  "id": "halloween-h20-1998",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1050815"
+ },
+ {
+  "id": "audition-1999",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q565130"
+ },
+ {
+  "id": "the-blair-witch-project-1999",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q644554"
+ },
+ {
+  "id": "the-sixth-sense-1999",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q183063"
+ },
+ {
+  "id": "sleepy-hollow-1999",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q208592"
+ },
+ {
+  "id": "final-destination-2000",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7561043"
+ },
+ {
+  "id": "ginger-snaps-2000",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1475136"
+ },
+ {
+  "id": "american-psycho-2000",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1405126"
+ },
+ {
+  "id": "scream-3-2000",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q391784"
+ },
+ {
+  "id": "the-others-2001",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q332515"
+ },
+ {
+  "id": "the-devils-backbone-2001",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1350521"
+ },
+ {
+  "id": "pulse-2001",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q196184"
+ },
+ {
+  "id": "session-9-2001",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q577221"
+ },
+ {
+  "id": "jason-x-2001",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1427521"
+ },
+ {
+  "id": "28-days-later-2002",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q221075"
+ },
+ {
+  "id": "the-ring-2002",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q212804"
+ },
+ {
+  "id": "ju-on-the-grudge-2002",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q730555"
+ },
+ {
+  "id": "dog-soldiers-2002",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1234664"
+ },
+ {
+  "id": "halloween-resurrection-2002",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q176488"
+ },
+ {
+  "id": "a-tale-of-two-sisters-2003",
+  "verdict": "director",
+  "ours": "Kim Jee-woon",
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q255260",
+    "dirs": [
+     "Kim Ji-woon"
+    ],
+    "years": [
+     2003,
+     2004
+    ]
+   }
+  ]
+ },
+ {
+  "id": "high-tension-2003",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q587407"
+ },
+ {
+  "id": "final-destination-2-2003",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q820009"
+ },
+ {
+  "id": "freddy-vs-jason-2003",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q965859"
+ },
+ {
+  "id": "dawn-of-the-dead-2004",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q749011"
+ },
+ {
+  "id": "shaun-of-the-dead-2004",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q858724"
+ },
+ {
+  "id": "saw-2004",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q486239"
+ },
+ {
+  "id": "seed-of-chucky-2004",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q925421"
+ },
+ {
+  "id": "noroi-the-curse-2005",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q2053980"
+ },
+ {
+  "id": "the-descent-2005",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1367317"
+ },
+ {
+  "id": "hostel-2005",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q842720"
+ },
+ {
+  "id": "saw-ii-2005",
+  "verdict": "director",
+  "ours": "Darren Lynn Bousman",
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q270410",
+    "dirs": [
+     "Darren Lynn Bouseman"
+    ],
+    "years": [
+     2005,
+     2006
+    ]
+   }
+  ]
+ },
+ {
+  "id": "slither-2006",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q2092936"
+ },
+ {
+  "id": "the-host-2006",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q488222"
+ },
+ {
+  "id": "final-destination-3-2006",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q820811"
+ },
+ {
+  "id": "saw-iii-2006",
+  "verdict": "director",
+  "ours": "Darren Lynn Bousman",
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q276392",
+    "dirs": [
+     "Darren Lynn Bouseman"
+    ],
+    "years": [
+     2006,
+     2007
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rec-2007",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q754474"
+ },
+ {
+  "id": "the-orphanage-2007",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q923911"
+ },
+ {
+  "id": "the-mist-2007",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q695209"
+ },
+ {
+  "id": "inside-2007",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1664534"
+ },
+ {
+  "id": "paranormal-activity-2007",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q381028"
+ },
+ {
+  "id": "trick-r-treat-2007",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1686936"
+ },
+ {
+  "id": "28-weeks-later-2007",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q221102"
+ },
+ {
+  "id": "30-days-of-night-2007",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q224117"
+ },
+ {
+  "id": "1408-2007",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q203560"
+ },
+ {
+  "id": "teeth-2007",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1208193"
+ },
+ {
+  "id": "halloween-2007",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q909063"
+ },
+ {
+  "id": "saw-iv-2007",
+  "verdict": "director",
+  "ours": "Darren Lynn Bousman",
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q326319",
+    "dirs": [
+     "Darren Lynn Bouseman"
+    ],
+    "years": [
+     2007,
+     2008
+    ]
+   }
+  ]
+ },
+ {
+  "id": "the-strangers-2008",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1259466"
+ },
+ {
+  "id": "let-the-right-one-in-2008",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q144756"
+ },
+ {
+  "id": "martyrs-2008",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q577581"
+ },
+ {
+  "id": "lake-mungo-2008",
+  "verdict": "director",
+  "ours": "Joel Anderson",
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q6477009",
+    "dirs": [],
+    "years": [
+     2008
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cloverfield-2008",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q123742"
+ },
+ {
+  "id": "pontypool-2008",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1059028"
+ },
+ {
+  "id": "saw-v-2008",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q326177"
+ },
+ {
+  "id": "drag-me-to-hell-2009",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q632737"
+ },
+ {
+  "id": "zombieland-2009",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q219810"
+ },
+ {
+  "id": "thirst-2009",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q483780"
+ },
+ {
+  "id": "halloween-ii-2009",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q908690"
+ },
+ {
+  "id": "the-final-destination-2009",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q858976"
+ },
+ {
+  "id": "friday-the-13th-2009",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1454815"
+ },
+ {
+  "id": "saw-vi-2009",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q834327"
+ },
+ {
+  "id": "insidious-2010",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q122713"
+ },
+ {
+  "id": "tucker-and-dale-vs-evil-2010",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1782738"
+ },
+ {
+  "id": "trollhunter-2010",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q633131"
+ },
+ {
+  "id": "a-nightmare-on-elm-street-2010",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q300508"
+ },
+ {
+  "id": "saw-3d-2010",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q676284"
+ },
+ {
+  "id": "youre-next-2011",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q3572721"
+ },
+ {
+  "id": "kill-list-2011",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q3196607"
+ },
+ {
+  "id": "grave-encounters-2011",
+  "verdict": "director",
+  "ours": "The Vicious Brothers",
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q1189580",
+    "dirs": [
+     "Colin Minihan",
+     "Stuart Ortiz"
+    ],
+    "years": [
+     2011
+    ]
+   }
+  ]
+ },
+ {
+  "id": "scream-4-2011",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q323392"
+ },
+ {
+  "id": "final-destination-5-2011",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q661847"
+ },
+ {
+  "id": "the-cabin-in-the-woods-2012",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q45394"
+ },
+ {
+  "id": "sinister-2012",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q761519"
+ },
+ {
+  "id": "vhs-2012",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1359366"
+ },
+ {
+  "id": "prometheus-2012",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q192686"
+ },
+ {
+  "id": "the-conjuring-2013",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5540479"
+ },
+ {
+  "id": "world-war-z-2013",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q28196"
+ },
+ {
+  "id": "oculus-2013",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q3349019"
+ },
+ {
+  "id": "evil-dead-2013",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q73279"
+ },
+ {
+  "id": "only-lovers-left-alive-2013",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q3352751"
+ },
+ {
+  "id": "curse-of-chucky-2013",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q12161666"
+ },
+ {
+  "id": "the-babadook-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q16011764"
+ },
+ {
+  "id": "it-follows-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q16547881"
+ },
+ {
+  "id": "what-we-do-in-the-shadows-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q17036671"
+ },
+ {
+  "id": "a-girl-walks-home-alone-at-night-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q17061299"
+ },
+ {
+  "id": "creep-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q16952632"
+ },
+ {
+  "id": "goodnight-mommy-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q18642934"
+ },
+ {
+  "id": "housebound-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q17051533"
+ },
+ {
+  "id": "the-taking-of-deborah-logan-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q18393844"
+ },
+ {
+  "id": "unfriended-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q18086860"
+ },
+ {
+  "id": "annabelle-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q15733440"
+ },
+ {
+  "id": "the-witch-2015",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q19057481"
+ },
+ {
+  "id": "green-room-2015",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q18392433"
+ },
+ {
+  "id": "hell-house-llc-2015",
+  "verdict": "ok",
+  "note": "Wikidata's earliest year 2016",
+  "u": "http://www.wikidata.org/entity/Q28485812"
+ },
+ {
+  "id": "the-wailing-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q22972803"
+ },
+ {
+  "id": "train-to-busan-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q20948236"
+ },
+ {
+  "id": "raw-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q21427355"
+ },
+ {
+  "id": "hush-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q23044927"
+ },
+ {
+  "id": "the-autopsy-of-jane-doe-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q27458304"
+ },
+ {
+  "id": "the-girl-with-all-the-gifts-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q20649318"
+ },
+ {
+  "id": "under-the-shadow-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q23925023"
+ },
+ {
+  "id": "the-conjuring-2-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q21001651"
+ },
+ {
+  "id": "terrifier-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q50650165"
+ },
+ {
+  "id": "get-out-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q25136235"
+ },
+ {
+  "id": "it-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q25136484"
+ },
+ {
+  "id": "happy-death-day-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q29514884"
+ },
+ {
+  "id": "one-cut-of-the-dead-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q55223237"
+ },
+ {
+  "id": "geralds-game-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q27940451"
+ },
+ {
+  "id": "the-ritual-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q42837930"
+ },
+ {
+  "id": "annabelle-creation-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q21511509"
+ },
+ {
+  "id": "cult-of-chucky-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q28130946"
+ },
+ {
+  "id": "jigsaw-2017",
+  "verdict": "director",
+  "ours": "The Spierig Brothers",
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q15712110",
+    "dirs": [
+     "Michael Spierig",
+     "Peter Spierig"
+    ],
+    "years": [
+     2017
+    ]
+   }
+  ]
+ },
+ {
+  "id": "alien-covenant-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q20430699"
+ },
+ {
+  "id": "a-quiet-place-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q39070473"
+ },
+ {
+  "id": "hereditary-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q47524071"
+ },
+ {
+  "id": "annihilation-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q25136228"
+ },
+ {
+  "id": "apostle-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q29454857"
+ },
+ {
+  "id": "the-nun-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q29841731"
+ },
+ {
+  "id": "halloween-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q20666646"
+ },
+ {
+  "id": "midsommar-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q55907451"
+ },
+ {
+  "id": "us-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q56000996"
+ },
+ {
+  "id": "the-lighthouse-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q55402791"
+ },
+ {
+  "id": "ready-or-not-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q58815115"
+ },
+ {
+  "id": "saint-maud-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q68681279"
+ },
+ {
+  "id": "doctor-sleep-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q56881169"
+ },
+ {
+  "id": "crawl-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q56241205"
+ },
+ {
+  "id": "la-llorona-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q66813625"
+ },
+ {
+  "id": "the-curse-of-la-llorona-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q48674258"
+ },
+ {
+  "id": "annabelle-comes-home-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q55973412"
+ },
+ {
+  "id": "it-chapter-two-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q42726338"
+ },
+ {
+  "id": "childs-play-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q56697304"
+ },
+ {
+  "id": "the-invisible-man-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q64004122"
+ },
+ {
+  "id": "his-house-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q83826818"
+ },
+ {
+  "id": "possessor-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q60849823"
+ },
+ {
+  "id": "freaky-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q73536996"
+ },
+ {
+  "id": "host-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q98114112"
+ },
+ {
+  "id": "titane-2021",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q105393862"
+ },
+ {
+  "id": "lamb-2021",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q106371709"
+ },
+ {
+  "id": "werewolves-within-2021",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q85814960"
+ },
+ {
+  "id": "fear-street-part-one-1994-2021",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q62066191"
+ },
+ {
+  "id": "halloween-kills-2021",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q67279679"
+ },
+ {
+  "id": "the-conjuring-the-devil-made-me-do-it-2021",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q64145552"
+ },
+ {
+  "id": "spiral-2021",
+  "verdict": "director",
+  "ours": "Darren Lynn Bousman",
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q64590532",
+    "dirs": [
+     "Darren Lynn Bouseman"
+    ],
+    "years": [
+     2020,
+     2021
+    ]
+   }
+  ]
+ },
+ {
+  "id": "barbarian-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q38526439"
+ },
+ {
+  "id": "x-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q105605250"
+ },
+ {
+  "id": "pearl-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q111669794"
+ },
+ {
+  "id": "nope-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q107176162"
+ },
+ {
+  "id": "smile-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q112623225"
+ },
+ {
+  "id": "crimes-of-the-future-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q107883998"
+ },
+ {
+  "id": "skinamarink-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q115818765"
+ },
+ {
+  "id": "halloween-ends-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q85997053"
+ },
+ {
+  "id": "scream-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q88563268"
+ },
+ {
+  "id": "prey-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q108329738"
+ },
+ {
+  "id": "talk-to-me-2023",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q116193178"
+ },
+ {
+  "id": "evil-dead-rise-2023",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q107203508"
+ },
+ {
+  "id": "late-night-with-the-devil-2023",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q119718080"
+ },
+ {
+  "id": "scream-vi-2023",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q112183099"
+ },
+ {
+  "id": "the-nun-ii-2023",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q111784581"
+ },
+ {
+  "id": "saw-x-2023",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q115734942"
+ },
+ {
+  "id": "longlegs-2024",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q116470610"
+ },
+ {
+  "id": "the-substance-2024",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q113380226"
+ },
+ {
+  "id": "nosferatu-2024",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q116361132"
+ },
+ {
+  "id": "alien-romulus-2024",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q115932544"
+ },
+ {
+  "id": "sinners-2025",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q125473145"
+ },
+ {
+  "id": "weapons-2025",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q126487478"
+ },
+ {
+  "id": "final-destination-bloodlines-2025",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q118212751"
+ },
+ {
+  "id": "the-conjuring-last-rites-2025",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q114802043"
+ },
+ {
+  "id": "28-years-later-2025",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q125392328"
+ }
+]
