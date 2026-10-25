@@ -17,6 +17,7 @@ domains/<domain>/
   collections/<group>.json  collections that list item ids
   collections/<group>.md    the review page, generated (don't edit)
 tools/catalog.mjs         validate · review · batch · send · status
+tools/identity.mjs        the app's own title matcher, copied (see Identity)
 ```
 
 An item is defined **once** per domain and referenced by id from any number of
@@ -31,6 +32,12 @@ collections, so *The Thing* is the same item in "80s Horror", "Creature Features
 Each domain says which fields make an item unique (`identity`). For movies it is
 title + year. Two items that share a title (remakes: *Halloween* 1978 / 2007 / 2018)
 reach the app as "Halloween (1978)", "Halloween (2007)" and "Halloween (2018)".
+A leading "The" doesn't count, so "The Evil Dead" and "Evil Dead" get years too.
+
+`validate` judges every pair of items with `tools/identity.mjs`, which is NextLevel's
+own matcher (`src/app/nlcommon/definitions/library-identity.ts`, compiled to JS). It
+fails on two items the app would treat as one, and lists the pairs the app would ask
+you about. Re-copy it when the app's matcher changes.
 
 ## Workflow
 

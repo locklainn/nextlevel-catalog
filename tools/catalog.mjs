@@ -13,6 +13,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { compareTitles, titleKey } from './identity.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ENDPOINT = process.env.NEXTLEVEL_ENDPOINT || 'https://activity-worker.tj-locklainn.workers.dev';
@@ -34,37 +35,25 @@ function loadDomain(domain) {
   return { dir, meta, items, groups };
 }
 
-// The title an item carries into the app. When two items in a domain share a
-// title (remakes: Halloween 1978 / 2007 / 2018), each gets " (year)" so the app
-// never treats them as one thing.
+// The title an item carries into the app. When two items in a domain are the same
+// title to the app (remakes: Halloween 1978 / 2007 / 2018; "The Evil Dead" and
+// "Evil Dead", since a leading "The" doesn't count), each gets " (year)" so the
+// app never treats them as one thing.
 function libraryTitles(items) {
   const byTitle = new Map();
   for (const it of items) {
-    const k = norm(it.title);
+    const k = titleKey(it.title).core;
     byTitle.set(k, (byTitle.get(k) || 0) + 1);
   }
   const out = new Map();
   for (const it of items) {
-    out.set(it.id, byTitle.get(norm(it.title)) > 1 && it.year ? `${it.title} (${it.year})` : it.title);
+    out.set(it.id, byTitle.get(titleKey(it.title).core) > 1 && it.year ? `${it.title} (${it.year})` : it.title);
   }
   return out;
 }
 
 function noteFor(meta, it) {
   return (meta.note || '').replace(/\{(\w+)\}/g, (_, k) => it[k] ?? '').replace(/^[\s·]+|[\s·]+$/g, '');
-}
-
-// Word-boundary containment, the app's "strong" fuzzy match as of 2026-10-25.
-function containsWord(hay, needle) {
-  let from = 0;
-  for (;;) {
-    const i = hay.indexOf(needle, from);
-    if (i === -1) return false;
-    const before = i === 0 ? ' ' : hay[i - 1];
-    const after = i + needle.length >= hay.length ? ' ' : hay[i + needle.length];
-    if (/[^a-z0-9]/i.test(before) && /[^a-z0-9]/i.test(after)) return true;
-    from = i + 1;
-  }
 }
 
 function validate(domain, { quiet = false } = {}) {
@@ -78,12 +67,6 @@ function validate(domain, { quiet = false } = {}) {
     for (const f of d.meta.identity || []) if (it[f] == null) errors.push(`${it.id}: missing identity field "${f}"`);
   }
   const titles = libraryTitles(d.items);
-  const seenTitle = new Map();
-  for (const it of d.items) {
-    const k = norm(titles.get(it.id));
-    if (seenTitle.has(k)) errors.push(`"${titles.get(it.id)}" is two items (${seenTitle.get(k)}, ${it.id}) even with the year`);
-    seenTitle.set(k, it.id);
-  }
   const used = new Set();
   for (const [g, file] of Object.entries(d.groups)) {
     const cids = new Set();
@@ -101,19 +84,22 @@ function validate(domain, { quiet = false } = {}) {
   }
   for (const it of d.items) if (!used.has(it.id)) warnings.push(`item "${it.id}" is in no collection`);
 
-  // Pairs a containment matcher would wrongly merge ("Scream 2" ⊃ "Scream").
+  // Every pair of items, judged by the app's own matcher. "same" would collapse two
+  // of ours into one Library item; "candidate" means the app would ask.
   const hazards = [];
-  const list = d.items.map(it => ({ id: it.id, t: titles.get(it.id).toLowerCase().trim() }));
-  for (const a of list) for (const b of list) {
-    if (a.id !== b.id && b.t.length >= 2 && containsWord(a.t, b.t)) hazards.push([a.id, b.id]);
+  for (let i = 0; i < d.items.length; i++) for (let j = i + 1; j < d.items.length; j++) {
+    const a = d.items[i], b = d.items[j];
+    const m = compareTitles(titles.get(a.id), titles.get(b.id));
+    if (m.verdict === 'same') errors.push(`the app would treat "${titles.get(a.id)}" (${a.id}) and "${titles.get(b.id)}" (${b.id}) as one item`);
+    else if (m.verdict === 'candidate') hazards.push([a.id, b.id, m.reason]);
   }
 
   if (!quiet) {
     for (const e of errors) console.log('ERROR  ' + e);
     for (const w of warnings) console.log('warn   ' + w);
     console.log(`${domain}: ${d.items.length} items, ${Object.values(d.groups).reduce((n, g) => n + g.collections.length, 0)} collections, ${errors.length} errors, ${warnings.length} warnings`);
-    console.log(`${hazards.length} title pairs where one title contains another (the app must not merge these):`);
-    for (const [a, b] of hazards) console.log(`  ${titles.get(a)}  ⊃  ${titles.get(b)}`);
+    console.log(`${hazards.length} pairs the app would flag as possible duplicates of each other:`);
+    for (const [a, b, why] of hazards) console.log(`  ${titles.get(a)}  ~  ${titles.get(b)}  (${why})`);
   }
   return { ...d, titles, errors, warnings, hazards };
 }
