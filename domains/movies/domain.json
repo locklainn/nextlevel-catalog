@@ -1,0 +1,13 @@
+{
+  "domain": "movies",
+  "libraryType": "Movies",
+  "refPrefix": "mv",
+  "identity": ["title", "year"],
+  "note": "{year} · {director}",
+  "fields": {
+    "id": "stable slug, title + year (never changes once sent)",
+    "title": "the title as it is commonly known in the US",
+    "year": "release year (first wide/festival release)",
+    "director": "credited director(s)"
+  }
+}

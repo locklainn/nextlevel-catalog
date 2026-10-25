@@ -1,0 +1,155 @@
+{
+  "group": "Horror",
+  "collections": [
+    {
+      "id": "horror-essentials", "title": "Horror Essentials", "icon": "🎃",
+      "description": "The canon: if you've seen these, you've seen horror. One of each era and kind.",
+      "members": ["cabinet-of-dr-caligari-1920","nosferatu-1922","frankenstein-1931","bride-of-frankenstein-1935","psycho-1960","the-haunting-1963","night-of-the-living-dead-1968","rosemarys-baby-1968","the-exorcist-1973","the-wicker-man-1973","the-texas-chain-saw-massacre-1974","black-christmas-1974","jaws-1975","carrie-1976","suspiria-1977","halloween-1978","dawn-of-the-dead-1978","alien-1979","the-shining-1980","the-evil-dead-1981","an-american-werewolf-in-london-1981","the-thing-1982","poltergeist-1982","videodrome-1983","a-nightmare-on-elm-street-1984","the-fly-1986","evil-dead-ii-1987","hellraiser-1987","the-silence-of-the-lambs-1991","candyman-1992","scream-1996","ringu-1998","audition-1999","the-blair-witch-project-1999","the-sixth-sense-1999","the-others-2001","28-days-later-2002","the-ring-2002","shaun-of-the-dead-2004","the-descent-2005","rec-2007","let-the-right-one-in-2008","the-babadook-2014","it-follows-2014","the-witch-2015","train-to-busan-2016","get-out-2017","hereditary-2018","a-quiet-place-2018","midsommar-2019","the-substance-2024","sinners-2025"]
+    },
+    {
+      "id": "universal-monsters", "title": "Universal Monsters", "icon": "🧟",
+      "description": "The studio that invented the movie monster, 1931–1954.",
+      "members": ["dracula-1931","frankenstein-1931","the-mummy-1932","the-invisible-man-1933","bride-of-frankenstein-1935","son-of-frankenstein-1939","the-wolf-man-1941","creature-from-the-black-lagoon-1954"]
+    },
+    {
+      "id": "horror-before-1970", "title": "Classic Horror (Before 1970)", "icon": "🕯️",
+      "description": "Silent expressionism, RKO shadows, Hitchcock and the birth of the modern zombie.",
+      "members": ["cabinet-of-dr-caligari-1920","nosferatu-1922","freaks-1932","vampyr-1932","cat-people-1942","godzilla-1954","them-1954","les-diaboliques-1955","invasion-of-the-body-snatchers-1956","horror-of-dracula-1958","the-blob-1958","house-on-haunted-hill-1959","psycho-1960","peeping-tom-1960","eyes-without-a-face-1960","black-sunday-1960","the-innocents-1961","carnival-of-souls-1962","the-birds-1963","the-haunting-1963","kwaidan-1964","onibaba-1964","rosemarys-baby-1968","night-of-the-living-dead-1968","witchfinder-general-1968"]
+    },
+    {
+      "id": "horror-70s", "title": "70s Horror", "icon": "📼",
+      "description": "The decade horror got serious, and got under your skin.",
+      "members": ["a-bay-of-blood-1971","the-blood-on-satans-claw-1971","the-exorcist-1973","the-wicker-man-1973","dont-look-now-1973","the-texas-chain-saw-massacre-1974","black-christmas-1974","jaws-1975","deep-red-1975","carrie-1976","the-omen-1976","suspiria-1977","hausu-1977","the-hills-have-eyes-1977","eraserhead-1977","halloween-1978","dawn-of-the-dead-1978","invasion-of-the-body-snatchers-1978","alien-1979","phantasm-1979","the-amityville-horror-1979","the-brood-1979"]
+    },
+    {
+      "id": "horror-80s", "title": "80s Horror", "icon": "🔪",
+      "description": "Practical effects at their peak: werewolves, Cenobites, Freddy and The Thing.",
+      "members": ["the-shining-1980","friday-the-13th-1980","the-fog-1980","the-changeling-1980","an-american-werewolf-in-london-1981","the-evil-dead-1981","the-howling-1981","scanners-1981","my-bloody-valentine-1981","the-thing-1982","poltergeist-1982","creepshow-1982","videodrome-1983","christine-1983","a-nightmare-on-elm-street-1984","gremlins-1984","re-animator-1985","the-return-of-the-living-dead-1985","day-of-the-dead-1985","fright-night-1985","aliens-1986","the-fly-1986","evil-dead-ii-1987","hellraiser-1987","near-dark-1987","the-lost-boys-1987","prince-of-darkness-1987","childs-play-1988","they-live-1988","beetlejuice-1988","pet-sematary-1989","society-1989"]
+    },
+    {
+      "id": "horror-90s", "title": "90s Horror", "icon": "📞",
+      "description": "Serial killers, meta-slashers, J-horror and the found-footage boom.",
+      "members": ["misery-1990","tremors-1990","jacobs-ladder-1990","the-silence-of-the-lambs-1991","candyman-1992","dead-alive-1992","bram-stokers-dracula-1992","army-of-darkness-1992","cronos-1993","in-the-mouth-of-madness-1994","interview-with-the-vampire-1994","wes-cravens-new-nightmare-1994","se7en-1995","scream-1996","from-dusk-till-dawn-1996","cube-1997","event-horizon-1997","i-know-what-you-did-last-summer-1997","ringu-1998","the-faculty-1998","audition-1999","the-blair-witch-project-1999","the-sixth-sense-1999","sleepy-hollow-1999"]
+    },
+    {
+      "id": "horror-2000s", "title": "2000s Horror", "icon": "💿",
+      "description": "Fast zombies, the New French Extremity, Saw, and the best ghost stories in decades.",
+      "members": ["final-destination-2000","ginger-snaps-2000","american-psycho-2000","the-others-2001","the-devils-backbone-2001","pulse-2001","session-9-2001","28-days-later-2002","the-ring-2002","ju-on-the-grudge-2002","dog-soldiers-2002","a-tale-of-two-sisters-2003","high-tension-2003","dawn-of-the-dead-2004","shaun-of-the-dead-2004","saw-2004","the-descent-2005","hostel-2005","slither-2006","the-host-2006","rec-2007","the-orphanage-2007","the-mist-2007","inside-2007","paranormal-activity-2007","trick-r-treat-2007","the-strangers-2008","let-the-right-one-in-2008","martyrs-2008","drag-me-to-hell-2009","zombieland-2009","thirst-2009"]
+    },
+    {
+      "id": "horror-modern", "title": "Modern Horror (2010–Now)", "icon": "🌒",
+      "description": "The new golden age: A24, Jordan Peele, Ari Aster, and a run of instant classics.",
+      "members": ["insidious-2010","the-cabin-in-the-woods-2012","sinister-2012","the-conjuring-2013","youre-next-2011","the-babadook-2014","it-follows-2014","what-we-do-in-the-shadows-2014","the-witch-2015","green-room-2015","the-wailing-2016","train-to-busan-2016","raw-2016","get-out-2017","it-2017","a-quiet-place-2018","hereditary-2018","annihilation-2018","midsommar-2019","us-2019","the-lighthouse-2019","ready-or-not-2019","saint-maud-2019","the-invisible-man-2020","his-house-2020","possessor-2020","barbarian-2022","x-2022","pearl-2022","nope-2022","smile-2022","talk-to-me-2023","evil-dead-rise-2023","late-night-with-the-devil-2023","skinamarink-2022","longlegs-2024","the-substance-2024","nosferatu-2024","sinners-2025","weapons-2025"]
+    },
+    {
+      "id": "slashers", "title": "Slashers", "icon": "🪓",
+      "description": "Masks, final girls and body counts, from the template to the tributes.",
+      "members": ["psycho-1960","peeping-tom-1960","a-bay-of-blood-1971","black-christmas-1974","the-texas-chain-saw-massacre-1974","halloween-1978","friday-the-13th-1980","my-bloody-valentine-1981","the-burning-1981","sleepaway-camp-1983","a-nightmare-on-elm-street-1984","childs-play-1988","candyman-1992","scream-1996","i-know-what-you-did-last-summer-1997","urban-legend-1998","youre-next-2011","hush-2016","terrifier-2016","happy-death-day-2017","halloween-2018","freaky-2020","fear-street-part-one-1994-2021","x-2022","pearl-2022"]
+    },
+    {
+      "id": "ghosts-and-possession", "title": "Ghosts, Hauntings & Possession", "icon": "👻",
+      "description": "Haunted houses, demons and the things that won't stay buried.",
+      "members": ["the-innocents-1961","the-haunting-1963","rosemarys-baby-1968","the-exorcist-1973","the-omen-1976","the-amityville-horror-1979","the-shining-1980","the-changeling-1980","poltergeist-1982","ringu-1998","the-sixth-sense-1999","the-others-2001","the-devils-backbone-2001","pulse-2001","session-9-2001","the-ring-2002","ju-on-the-grudge-2002","a-tale-of-two-sisters-2003","the-orphanage-2007","paranormal-activity-2007","lake-mungo-2008","insidious-2010","sinister-2012","the-conjuring-2013","oculus-2013","the-babadook-2014","the-conjuring-2-2016","the-autopsy-of-jane-doe-2016","under-the-shadow-2016","the-wailing-2016","hereditary-2018","his-house-2020","talk-to-me-2023","late-night-with-the-devil-2023"]
+    },
+    {
+      "id": "zombies", "title": "Zombie Movies", "icon": "🧠",
+      "description": "Shamblers, sprinters and the end of the world, from Romero on.",
+      "members": ["night-of-the-living-dead-1968","dawn-of-the-dead-1978","day-of-the-dead-1985","the-return-of-the-living-dead-1985","re-animator-1985","dead-alive-1992","28-days-later-2002","dawn-of-the-dead-2004","shaun-of-the-dead-2004","rec-2007","28-weeks-later-2007","pontypool-2008","zombieland-2009","world-war-z-2013","train-to-busan-2016","the-girl-with-all-the-gifts-2016","one-cut-of-the-dead-2017","28-years-later-2025"]
+    },
+    {
+      "id": "vampires", "title": "Vampire Movies", "icon": "🦇",
+      "description": "Every flavor of the undead, from Count Orlok to the Mississippi Delta.",
+      "members": ["nosferatu-1922","dracula-1931","vampyr-1932","horror-of-dracula-1958","fright-night-1985","near-dark-1987","the-lost-boys-1987","bram-stokers-dracula-1992","cronos-1993","interview-with-the-vampire-1994","from-dusk-till-dawn-1996","30-days-of-night-2007","let-the-right-one-in-2008","thirst-2009","only-lovers-left-alive-2013","a-girl-walks-home-alone-at-night-2014","what-we-do-in-the-shadows-2014","nosferatu-2024","sinners-2025"]
+    },
+    {
+      "id": "werewolves", "title": "Werewolf Movies", "icon": "🐺",
+      "description": "Full moons and painful transformations.",
+      "members": ["the-wolf-man-1941","an-american-werewolf-in-london-1981","the-howling-1981","wolfen-1981","the-company-of-wolves-1984","silver-bullet-1985","ginger-snaps-2000","dog-soldiers-2002","werewolves-within-2021"]
+    },
+    {
+      "id": "creature-features", "title": "Creature Features", "icon": "🦈",
+      "description": "Sharks, aliens, giant bugs and whatever's in the mist.",
+      "members": ["creature-from-the-black-lagoon-1954","them-1954","godzilla-1954","the-blob-1958","the-birds-1963","jaws-1975","alien-1979","the-thing-1982","gremlins-1984","aliens-1986","predator-1987","tremors-1990","arachnophobia-1990","the-descent-2005","slither-2006","the-host-2006","the-mist-2007","cloverfield-2008","trollhunter-2010","a-quiet-place-2018","annihilation-2018","crawl-2019","nope-2022","prey-2022"]
+    },
+    {
+      "id": "body-horror", "title": "Body Horror", "icon": "🧬",
+      "description": "When the threat is your own flesh. Cronenberg's country, and his heirs.",
+      "members": ["the-brood-1979","scanners-1981","the-thing-1982","videodrome-1983","re-animator-1985","the-fly-1986","hellraiser-1987","dead-ringers-1988","society-1989","tetsuo-the-iron-man-1989","slither-2006","teeth-2007","raw-2016","annihilation-2018","possessor-2020","titane-2021","crimes-of-the-future-2022","the-substance-2024"]
+    },
+    {
+      "id": "folk-horror", "title": "Folk Horror", "icon": "🌾",
+      "description": "Old rites, remote villages, and the countryside that wants you.",
+      "members": ["witchfinder-general-1968","the-blood-on-satans-claw-1971","the-wicker-man-1973","children-of-the-corn-1984","kill-list-2011","the-witch-2015","the-wailing-2016","the-ritual-2017","apostle-2018","midsommar-2019","lamb-2021"]
+    },
+    {
+      "id": "horror-comedy", "title": "Horror Comedies", "icon": "😱",
+      "description": "Scary and funny, often at the same moment.",
+      "members": ["young-frankenstein-1974","an-american-werewolf-in-london-1981","gremlins-1984","the-return-of-the-living-dead-1985","re-animator-1985","fright-night-1985","little-shop-of-horrors-1986","evil-dead-ii-1987","the-lost-boys-1987","beetlejuice-1988","tremors-1990","dead-alive-1992","army-of-darkness-1992","death-becomes-her-1992","scream-1996","shaun-of-the-dead-2004","slither-2006","drag-me-to-hell-2009","zombieland-2009","tucker-and-dale-vs-evil-2010","the-cabin-in-the-woods-2012","what-we-do-in-the-shadows-2014","housebound-2014","happy-death-day-2017","one-cut-of-the-dead-2017","ready-or-not-2019","freaky-2020","werewolves-within-2021"]
+    },
+    {
+      "id": "found-footage", "title": "Found Footage", "icon": "📹",
+      "description": "Shaky cams, night vision and tapes nobody should have watched.",
+      "members": ["cannibal-holocaust-1980","the-blair-witch-project-1999","noroi-the-curse-2005","rec-2007","paranormal-activity-2007","lake-mungo-2008","cloverfield-2008","trollhunter-2010","grave-encounters-2011","vhs-2012","creep-2014","the-taking-of-deborah-logan-2014","unfriended-2014","hell-house-llc-2015","host-2020","late-night-with-the-devil-2023"]
+    },
+    {
+      "id": "world-horror", "title": "World Horror", "icon": "🌍",
+      "description": "The best horror from outside Hollywood: Japan, Korea, Italy, France, Spain and beyond.",
+      "members": ["cabinet-of-dr-caligari-1920","nosferatu-1922","vampyr-1932","godzilla-1954","eyes-without-a-face-1960","black-sunday-1960","kwaidan-1964","onibaba-1964","deep-red-1975","suspiria-1977","hausu-1977","the-beyond-1981","tetsuo-the-iron-man-1989","dead-alive-1992","cronos-1993","ringu-1998","audition-1999","the-devils-backbone-2001","pulse-2001","ju-on-the-grudge-2002","a-tale-of-two-sisters-2003","high-tension-2003","the-host-2006","rec-2007","the-orphanage-2007","inside-2007","let-the-right-one-in-2008","martyrs-2008","lake-mungo-2008","thirst-2009","trollhunter-2010","the-babadook-2014","goodnight-mommy-2014","the-wailing-2016","train-to-busan-2016","raw-2016","under-the-shadow-2016","one-cut-of-the-dead-2017","la-llorona-2019","titane-2021","lamb-2021","talk-to-me-2023"]
+    },
+    {
+      "id": "stephen-king-horror", "title": "Stephen King on Screen", "icon": "🎈",
+      "description": "The horror adaptations worth your time.",
+      "members": ["carrie-1976","the-shining-1980","creepshow-1982","christine-1983","cujo-1983","the-dead-zone-1983","children-of-the-corn-1984","silver-bullet-1985","pet-sematary-1989","misery-1990","1408-2007","the-mist-2007","it-2017","geralds-game-2017","it-chapter-two-2019","doctor-sleep-2019"]
+    },
+    {
+      "id": "franchise-halloween", "title": "Halloween: Every Film", "icon": "🎃", "ordered": true,
+      "description": "Michael Myers, all 13 films in release order (three timelines and a remake).",
+      "members": ["halloween-1978","halloween-ii-1981","halloween-iii-1982","halloween-4-1988","halloween-5-1989","halloween-the-curse-of-michael-myers-1995","halloween-h20-1998","halloween-resurrection-2002","halloween-2007","halloween-ii-2009","halloween-2018","halloween-kills-2021","halloween-ends-2022"]
+    },
+    {
+      "id": "franchise-friday-the-13th", "title": "Friday the 13th: Every Film", "icon": "🏕️", "ordered": true,
+      "description": "Jason Voorhees, in release order, crossover and remake included.",
+      "members": ["friday-the-13th-1980","friday-the-13th-part-2-1981","friday-the-13th-part-iii-1982","friday-the-13th-the-final-chapter-1984","friday-the-13th-a-new-beginning-1985","friday-the-13th-part-vi-1986","friday-the-13th-part-vii-1988","friday-the-13th-part-viii-1989","jason-goes-to-hell-1993","jason-x-2001","freddy-vs-jason-2003","friday-the-13th-2009"]
+    },
+    {
+      "id": "franchise-nightmare-on-elm-street", "title": "A Nightmare on Elm Street: Every Film", "icon": "🧤", "ordered": true,
+      "description": "Freddy Krueger, in release order, crossover and remake included.",
+      "members": ["a-nightmare-on-elm-street-1984","a-nightmare-on-elm-street-2-1985","a-nightmare-on-elm-street-3-1987","a-nightmare-on-elm-street-4-1988","a-nightmare-on-elm-street-5-1989","freddys-dead-1991","wes-cravens-new-nightmare-1994","freddy-vs-jason-2003","a-nightmare-on-elm-street-2010"]
+    },
+    {
+      "id": "franchise-scream", "title": "Scream: Every Film", "icon": "📞", "ordered": true,
+      "description": "Ghostface, in release order.",
+      "members": ["scream-1996","scream-2-1997","scream-3-2000","scream-4-2011","scream-2022","scream-vi-2023"]
+    },
+    {
+      "id": "franchise-evil-dead", "title": "Evil Dead: Every Film", "icon": "📖", "ordered": true,
+      "description": "The Necronomicon, in release order.",
+      "members": ["the-evil-dead-1981","evil-dead-ii-1987","army-of-darkness-1992","evil-dead-2013","evil-dead-rise-2023"]
+    },
+    {
+      "id": "franchise-alien", "title": "Alien: Every Film", "icon": "👽", "ordered": true,
+      "description": "The Xenomorph saga in release order, prequels included (no Predator crossovers).",
+      "members": ["alien-1979","aliens-1986","alien-3-1992","alien-resurrection-1997","prometheus-2012","alien-covenant-2017","alien-romulus-2024"]
+    },
+    {
+      "id": "franchise-conjuring", "title": "The Conjuring Universe", "icon": "🪆", "ordered": true,
+      "description": "The Warrens' case files and every spin-off, in release order.",
+      "members": ["the-conjuring-2013","annabelle-2014","the-conjuring-2-2016","annabelle-creation-2017","the-nun-2018","the-curse-of-la-llorona-2019","annabelle-comes-home-2019","the-conjuring-the-devil-made-me-do-it-2021","the-nun-ii-2023","the-conjuring-last-rites-2025"]
+    },
+    {
+      "id": "franchise-saw", "title": "Saw: Every Film", "icon": "🧩", "ordered": true,
+      "description": "Jigsaw's games, in release order.",
+      "members": ["saw-2004","saw-ii-2005","saw-iii-2006","saw-iv-2007","saw-v-2008","saw-vi-2009","saw-3d-2010","jigsaw-2017","spiral-2021","saw-x-2023"]
+    },
+    {
+      "id": "franchise-final-destination", "title": "Final Destination: Every Film", "icon": "✈️", "ordered": true,
+      "description": "Death's design, in release order.",
+      "members": ["final-destination-2000","final-destination-2-2003","final-destination-3-2006","the-final-destination-2009","final-destination-5-2011","final-destination-bloodlines-2025"]
+    },
+    {
+      "id": "franchise-childs-play", "title": "Child's Play: Every Film", "icon": "🔪", "ordered": true,
+      "description": "Chucky, in release order, remake included.",
+      "members": ["childs-play-1988","childs-play-2-1990","childs-play-3-1991","bride-of-chucky-1998","seed-of-chucky-2004","curse-of-chucky-2013","cult-of-chucky-2017","childs-play-2019"]
+    }
+  ]
+}
