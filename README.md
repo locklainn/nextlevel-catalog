@@ -1,5 +1,8 @@
 # NextLevel Catalog
 
+**Live:** https://nextlevel-collections.pages.dev — the public site, and the JSON API the app
+reads at `/api/v1/`.
+
 A catalog of the things a person can collect, earn or complete: movies to watch,
 mountains to climb, trails to hike, beers to try. In NextLevel each one becomes a
 **Library item**, and a curated set becomes a **collection** ("Horror Essentials",
@@ -18,6 +21,10 @@ domains/<domain>/
   collections/<group>.md    the review page, generated (don't edit)
 tools/catalog.mjs         validate · review · batch · send · status
 tools/identity.mjs        the app's own title matcher, copied (see Identity)
+tools/verify-wikidata.mjs fact-check years and directors (domains/<d>/FACT-CHECK.md)
+tools/build-site.mjs      dist/: the website + /api/v1 JSON, from the same data
+tools/site-check.mjs      drives dist/ in headless Chrome at phone + desktop width
+site/                     the site's CSS and JS
 ```
 
 An item is defined **once** per domain and referenced by id from any number of
@@ -58,3 +65,30 @@ until it is approved in the app's Activity Inbox.** Batches are idempotent by
 | domain | Library type | groups |
 |---|---|---|
 | movies | Movies | horror |
+
+## Publish the site
+
+```sh
+node tools/build-site.mjs && node tools/site-check.mjs          # build, then check it
+npx wrangler@3 pages deploy dist --project-name nextlevel-collections --branch main
+```
+
+The API is static JSON, CORS-open (`dist/_headers`):
+
+| path | what |
+|---|---|
+| `/api/v1/index.json` | domains, and every collection without members |
+| `/api/v1/collections/<id>.json` | one collection with its members |
+| `/api/v1/items/<domain>.json` | every item in a domain, with the collections it's on |
+
+Ids: an item is `movies:<id>`, a collection `col:movies:<id>`. A collection's `version`
+changes when its title, description, icon or members do — the app re-syncs on that.
+
+## The waitlist
+
+The site's form posts to the activity Worker (`POST /waitlist`). There is no read
+endpoint on purpose. Read it with your Cloudflare login, from `goalsetters/activity-worker`:
+
+```sh
+npx wrangler@3 kv key list --binding ACTIVITY --prefix waitlist:
+```
