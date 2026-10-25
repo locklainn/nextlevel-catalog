@@ -7,13 +7,25 @@
 //   node tools/build-site.mjs && node tools/site-check.mjs [shots-dir]
 
 import { createServer } from 'node:http';
-import { readFileSync, existsSync, statSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, existsSync, statSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { spawn, execFileSync } from 'node:child_process';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
+// What the site should show, counted from the source data, not typed in: a new
+// collection or film must not fail the check just for existing.
+const SRC = (() => {
+  const doms = readdirSync(join(ROOT, 'domains')).filter((d) => existsSync(join(ROOT, 'domains', d, 'domain.json')));
+  let colls = 0, items = 0;
+  for (const d of doms) {
+    items += JSON.parse(readFileSync(join(ROOT, 'domains', d, 'items.json'), 'utf8')).length;
+    const cdir = join(ROOT, 'domains', d, 'collections');
+    for (const f of readdirSync(cdir).filter((f) => f.endsWith('.json'))) colls += JSON.parse(readFileSync(join(cdir, f), 'utf8')).collections.length;
+  }
+  return { colls, items, firstDomainItems: JSON.parse(readFileSync(join(ROOT, 'domains', doms.sort()[0], 'items.json'), 'utf8')).length };
+})();
 const SHOTS = process.argv[2] || join(ROOT, '.shots');
 const PORT = 8899, WL = 8898, CDP = 9277;
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
@@ -96,7 +108,7 @@ try {
     check('landing: no sideways scroll', await noSideScroll(), JSON.stringify(await overflowers()));
     check('landing: the display font loaded', await evl(`document.fonts.check('800 40px "Bricolage Grotesque"')`));
     const counts = await evl(`({ cards:document.querySelectorAll('.grid .card').length, walls:[...document.querySelectorAll('.grid .poster-wall')].filter(e=>e.textContent.length>40).length, h1:document.querySelector('h1').textContent })`);
-    check('landing: a poster for every collection, each drawn from its titles', counts.cards === 30 && counts.walls === 30, JSON.stringify(counts));
+    check('landing: a poster for every collection, each drawn from its titles', counts.cards === SRC.colls && counts.walls === SRC.colls, JSON.stringify({ ...counts, expected: SRC.colls }));
     // How far down each poster its title wall reaches (0..1). A wall that stops halfway reads as an empty card.
     const fill = await evl(`[...document.querySelectorAll('.grid .poster')].map(p => {
       const b = p.getBoundingClientRect(), r = document.createRange(); r.selectNodeContents(p.querySelector('.poster-wall'));
@@ -140,7 +152,7 @@ try {
   check('the waitlist form submits and thanks you', /on the list/.test(msg) && joined.length === 1, msg);
   check('…and records which page you joined from', joined[0]?.source === '/c/slashers/', JSON.stringify(joined[0]));
   const api = await evl(`fetch('/api/v1/index.json').then(r=>r.json()).then(j=>({ n:j.collections.length, d:j.domains[0], one:j.collections[0].defId }))`);
-  check('API index: 30 collections, 317 movies, namespaced ids', api.n === 30 && api.d.items === 317 && /^col:movies:/.test(api.one), JSON.stringify(api));
+  check(`API index: ${SRC.colls} collections, ${SRC.firstDomainItems} in the first domain, namespaced ids`, api.n === SRC.colls && api.d.items === SRC.firstDomainItems && /^col:movies:/.test(api.one), JSON.stringify(api));
   const one = await evl(`fetch('/api/v1/collections/horror-essentials.json').then(r=>r.json()).then(j=>({ size:j.size, m:j.members.length, d:j.members[0].defId, v:j.version }))`);
   check('API collection: members carry defIds and the collection a version', one.size === one.m && /^movies:/.test(one.d) && one.v, JSON.stringify(one));
   const headers = readFileSync(join(DIST, '_headers'), 'utf8');

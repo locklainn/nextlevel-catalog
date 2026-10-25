@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 // Cross-check a movie domain against Wikidata: for every item, find films with that
 // English title and compare the year (±1, release dates vary by country) and the
-// director(s). Read-only; writes a report, changes nothing.
+// director(s). Writes a report; with --apply, also records each matched film's
+// Wikidata id (Q-number) as `wikidata` in items.json. Nothing else is changed.
 //
-//   node tools/verify-wikidata.mjs movies        → domains/movies/wikidata-report.json
+//   node tools/verify-wikidata.mjs movies          → domains/movies/wikidata-report.json
+//   node tools/verify-wikidata.mjs movies --apply  → …and fills missing `wikidata` ids
 //
 // Verdicts: ok · year (a film by that title exists, not in that year) · director ·
 // notfound (no English label matches — often a different US title; check by hand).
@@ -77,3 +79,12 @@ console.log(`\n${domain}: ${report.length} items — ok ${count('ok')} · year $
 for (const r of report.filter((r) => r.verdict !== 'ok')) console.log(`  ${r.verdict.padEnd(8)} ${r.id}  ours: ${r.ours}  ${r.wikidata ? JSON.stringify(r.wikidata) : ''}`);
 const off = report.filter((r) => r.note);
 if (off.length) console.log(`\n${off.length} ok but a different year is listed first:`), off.forEach((r) => console.log(`  ${r.id}  ${r.note}`));
+
+if (process.argv.includes('--apply')) {
+  // Only fill a missing id, only from an 'ok' verdict; a hand-checked film keeps what it has.
+  const qid = new Map(report.filter((r) => r.verdict === 'ok' && r.u).map((r) => [r.id, r.u.split('/').pop()]));
+  let added = 0;
+  for (const it of items) if (!it.wikidata && qid.has(it.id)) { it.wikidata = qid.get(it.id); added++; }
+  writeFileSync(join(ROOT, 'domains', domain, 'items.json'), '[\n' + items.map((it) => JSON.stringify(it)).join(',\n') + '\n]\n');
+  console.log(`\n--apply: recorded ${added} Wikidata id${added === 1 ? '' : 's'} in items.json`);
+}

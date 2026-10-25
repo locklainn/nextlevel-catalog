@@ -33,7 +33,10 @@ already has it or does it. So the job here is: curate the data, rebuild the site
 
 - `id`: slug of the title + year, lowercase, keeping a leading "the" (`the-thing-1982`).
   One older id breaks that pattern (`cabinet-of-dr-caligari-1920`); leave it, ids never change.
-- `title`: as commonly known in the US. `year`: first wide or festival release.
+- `title`: the English title it is best known by today. When a film has several (Twitch
+  of the Death Nerve / A Bay of Blood, Tenebrae / Unsane), use **Wikidata's English
+  label**, so the fact-check matches, and note the other title in `FACT-CHECK.md`.
+  Precedent: `a-bay-of-blood-1971`, "Hausu". `year`: first wide or festival release.
 - **Define a film once.** If it is already in `items.json`, reference that id; don't add
   a second entry because a new collection wants it.
 - Remakes and same-title films are separate items with their years. `validate` tells you
@@ -51,6 +54,10 @@ already has it or does it. So the job here is: curate the data, rebuild the site
 
 - `ordered: true` = a franchise in viewing order (numbered rows on the site and in the
   app). Otherwise order members by year.
+- **Overlap is fine and intended, but deliberate.** A new film can also belong in an era
+  list (`horror-70s`…), World Horror or Horror Essentials. Add it there only if it would
+  have earned a place on its own; don't stretch an existing list just because a new one
+  pulled the film in. Each addition re-versions that list for its followers.
 - **Curate.** A collection is a reason to watch these films together; not every film
   that could fit. The existing ones run 5–52 (franchises small, eras and the canon large). A collection that is a subset of another
   with no point of view of its own shouldn't exist.
@@ -62,7 +69,7 @@ already has it or does it. So the job here is: curate the data, rebuild the site
 
 ```sh
 node tools/catalog.mjs validate movies              # must say 0 errors (exit 0)
-node tools/verify-wikidata.mjs movies               # new films: year ±1 and director vs Wikidata
+node tools/verify-wikidata.mjs movies --apply       # year ±1 + director vs Wikidata; records Q-ids
 node tools/catalog.mjs review movies horror         # regenerates horror.md; read it
 node tools/build-site.mjs && node tools/site-check.mjs   # must end with 0 failed
 ```
@@ -77,16 +84,18 @@ Domains and group files are discovered automatically by the site build. **Known 
 (`tools/build-site.mjs`, search `Eras`). A new era collection, or a new group, needs that
 list updated or it gets no chip. "Every film" picks up `ordered` collections on its own.
 
-**Then run the app's gate, which reads THIS repo's `dist/`:**
+**Then run the app's gate** (in the app repo, `~/goalsetters`). It serves this repo's `dist/`
+to the real app; from a checkout anywhere other than `~/nextlevel-catalog`, pass the path:
 ```sh
-cd ~/goalsetters && PATH=~/.nvm/versions/node/v22.22.2/bin:$PATH node scripts/marketplace-verify.mjs
+cd ~/goalsetters && NL_CATALOG_DIST=<this repo>/dist PATH=~/.nvm/versions/node/v22.22.2/bin:$PATH node scripts/marketplace-verify.mjs
 ```
+Node 22 is needed (the path above is TJ's nvm install).
 (It needs the app's dev server on :4200; if it isn't up, say so rather than starting a
 second one.) The gate pins real data: Folk Horror is 11 films with The Wicker Man, Lamb and
 Blood on Satan's Claw in it; Zombie Movies exists as `zombies`; both Halloweens (1978,
-2018), both Evil Deads (1981, 2013), Evil Dead II and Evil Dead Rise exist. **Adding new
-collections and films is safe. Growing Folk Horror, or renaming those, fails it on counts**,
-correctly: then update the numbers in the gate in the same change and tell TJ.
+2018), both Evil Deads (1981, 2013), Evil Dead II and Evil Dead Rise exist. **Adding collections and films is safe:** both checks count collections from the
+data, so a new one passes. **Growing Folk Horror, or renaming those films, fails the gate**,
+correctly: then update its numbers in the same change and tell TJ.
 
 ## Publishing (TJ runs it, or says you may)
 
@@ -124,7 +133,7 @@ starting one: the site's design and the app's suggestions have only been checked
 2. **`validate`** until clean. It caught real collisions: "The Evil Dead" vs "Evil Dead"
    look the same to the app (a leading "The" is ignored), so both carry years in the app.
 3. **Fact-check against Wikidata** (`verify-wikidata.mjs`). Most match outright; check the
-   rest by hand and write them up in `FACT-CHECK.md`. It records each film's Q-id.
+   rest by hand and write them up in `FACT-CHECK.md`. `--apply` writes each matched film's Q-id into `items.json` (only where missing).
 4. **`review`** writes `collections/<group>.md`: read it as a person would.
 5. **Build + `site-check`**, then the app gate above, then commit.
 
@@ -150,3 +159,5 @@ title here is something the app may match a user's task against.
   the site. The repo has **no git remote**: commits live only on this Mac. Ask before
   adding one.
 - **Held:** the `send` batch (see Never).
+- **A public repo.** Everything here is public: no tokens, emails or personal paths in
+  code or commits. `send` reads its token from `NEXTLEVEL_TOKEN`; never write it down.
