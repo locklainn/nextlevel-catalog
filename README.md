@@ -94,3 +94,10 @@ endpoint on purpose. Read it with your Cloudflare login, from `goalsetters/activ
 ```sh
 npx wrangler@3 kv key list --binding ACTIVITY --prefix waitlist:
 ```
+
+## License
+
+The data (`domains/`, and the `/api/v1/` JSON built from it) is **CC BY 4.0**: use it for
+anything, including commercially, with credit to "NextLevel Catalog"
+(https://nextlevel-collections.pages.dev). The code (`tools/`, `site/`) is **MIT**. See
+`LICENSE` and `domains/LICENSE`.

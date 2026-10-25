@@ -1,0 +1,17 @@
+NextLevel Catalog data
+Copyright (c) 2026 Tj Loughlin
+
+The catalog data in this directory (items, collections, their selection, order and
+descriptions), and the JSON API generated from it, are licensed under the Creative
+Commons Attribution 4.0 International License (CC BY 4.0).
+
+  Summary:    https://creativecommons.org/licenses/by/4.0/
+  Legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+You may share and adapt the data for any purpose, including commercially, as long as
+you give credit. Please attribute it as:
+
+  "NextLevel Catalog" (https://nextlevel-collections.pages.dev), CC BY 4.0
+
+Film facts (titles, years, directors) were checked against Wikidata, whose data is
+CC0. The Wikidata ids recorded on items are Wikidata's.

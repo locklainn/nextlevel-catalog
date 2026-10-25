@@ -111,7 +111,7 @@ ${body}
 ${waitlist()}
 <footer class="foot">
   <p><strong>NextLevel</strong> turns the things you do into a record you keep: goals, streaks, and a Legacy of everything you've finished.</p>
-  <p class="foot-small">Film facts checked against <a href="https://www.wikidata.org/">Wikidata</a>. Built ${BUILT.slice(0, 10)}. Developers: the catalog is a free JSON API at <a href="/api/v1/index.json">/api/v1</a>.</p>
+  <p class="foot-small">Film facts checked against <a href="https://www.wikidata.org/">Wikidata</a>. Built ${BUILT.slice(0, 10)}. Developers: the catalog is a free JSON API at <a href="/api/v1/index.json">/api/v1</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; credit “NextLevel Catalog”. Source on <a href="https://github.com/locklainn/nextlevel-catalog">GitHub</a>.</p>
 </footer>
 <script src="/assets/site.js" defer></script>
 </body>
@@ -280,6 +280,7 @@ rmSync(OUT, { recursive: true, force: true });
 
 write('api/v1/index.json', JSON.stringify({
   version: 1, generatedAt: BUILT, site: SITE,
+  license: { data: 'CC BY 4.0', url: 'https://creativecommons.org/licenses/by/4.0/', attribution: `"NextLevel Catalog" (${SITE}), CC BY 4.0` },
   domains: domains.map((d) => ({ domain: d.domain, libraryType: d.libraryType, items: d.items.length, collections: catalog.filter((c) => c.domain === d.domain).length })),
   collections: catalog.map(collSummary),
 }, null, 1));
