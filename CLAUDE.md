@@ -149,15 +149,16 @@ title here is something the app may match a user's task against.
   horror, folk horror, horror comedy, found footage, world horror, Stephen King, Universal
   Monsters), and ten franchises in viewing order (Halloween, Friday the 13th, Elm Street,
   Scream, Evil Dead, Alien, Conjuring, Saw, Final Destination, Child's Play).
-- **Live** at https://nextlevel-collections.pages.dev, matching `dist/` as of `ea14e60`.
+- **Live** at https://nextlevel-collections.pages.dev, matching `dist/` (built from the data as of 2026-10-25).
 - **Natural next horror collections** (not started; TJ hasn't picked): giallo, cosmic /
   Lovecraftian, home invasion, witches, killer dolls, Christmas horror, "elevated" A24-era
   horror; franchises Texas Chain Saw, Hellraiser, Insidious, Romero's Dead, The Purge.
 - **Beyond horror** (a new group in `movies`, e.g. `sci-fi.json`) or a new domain: ask
   TJ which first. The design/marketing site was only checked on horror.
 - **Open, not this repo's data:** link-preview images (og:image) and a custom domain for
-  the site. The repo has **no git remote**: commits live only on this Mac. Ask before
-  adding one.
+  the site.
+- **Repo:** public at https://github.com/locklainn/nextlevel-catalog (`main`). Push only
+  when TJ says so.
 - **Held:** the `send` batch (see Never).
 - **A public repo.** Everything here is public: no tokens, emails or personal paths in
   code or commits. `send` reads its token from `NEXTLEVEL_TOKEN`; never write it down.
