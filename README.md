@@ -1,5 +1,7 @@
 # NextLevel Catalog
 
+Agents: read `CLAUDE.md` before changing anything.
+
 **Live:** https://nextlevel-collections.pages.dev — the public site, and the JSON API the app
 reads at `/api/v1/`.
 
@@ -56,7 +58,7 @@ NEXTLEVEL_TOKEN=… node tools/catalog.mjs send movies horror
 node tools/catalog.mjs status catalog-movies-horror-v1
 ```
 
-`send` proposes a batch to the NextLevel agent-builds endpoint. **Nothing is created
+**`send` is superseded; don't run it** (the app now *follows* collections instead of copying them; see `CLAUDE.md`). It proposes a batch to the NextLevel agent-builds endpoint. **Nothing is created
 until it is approved in the app's Activity Inbox.** Batches are idempotent by
 `batchId`, and members the app already made (refs in `/builds/state`) aren't re-sent.
 
