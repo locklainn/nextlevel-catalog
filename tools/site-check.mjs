@@ -44,7 +44,12 @@ const chrome = spawn(CHROME, ['--headless=new', `--remote-debugging-port=${CDP}`
 process.on('exit', () => { try { chrome.kill(); site.close(); wl.close(); } catch {} });
 
 let ws, id = 0; const pending = new Map(); const errors = [];
-const send = (method, params = {}) => new Promise((res, rej) => { const i = ++id; pending.set(i, { res, rej }); ws.send(JSON.stringify({ id: i, method, params })); });
+// Every CDP call times out with its own name, so a stall says where it is instead of hanging the run.
+const send = (method, params = {}) => new Promise((res, rej) => {
+  const i = ++id, t = setTimeout(() => { pending.delete(i); rej(new Error(`CDP ${method} timed out`)); }, 20000);
+  pending.set(i, { res: (v) => { clearTimeout(t); res(v); }, rej: (e) => { clearTimeout(t); rej(e); } });
+  ws.send(JSON.stringify({ id: i, method, params }));
+});
 const evl = async (expr) => { const r = await send('Runtime.evaluate', { expression: expr, awaitPromise: true, returnByValue: true }); if (r.exceptionDetails) throw new Error(r.exceptionDetails.exception?.description || 'eval failed'); return r.result.value; };
 
 async function connect() {
@@ -67,7 +72,7 @@ async function shot(name, full = false) {
   if (full) {
     // Stretch the viewport to the page, shoot, put it back. (captureBeyondViewport
     // hangs headless Chrome on long pages.)
-    const m = await evl(`({ w: document.documentElement.clientWidth, h: Math.min(document.documentElement.scrollHeight, 7000), mobile: innerWidth < 600 })`);
+    const m = await evl(`({ w: document.documentElement.clientWidth, h: Math.min(document.documentElement.scrollHeight, innerWidth < 600 ? 7000 : 3200), mobile: innerWidth < 600 })`);
     restore = m;
     await send('Emulation.setDeviceMetricsOverride', { width: m.w, height: m.h, deviceScaleFactor: 1, mobile: m.mobile });
     await sleep(300);
@@ -92,6 +97,14 @@ try {
     check('landing: the display font loaded', await evl(`document.fonts.check('800 40px "Bricolage Grotesque"')`));
     const counts = await evl(`({ cards:document.querySelectorAll('.grid .card').length, walls:[...document.querySelectorAll('.grid .poster-wall')].filter(e=>e.textContent.length>40).length, h1:document.querySelector('h1').textContent })`);
     check('landing: a poster for every collection, each drawn from its titles', counts.cards === 30 && counts.walls === 30, JSON.stringify(counts));
+    // How far down each poster its title wall reaches (0..1). A wall that stops halfway reads as an empty card.
+    const fill = await evl(`[...document.querySelectorAll('.grid .poster')].map(p => {
+      const b = p.getBoundingClientRect(), r = document.createRange(); r.selectNodeContents(p.querySelector('.poster-wall'));
+      const rects = [...r.getClientRects()].filter(x => x.right > b.left && x.left < b.right && x.bottom > b.top && x.top < b.bottom);
+      const low = Math.max(b.top, ...rects.map(x => Math.min(x.bottom, b.bottom)));
+      const w = p.querySelector('.poster-wall').getBoundingClientRect(); return { wt: Math.round(w.top-b.top), wb: Math.round(w.bottom-b.top), n: rects.length, all: r.getClientRects().length, t: p.closest('.card').querySelector('h3').textContent, f: +((low - b.top) / b.height).toFixed(2), h: Math.round(b.height) };
+    }).sort((a, b) => a.f - b.f)`);
+    check('landing: every poster wall reaches the bottom of its card (≥ 0.9)', fill[0].f >= 0.9, JSON.stringify(fill.slice(0, 4)) + " all=" + fill.map(x=>x.f).join(","));
     await shot(`${label}-landing`); await shot(`${label}-landing-full`, true);
     if (label === 'phone') {
       const tgt = await evl(`[...document.querySelectorAll('a.btn, button.chip, .top-cta, .join-form button, .join-form input[type=email]')].map(e=>e.getBoundingClientRect()).filter(r=>r.height && r.height < 38).length`);

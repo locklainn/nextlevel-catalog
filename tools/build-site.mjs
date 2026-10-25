@@ -138,7 +138,11 @@ function waitlist(source = '') {
 
 // A poster: the collection's own titles, set as a typographic wall behind its name.
 function poster(c, { big = false } = {}) {
-  const wall = c.members.slice(0, big ? 60 : 24).map((m) => esc(m.displayTitle)).join(' <i>/</i> ');
+  // Cycle the titles until the wall overfills the poster; a five-film franchise repeats as a pattern.
+  const names = c.members.map((m) => esc(m.displayTitle));
+  const want = big ? 2800 : 2200, parts = [];
+  for (let i = 0, n = 0; n < want; i++) { const t = names[i % names.length]; parts.push(t); n += t.length + 3; }
+  const wall = parts.join(' <i>/</i> ');
   const years = c.members.map((m) => m.year).filter(Boolean);
   const span = years.length ? `${Math.min(...years)}–${Math.max(...years)}` : '';
   return `<div class="poster${big ? ' poster-big' : ''}" style="--accent:${c.accent}">
