@@ -1,0 +1,152 @@
+{
+  "group": "Regions",
+  "collections": [
+    {
+      "id": "benelux",
+      "title": "Benelux",
+      "icon": "🚲",
+      "description": "Belgium, the Netherlands and Luxembourg: three countries a train crosses in a day.",
+      "ordered": false,
+      "members": [
+        "belgium",
+        "luxembourg",
+        "netherlands"
+      ]
+    },
+    {
+      "id": "baltic-states",
+      "title": "The Baltic States",
+      "icon": "🏰",
+      "description": "Estonia, Latvia and Lithuania: three medieval capitals, Tallinn, Riga and Vilnius, a bus ride apart.",
+      "ordered": false,
+      "members": [
+        "estonia",
+        "latvia",
+        "lithuania"
+      ]
+    },
+    {
+      "id": "nordic-countries",
+      "title": "The Nordic Countries",
+      "icon": "❄️",
+      "description": "Denmark, Finland, Iceland, Norway and Sweden: fjords, saunas, the midnight sun and the northern lights.",
+      "ordered": false,
+      "members": [
+        "denmark",
+        "finland",
+        "iceland",
+        "norway",
+        "sweden"
+      ]
+    },
+    {
+      "id": "european-microstates",
+      "title": "Europe's Microstates",
+      "icon": "🔬",
+      "description": "The six smallest countries in Europe, from Malta to Vatican City, which is smaller than New York's Central Park. Each is an easy add to a bigger trip.",
+      "ordered": false,
+      "members": [
+        "andorra",
+        "liechtenstein",
+        "malta",
+        "monaco",
+        "san-marino",
+        "vatican-city"
+      ]
+    },
+    {
+      "id": "central-america",
+      "title": "Central America",
+      "icon": "🌋",
+      "description": "The seven countries on the land bridge from Mexico to Colombia, Belize to Panama: volcanoes, cloud forest and two oceans a day's drive apart.",
+      "ordered": false,
+      "members": [
+        "belize",
+        "costa-rica",
+        "el-salvador",
+        "guatemala",
+        "honduras",
+        "nicaragua",
+        "panama"
+      ]
+    },
+    {
+      "id": "the-caribbean",
+      "title": "The Caribbean",
+      "icon": "🏝️",
+      "description": "The thirteen island nations of the Caribbean, from Cuba and Jamaica to Grenada and Barbados. Cruise ports count as long as you went ashore.",
+      "ordered": false,
+      "members": [
+        "antigua-and-barbuda",
+        "barbados",
+        "cuba",
+        "dominica",
+        "dominican-republic",
+        "grenada",
+        "haiti",
+        "jamaica",
+        "saint-kitts-and-nevis",
+        "saint-lucia",
+        "saint-vincent-and-the-grenadines",
+        "the-bahamas",
+        "trinidad-and-tobago"
+      ]
+    },
+    {
+      "id": "southeast-asia",
+      "title": "Southeast Asia",
+      "icon": "🛕",
+      "description": "The eleven countries from Myanmar to Timor-Leste: the backpacker loop through Thailand, Vietnam and Cambodia, and the islands beyond it.",
+      "ordered": false,
+      "members": [
+        "brunei",
+        "cambodia",
+        "indonesia",
+        "laos",
+        "malaysia",
+        "myanmar",
+        "philippines",
+        "singapore",
+        "thailand",
+        "timor-leste",
+        "vietnam"
+      ]
+    },
+    {
+      "id": "european-union",
+      "title": "The European Union",
+      "icon": "🇪🇺",
+      "description": "The 27 member states of the EU, from Ireland to Cyprus. Most share a currency and open borders, so they add up faster than you'd think.",
+      "ordered": false,
+      "members": [
+        "austria",
+        "belgium",
+        "bulgaria",
+        "croatia",
+        "cyprus",
+        "czech-republic",
+        "denmark",
+        "estonia",
+        "finland",
+        "france",
+        "germany",
+        "greece",
+        "hungary",
+        "ireland",
+        "italy",
+        "latvia",
+        "lithuania",
+        "luxembourg",
+        "malta",
+        "netherlands",
+        "poland",
+        "portugal",
+        "romania",
+        "slovakia",
+        "slovenia",
+        "spain",
+        "sweden"
+      ]
+    }
+  ]
+}

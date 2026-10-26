@@ -28,8 +28,8 @@ commit. Nothing is deployed without TJ.
 |---|---|---|---|---|
 | 1 | **Multi-category tooling** + ⛰️ **Mountains** (Northeast + California) | Mountains | title + state | done 2026-10-26: 205 peaks, 8 lists |
 | 2 | 🎮 Video Games | Video Games | title + year | done 2026-10-26: 106 games, 7 lists |
-| 3 | 🏞️ National Parks | Destinations | title + state | next |
-| 4 | 🗺️ States & Provinces | Destinations | title + country | |
+| 3 | 🗺️ **States & Provinces** + 🌍 **Countries** (moved up: what people show off) | Destinations | title + country | done 2026-10-26: 63 states/provinces in 11 lists; 197 countries in 15 lists |
+| 4 | 🏞️ National Parks | Destinations | title + state | next |
 | 5 | 🏟️ Ballparks & Arenas | Destinations | title + city | |
 | 6 | 📚 Books | Books | title + author | |
 | 7 | 📺 TV | TV Shows | title + startYear | |
@@ -41,8 +41,9 @@ commit. Nothing is deployed without TJ.
 | 13 | 🎬 Finish horror (+17 collections) | Movies | title + year | |
 | done | **Metadata keys in the app** (goalsetters `f197e03d`; catalog half in `IDENTITY.md`) | n/a | n/a | done 2026-10-26 |
 
-Movies already counts as category 1 of 12, so the launch bar is reached at step 11. Steps 12 and 13
-deepen movies and can move earlier whenever TJ wants.
+Five categories are built (Movies, Mountains, Video Games, Countries, States & Provinces), so
+the launch bar of 12 is reached at step 10. Steps 12 and 13 deepen movies and can move
+earlier whenever TJ wants.
 
 **Step 1's tooling:** the site and tools are written for one domain (films):
 - `build-site.mjs` hard-codes "film", `year`, `director` and the horror landing copy.
@@ -75,11 +76,19 @@ Quick win → core → long haul. Counts marked ~ are targets; the others are fi
 - **The Big Multiplayer Games** (~18)
 - **Modern Essentials, 2015 to now** (~40)
 
-### 🏞️ National Parks (step 3)
+### 🏞️ National Parks (step 4)
 - **Utah's Mighty 5** · **Alaska's 8** · **California's 9** · **All 63 National Parks**
 
-### 🗺️ States & Provinces (step 4)
-- **New England** (6) · **The 7 Continents** · **Canada's Provinces & Territories** (13) · **All 50 States**
+### 🗺️ States & Provinces + 🌍 Countries (step 3, done)
+- States: **The Four Corners** (4) · **New England** (6) · **The Original 13** (ordered) · the four
+  **Census regions** · **The Lower 48** · **All 50 States** · **The Maritimes** (3) · **Canada's 13**
+- Countries: **Benelux**, **Baltics**, **Nordics**, **Europe's Microstates**, **Central America**,
+  **The Caribbean**, **Southeast Asia**, **The EU**, six **continents**, **Every Country** (195, the UN's)
+- **Not yet: The 7 Continents.** A continent has no `country`, and both place domains require
+  it. It needs its own small domain (identity: title) or an app-side answer for a place with
+  no country. "Australia" the continent vs the country is the clash to design for.
+- Every item carries `state` or `country` codes, which is what the app's planned "regions"
+  map fills in by (goalsetters `designs/collection-visuals.md`). No `display` is declared yet.
 
 ### 🏟️ Ballparks & Arenas (step 5)
 - **Historic Ballparks** (~5: Fenway, Wrigley, Dodger Stadium…)
@@ -129,7 +138,6 @@ name clashes, can be built. Mountains' Northeast 67, Northeast 115 and Catskills
 - **Cascade Volcanoes**: Mount Adams and Mount Jefferson are also NH 48 peaks
 - **Colorado 14ers**: Mount Lincoln is also an NH 48 peak
 - **Washington's Bulger List**, **New England Hundred Highest**: same risk, unchecked
-- **Countries of the World**: Georgia the country vs Georgia the state
 - **The Office** and other US/UK remakes in TV
 
 ## Before promoting the catalog
@@ -138,6 +146,16 @@ name clashes, can be built. Mountains' Northeast 67, Northeast 115 and Catskills
 - **Waitlist alerts by email**, once the domain is on Cloudflare. A push through ntfy.sh is
   built into the activity Worker but can't work from there: ntfy's free tier limits by IP,
   and Workers share theirs (`429 daily message quota reached`).
+
+## Ideas from TJ, not scheduled yet
+
+- **Golf courses**: Golf Digest's or Golf's top-100 lists are editorial; an authority-backed
+  start is **the major championship venues** (the Open rota, Augusta). Needs a Library type: ask first.
+- **Native plants and trees to identify**, by region: "the trees of New England", state trees.
+  A new kind of item (to identify, not to visit), so a new Library type. The natural key is
+  the **scientific name** (*Acer saccharum*), which never collides the way common names do
+  ("sugar maple", "rock maple"); common names go in `aka`.
+- Sports stadiums are step 5.
 
 ## Later, not scheduled
 

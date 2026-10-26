@@ -1,0 +1,36 @@
+{
+  "domain": "states",
+  "label": "States & Provinces",
+  "icon": "🗺️",
+  "order": 5,
+  "libraryType": "Destinations",
+  "refPrefix": "st",
+  "identity": ["title", "country"],
+  "noun": "place",
+  "nouns": "places",
+  "done": "visited",
+  "blurb": "Fill in the map: all 50 states, the Lower 48 by road, the Original 13, and Canada's provinces and territories.",
+  "note": "{capital} · since {year}",
+  "span": { "field": "year" },
+  "schemaType": "AdministrativeArea",
+  "featured": "all-50-states",
+  "shelf": ["four-corners", "new-england", "all-50-states", "canada-provinces-territories"],
+  "groups": ["us", "canada"],
+  "wikidata": {
+    "classes": ["Q35657", "Q11828004", "Q9357527"],
+    "checks": [
+      { "field": "state", "type": "code", "prop": "P300", "format": "{country}-{state}" },
+      { "field": "capital", "type": "label", "prop": "P36" },
+      { "field": "year", "type": "year", "prop": "P571", "tol": 0 }
+    ]
+  },
+  "fields": {
+    "id": "stable slug, name + country (never changes once sent)",
+    "title": "the name in English; other names of the place itself go in aka (never state names or codes)",
+    "state": "the subdivision code within its country (NH, BC): what a map fills in by",
+    "country": "ISO 3166-1 alpha-2 of the country it's in (identity): US, CA",
+    "capital": "the capital city (description, not identity)",
+    "year": "the year it became a state (the Original 13: ratified the Constitution) or joined Canada",
+    "aka": "other names a task might use"
+  }
+}

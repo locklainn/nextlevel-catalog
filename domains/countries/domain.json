@@ -1,0 +1,30 @@
+{
+  "domain": "countries",
+  "label": "Countries",
+  "icon": "🌍",
+  "order": 4,
+  "libraryType": "Destinations",
+  "refPrefix": "co",
+  "identity": ["title", "country"],
+  "noun": "country",
+  "nouns": "countries",
+  "done": "visited",
+  "blurb": "The list travellers brag about: every country in the world, continent by continent, and the quick trips that tick off three at once.",
+  "note": "{continent}",
+  "schemaType": "Country",
+  "featured": "every-country",
+  "shelf": ["benelux", "nordic-countries", "european-union", "every-country"],
+  "groups": ["world", "regions", "continents"],
+  "wikidata": {
+    "checks": [
+      { "field": "country", "type": "code", "prop": "P297" }
+    ]
+  },
+  "fields": {
+    "id": "stable slug of the name (never changes once sent)",
+    "title": "the name people use in English: Wikidata's label, unless that is the formal name (China, not People's Republic of China); other names go in aka",
+    "country": "its own ISO 3166-1 alpha-2 code (identity); Kosovo uses the common XK",
+    "continent": "Africa, Asia, Europe, North America, South America or Oceania, following the UN's M49 regions (description, not identity)",
+    "aka": "other names a task might use"
+  }
+}

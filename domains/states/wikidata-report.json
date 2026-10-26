@@ -1,0 +1,325 @@
+[
+ {
+  "id": "alabama-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q173"
+ },
+ {
+  "id": "alaska-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q797"
+ },
+ {
+  "id": "arizona-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q816"
+ },
+ {
+  "id": "arkansas-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1612"
+ },
+ {
+  "id": "california-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q99"
+ },
+ {
+  "id": "colorado-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1261"
+ },
+ {
+  "id": "connecticut-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q779"
+ },
+ {
+  "id": "delaware-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1393"
+ },
+ {
+  "id": "florida-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q812"
+ },
+ {
+  "id": "georgia-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1428"
+ },
+ {
+  "id": "hawaii-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q782"
+ },
+ {
+  "id": "idaho-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1221"
+ },
+ {
+  "id": "illinois-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1204"
+ },
+ {
+  "id": "indiana-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1415"
+ },
+ {
+  "id": "iowa-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1546"
+ },
+ {
+  "id": "kansas-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1558"
+ },
+ {
+  "id": "kentucky-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1603"
+ },
+ {
+  "id": "louisiana-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1588"
+ },
+ {
+  "id": "maine-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q724"
+ },
+ {
+  "id": "maryland-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1391"
+ },
+ {
+  "id": "massachusetts-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q771"
+ },
+ {
+  "id": "michigan-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1166"
+ },
+ {
+  "id": "minnesota-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1527"
+ },
+ {
+  "id": "mississippi-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1494"
+ },
+ {
+  "id": "missouri-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1581"
+ },
+ {
+  "id": "montana-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1212"
+ },
+ {
+  "id": "nebraska-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1553"
+ },
+ {
+  "id": "nevada-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1227"
+ },
+ {
+  "id": "new-hampshire-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q759"
+ },
+ {
+  "id": "new-jersey-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1408"
+ },
+ {
+  "id": "new-mexico-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1522"
+ },
+ {
+  "id": "new-york-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1384"
+ },
+ {
+  "id": "north-carolina-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1454"
+ },
+ {
+  "id": "north-dakota-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1207"
+ },
+ {
+  "id": "ohio-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1397"
+ },
+ {
+  "id": "oklahoma-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1649"
+ },
+ {
+  "id": "oregon-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q824"
+ },
+ {
+  "id": "pennsylvania-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1400"
+ },
+ {
+  "id": "rhode-island-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1387"
+ },
+ {
+  "id": "south-carolina-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1456"
+ },
+ {
+  "id": "south-dakota-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1211"
+ },
+ {
+  "id": "tennessee-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1509"
+ },
+ {
+  "id": "texas-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1439"
+ },
+ {
+  "id": "utah-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q829"
+ },
+ {
+  "id": "vermont-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q16551"
+ },
+ {
+  "id": "virginia-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1370"
+ },
+ {
+  "id": "washington-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1223"
+ },
+ {
+  "id": "west-virginia-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1371"
+ },
+ {
+  "id": "wisconsin-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1537"
+ },
+ {
+  "id": "wyoming-us",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1214"
+ },
+ {
+  "id": "alberta-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1951"
+ },
+ {
+  "id": "british-columbia-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1973"
+ },
+ {
+  "id": "manitoba-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1948"
+ },
+ {
+  "id": "new-brunswick-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1965"
+ },
+ {
+  "id": "newfoundland-and-labrador-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q2003"
+ },
+ {
+  "id": "northwest-territories-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q2007"
+ },
+ {
+  "id": "nova-scotia-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1952"
+ },
+ {
+  "id": "nunavut-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q2023"
+ },
+ {
+  "id": "ontario-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1904"
+ },
+ {
+  "id": "prince-edward-island-ca",
+  "verdict": "year",
+  "ours": 1873,
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q1978",
+    "year": [
+     1769
+    ]
+   }
+  ]
+ },
+ {
+  "id": "quebec-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q176"
+ },
+ {
+  "id": "saskatchewan-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1989"
+ },
+ {
+  "id": "yukon-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q2009"
+ }
+]

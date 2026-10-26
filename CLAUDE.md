@@ -3,7 +3,8 @@
 Read `README.md` first for the layout, the API and the commands. This file is the
 rules: how to add to the catalog without breaking the app that reads it. How the app
 tells items apart (`name` + `keys` + `aka`, and what the API must send) is `IDENTITY.md`.
-What to build next, in order, is `ROADMAP.md`.
+What to build next, in order, is `ROADMAP.md`. How a collection asks the app for a map or a
+skyline instead of a list (`display`, shape files, coordinates) is `VISUALS.md`.
 
 **What this repo is now.** The public catalog at https://nextlevel-collections.pages.dev.
 The NextLevel app downloads `/api/v1/` and lets the user **follow** a collection as a
@@ -83,8 +84,8 @@ node tools/catalog.mjs review movies horror         # regenerates horror.md; rea
 node tools/build-site.mjs && node tools/site-check.mjs   # must end with 0 failed
 ```
 
-`validate` also lists "pairs the app would flag as possible duplicates" (2 today: La
-Llorona ~ The Curse of La Llorona, same year; Hausu's alternate title "House" ~ His House). Those are fine: the app asks the user Same/Separate. Only add
+`validate` also lists "pairs the app would flag as possible duplicates" (3 today: La
+Llorona ~ The Curse of La Llorona, same year; Hausu's alternate title "House" ~ His House; Virginia ~ West Virginia). Those are fine: the app asks the user Same/Separate. Only add
 to that list knowingly. Anything `verify-wikidata` can't match, check by hand and record in
 `domains/<domain>/FACT-CHECK.md`, as the 13 already there are. Then commit. Commit
 messages say what changed for a reader of the catalog ("Add Giallo: 14 films"), not the mechanics.
@@ -159,7 +160,7 @@ title here is something the app may match a user's task against.
 
 ## Where it stands (2026-10-26)
 
-- **Three domains.** `movies`: one group, `horror`, 317 films in 30 collections (the canon,
+- **Five domains.** `movies`: one group, `horror`, 317 films in 30 collections (the canon,
   six eras, thirteen subgenres, ten franchises in viewing order). `mountains`: 205 peaks in
   8 collections over three groups: Northeast (NE state high points, Catskill 3500, NH 48,
   Adirondack 46, NE 67, NE 115), West (California 14ers), Across the US (state high points).
@@ -167,10 +168,18 @@ title here is something the app may match a user's task against.
   106 games in 7 collections (Finish in a Weekend, Indie Darlings, Horror Games, Game of the
   Year winners, the Modern Canon, FromSoftware in order, The Big Online Games); its rules
   (year = 1.0 release, remakes are their own items) are in `domains/games/FACT-CHECK.md`.
+  `countries`: 197 in 15 collections (the UN's 195 as Every Country, plus Taiwan and Kosovo on
+  their continents; six continents; regions from Benelux to the EU). `states`: the 50 states
+  and Canada's 13 in 11 collections (Four Corners to All 50, Census regions, the Original 13 in
+  ratification order). Both are Destinations, keyed title + country, so Georgia the state and
+  Georgia the country stay apart; their rules are in each `FACT-CHECK.md`.
 - **The plan is `ROADMAP.md`**: 12 categories before the catalog is promoted, built one
-  step at a time, TJ confirming each. Next: National Parks.
-- **Live** at https://nextlevel-collections.pages.dev is the horror-only site of 2026-10-25.
-  The category hub, Mountains and Video Games are built in `dist/` but **not deployed**; that's TJ's call.
+  step at a time, TJ confirming each. Next: National Parks. The 7 Continents is not built
+  (a continent has no `country`; see ROADMAP).
+- **Live** at https://nextlevel-collections.pages.dev: the category hub with Movies, Mountains
+  and Video Games (deployed 2026-10-26). Countries and States are built, not deployed.
+- **The waitlist** (README): sign-ups are stored, nobody is notified. An ntfy push is in the
+  activity Worker but ntfy rejects Workers (shared IPs); alerts wait for a real domain and email.
 - **Open, not this repo's data:** link-preview images (og:image) and a custom domain for
   the site.
 - **Repo:** public at https://github.com/locklainn/nextlevel-catalog (`main`). Push only

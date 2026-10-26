@@ -1,0 +1,987 @@
+[
+ {
+  "id": "afghanistan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q889"
+ },
+ {
+  "id": "albania",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q222"
+ },
+ {
+  "id": "algeria",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q262"
+ },
+ {
+  "id": "andorra",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q228"
+ },
+ {
+  "id": "angola",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q916"
+ },
+ {
+  "id": "antigua-and-barbuda",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q781"
+ },
+ {
+  "id": "argentina",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q414"
+ },
+ {
+  "id": "armenia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q399"
+ },
+ {
+  "id": "australia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q408"
+ },
+ {
+  "id": "austria",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q40"
+ },
+ {
+  "id": "azerbaijan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q227"
+ },
+ {
+  "id": "bahrain",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q398"
+ },
+ {
+  "id": "bangladesh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q902"
+ },
+ {
+  "id": "barbados",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q244"
+ },
+ {
+  "id": "belarus",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q184"
+ },
+ {
+  "id": "belgium",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q31"
+ },
+ {
+  "id": "belize",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q242"
+ },
+ {
+  "id": "benin",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q962"
+ },
+ {
+  "id": "bhutan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q917"
+ },
+ {
+  "id": "bolivia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q750"
+ },
+ {
+  "id": "bosnia-and-herzegovina",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q225"
+ },
+ {
+  "id": "botswana",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q963"
+ },
+ {
+  "id": "brazil",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q155"
+ },
+ {
+  "id": "brunei",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q921"
+ },
+ {
+  "id": "bulgaria",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q219"
+ },
+ {
+  "id": "burkina-faso",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q965"
+ },
+ {
+  "id": "burundi",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q967"
+ },
+ {
+  "id": "cambodia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q424"
+ },
+ {
+  "id": "cameroon",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1009"
+ },
+ {
+  "id": "canada",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q16"
+ },
+ {
+  "id": "cape-verde",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1011"
+ },
+ {
+  "id": "central-african-republic",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q929"
+ },
+ {
+  "id": "chad",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q657"
+ },
+ {
+  "id": "chile",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q298"
+ },
+ {
+  "id": "china",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q148"
+ },
+ {
+  "id": "colombia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q739"
+ },
+ {
+  "id": "comoros",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q970"
+ },
+ {
+  "id": "costa-rica",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q800"
+ },
+ {
+  "id": "croatia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q224"
+ },
+ {
+  "id": "cuba",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q241"
+ },
+ {
+  "id": "cyprus",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q229"
+ },
+ {
+  "id": "czech-republic",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q213"
+ },
+ {
+  "id": "democratic-republic-of-the-congo",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q974"
+ },
+ {
+  "id": "denmark",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q35"
+ },
+ {
+  "id": "djibouti",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q977"
+ },
+ {
+  "id": "dominica",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q784"
+ },
+ {
+  "id": "dominican-republic",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q786"
+ },
+ {
+  "id": "ecuador",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q736"
+ },
+ {
+  "id": "egypt",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q79"
+ },
+ {
+  "id": "el-salvador",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q792"
+ },
+ {
+  "id": "equatorial-guinea",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q983"
+ },
+ {
+  "id": "eritrea",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q986"
+ },
+ {
+  "id": "estonia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q191"
+ },
+ {
+  "id": "eswatini",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1050"
+ },
+ {
+  "id": "ethiopia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q115"
+ },
+ {
+  "id": "fiji",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q712"
+ },
+ {
+  "id": "finland",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q33"
+ },
+ {
+  "id": "france",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q142"
+ },
+ {
+  "id": "gabon",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1000"
+ },
+ {
+  "id": "georgia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q230"
+ },
+ {
+  "id": "germany",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q183"
+ },
+ {
+  "id": "ghana",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q117"
+ },
+ {
+  "id": "greece",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q41"
+ },
+ {
+  "id": "grenada",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q769"
+ },
+ {
+  "id": "guatemala",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q774"
+ },
+ {
+  "id": "guinea",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1006"
+ },
+ {
+  "id": "guinea-bissau",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1007"
+ },
+ {
+  "id": "guyana",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q734"
+ },
+ {
+  "id": "haiti",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q790"
+ },
+ {
+  "id": "honduras",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q783"
+ },
+ {
+  "id": "hungary",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q28"
+ },
+ {
+  "id": "iceland",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q189"
+ },
+ {
+  "id": "india",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q668"
+ },
+ {
+  "id": "indonesia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q252"
+ },
+ {
+  "id": "iran",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q794"
+ },
+ {
+  "id": "iraq",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q796"
+ },
+ {
+  "id": "ireland",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q27"
+ },
+ {
+  "id": "israel",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q801"
+ },
+ {
+  "id": "italy",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q38"
+ },
+ {
+  "id": "ivory-coast",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1008"
+ },
+ {
+  "id": "jamaica",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q766"
+ },
+ {
+  "id": "japan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q17"
+ },
+ {
+  "id": "jordan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q810"
+ },
+ {
+  "id": "kazakhstan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q232"
+ },
+ {
+  "id": "kenya",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q114"
+ },
+ {
+  "id": "kiribati",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q710"
+ },
+ {
+  "id": "kosovo",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1246"
+ },
+ {
+  "id": "kuwait",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q817"
+ },
+ {
+  "id": "kyrgyzstan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q813"
+ },
+ {
+  "id": "laos",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q819"
+ },
+ {
+  "id": "latvia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q211"
+ },
+ {
+  "id": "lebanon",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q822"
+ },
+ {
+  "id": "lesotho",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1013"
+ },
+ {
+  "id": "liberia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1014"
+ },
+ {
+  "id": "libya",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1016"
+ },
+ {
+  "id": "liechtenstein",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q347"
+ },
+ {
+  "id": "lithuania",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q37"
+ },
+ {
+  "id": "luxembourg",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q32"
+ },
+ {
+  "id": "madagascar",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1019"
+ },
+ {
+  "id": "malawi",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1020"
+ },
+ {
+  "id": "malaysia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q833"
+ },
+ {
+  "id": "maldives",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q826"
+ },
+ {
+  "id": "mali",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q912"
+ },
+ {
+  "id": "malta",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q233"
+ },
+ {
+  "id": "marshall-islands",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q709"
+ },
+ {
+  "id": "mauritania",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1025"
+ },
+ {
+  "id": "mauritius",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1027"
+ },
+ {
+  "id": "mexico",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q96"
+ },
+ {
+  "id": "micronesia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q702"
+ },
+ {
+  "id": "moldova",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q217"
+ },
+ {
+  "id": "monaco",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q235"
+ },
+ {
+  "id": "mongolia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q711"
+ },
+ {
+  "id": "montenegro",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q236"
+ },
+ {
+  "id": "morocco",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1028"
+ },
+ {
+  "id": "mozambique",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1029"
+ },
+ {
+  "id": "myanmar",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q836"
+ },
+ {
+  "id": "namibia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1030"
+ },
+ {
+  "id": "nauru",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q697"
+ },
+ {
+  "id": "nepal",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q837"
+ },
+ {
+  "id": "netherlands",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q29999"
+ },
+ {
+  "id": "new-zealand",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q664"
+ },
+ {
+  "id": "nicaragua",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q811"
+ },
+ {
+  "id": "niger",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1032"
+ },
+ {
+  "id": "nigeria",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1033"
+ },
+ {
+  "id": "north-korea",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q423"
+ },
+ {
+  "id": "north-macedonia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q221"
+ },
+ {
+  "id": "norway",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q20"
+ },
+ {
+  "id": "oman",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q842"
+ },
+ {
+  "id": "pakistan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q843"
+ },
+ {
+  "id": "palau",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q695"
+ },
+ {
+  "id": "palestine",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q219060"
+ },
+ {
+  "id": "panama",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q804"
+ },
+ {
+  "id": "papua-new-guinea",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q691"
+ },
+ {
+  "id": "paraguay",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q733"
+ },
+ {
+  "id": "peru",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q419"
+ },
+ {
+  "id": "philippines",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q928"
+ },
+ {
+  "id": "poland",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q36"
+ },
+ {
+  "id": "portugal",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q45"
+ },
+ {
+  "id": "qatar",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q846"
+ },
+ {
+  "id": "republic-of-the-congo",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q971"
+ },
+ {
+  "id": "romania",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q218"
+ },
+ {
+  "id": "russia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q159"
+ },
+ {
+  "id": "rwanda",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1037"
+ },
+ {
+  "id": "saint-kitts-and-nevis",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q763"
+ },
+ {
+  "id": "saint-lucia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q760"
+ },
+ {
+  "id": "saint-vincent-and-the-grenadines",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q757"
+ },
+ {
+  "id": "samoa",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q683"
+ },
+ {
+  "id": "san-marino",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q238"
+ },
+ {
+  "id": "sao-tome-and-principe",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1039"
+ },
+ {
+  "id": "saudi-arabia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q851"
+ },
+ {
+  "id": "senegal",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1041"
+ },
+ {
+  "id": "serbia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q403"
+ },
+ {
+  "id": "seychelles",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1042"
+ },
+ {
+  "id": "sierra-leone",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1044"
+ },
+ {
+  "id": "singapore",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q334"
+ },
+ {
+  "id": "slovakia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q214"
+ },
+ {
+  "id": "slovenia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q215"
+ },
+ {
+  "id": "solomon-islands",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q685"
+ },
+ {
+  "id": "somalia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1045"
+ },
+ {
+  "id": "south-africa",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q258"
+ },
+ {
+  "id": "south-korea",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q884"
+ },
+ {
+  "id": "south-sudan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q958"
+ },
+ {
+  "id": "spain",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q29"
+ },
+ {
+  "id": "sri-lanka",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q854"
+ },
+ {
+  "id": "sudan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1049"
+ },
+ {
+  "id": "suriname",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q730"
+ },
+ {
+  "id": "sweden",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q34"
+ },
+ {
+  "id": "switzerland",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q39"
+ },
+ {
+  "id": "syria",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q858"
+ },
+ {
+  "id": "taiwan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q865"
+ },
+ {
+  "id": "tajikistan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q863"
+ },
+ {
+  "id": "tanzania",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q924"
+ },
+ {
+  "id": "thailand",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q869"
+ },
+ {
+  "id": "the-bahamas",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q778"
+ },
+ {
+  "id": "the-gambia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1005"
+ },
+ {
+  "id": "timor-leste",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q574"
+ },
+ {
+  "id": "togo",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q945"
+ },
+ {
+  "id": "tonga",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q678"
+ },
+ {
+  "id": "trinidad-and-tobago",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q754"
+ },
+ {
+  "id": "tunisia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q948"
+ },
+ {
+  "id": "turkey",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q43"
+ },
+ {
+  "id": "turkmenistan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q874"
+ },
+ {
+  "id": "tuvalu",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q672"
+ },
+ {
+  "id": "uganda",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1036"
+ },
+ {
+  "id": "ukraine",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q212"
+ },
+ {
+  "id": "united-arab-emirates",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q878"
+ },
+ {
+  "id": "united-kingdom",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q145"
+ },
+ {
+  "id": "united-states",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q30"
+ },
+ {
+  "id": "uruguay",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q77"
+ },
+ {
+  "id": "uzbekistan",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q265"
+ },
+ {
+  "id": "vanuatu",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q686"
+ },
+ {
+  "id": "vatican-city",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q237"
+ },
+ {
+  "id": "venezuela",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q717"
+ },
+ {
+  "id": "vietnam",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q881"
+ },
+ {
+  "id": "yemen",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q805"
+ },
+ {
+  "id": "zambia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q953"
+ },
+ {
+  "id": "zimbabwe",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q954"
+ }
+]

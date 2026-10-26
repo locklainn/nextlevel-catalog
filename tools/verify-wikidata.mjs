@@ -17,6 +17,9 @@
 //     org       a company property; matched on any distinctive word (not "Studio", "Games")
 //     quantity  a number in feet against the property's value in metres, within ±tol feet
 //     usState   a two-letter state code against the ISO code of any containing state
+//     code      the entity's own code property, exactly (P297 country code, P300 "US-NH");
+//               `format` builds ours from several fields: "{country}-{state}"
+//     label     a linked entity's English label, exactly, ignoring accents and "St."/"Saint"
 //
 // Verdicts: ok · <field> (an entity by that title exists, but fails this check) ·
 // notfound (no English label or alias matches; check by hand).
@@ -39,6 +42,7 @@ const FT = 0.3048;
 // Development" share "nintendo"; "Team Cherry" and "Team Asobi" share nothing.
 const GENERIC = new Set(['team', 'studio', 'studios', 'games', 'game', 'entertainment', 'interactive', 'inc', 'llc', 'ltd', 'the', 'digital', 'productions', 'software', 'co', 'and', 'company']);
 const orgWords = (s) => (s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').split(/[^a-z0-9]+/).filter((w) => w && !GENERIC.has(w));
+const plain = (s) => (s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/\bst\.?(?= )/g, 'saint').replace(/[^a-z0-9]+/g, ' ').trim();
 const lastNames = (s) => (s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '')
   .split(/\s*(?:&|,| and )\s*/).map((n) => n.trim().split(/\s+/).pop()).filter(Boolean);
 
@@ -49,6 +53,8 @@ const clause = (c, i) => ({
   org: `OPTIONAL { ?x wdt:${c.prop} ?p${i}. ?p${i} rdfs:label ?c${i}. FILTER(LANG(?c${i}) IN ("en", "mul")) }`,
   quantity: `OPTIONAL { ?x p:${c.prop}/psn:${c.prop}/wikibase:quantityAmount ?c${i}. }`,
   usState: `OPTIONAL { ?x wdt:P131+ ?s${i}. ?s${i} wdt:P300 ?c${i}. FILTER(STRSTARTS(?c${i}, "US-")) }`,
+  code: `OPTIONAL { ?x wdt:${c.prop} ?c${i}. }`,
+  label: `OPTIONAL { ?x wdt:${c.prop} ?p${i}. ?p${i} rdfs:label ?c${i}. FILTER(LANG(?c${i}) IN ("en", "mul")) }`,
 }[c.type]);
 const valueOf = (c, b) => ({
   year: () => +b.value.slice(0, 4),
@@ -56,6 +62,8 @@ const valueOf = (c, b) => ({
   org: () => b.value,
   quantity: () => +b.value / FT,          // metres → feet
   usState: () => b.value.slice(3),
+  code: () => b.value,
+  label: () => b.value,
 }[c.type])();
 const passes = (c, ours, theirs) => ({
   year: () => theirs.some((y) => Math.abs(y - ours) <= (c.tol ?? 1)),
@@ -63,7 +71,11 @@ const passes = (c, ours, theirs) => ({
   org: () => theirs.some((d) => orgWords(d).some((w) => orgWords(ours).includes(w))),
   quantity: () => theirs.some((v) => Math.abs(v - ours) <= (c.tol ?? 100)),
   usState: () => theirs.includes(ours),
+  code: () => theirs.includes(ours),
+  label: () => theirs.some((d) => plain(d) === plain(ours)),
 }[c.type])();
+// Our value for a check: the field, or a `format` built from several fields.
+const oursFor = (c, it) => (c.format ? c.format.replace(/\{(\w+)\}/g, (_, k) => it[k] ?? '') : it[c.field]);
 const show = (c, v) => (c.type === 'quantity' ? Math.round(v) : v);
 
 async function query(titles) {
@@ -111,7 +123,7 @@ const report = items.map((it) => {
   // unchecked rather than wrong.
   const unchecked = [];
   for (const [k, c] of checks.entries()) {
-    const near = cands.filter(([, e]) => passes(c, it[c.field], [...e[k]]));
+    const near = cands.filter(([, e]) => passes(c, oursFor(c, it), [...e[k]]));
     const silent = cands.filter(([, e]) => !e[k].size);
     if (near.length) { cands = near; continue; }
     if (silent.length) { cands = silent; unchecked.push(c.field); continue; }

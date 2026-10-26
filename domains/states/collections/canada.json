@@ -1,0 +1,39 @@
+{
+  "group": "Canada",
+  "collections": [
+    {
+      "id": "the-maritimes",
+      "title": "The Maritimes",
+      "icon": "🦞",
+      "description": "New Brunswick, Nova Scotia and Prince Edward Island: three provinces on one stretch of coast, a single trip from end to end.",
+      "ordered": false,
+      "members": [
+        "new-brunswick-ca",
+        "nova-scotia-ca",
+        "prince-edward-island-ca"
+      ]
+    },
+    {
+      "id": "canada-provinces-territories",
+      "title": "Canada's Provinces & Territories",
+      "icon": "🍁",
+      "description": "All ten provinces and three territories. The territories are the hard part: no road reaches Nunavut from the rest of Canada, so it's a flight.",
+      "ordered": false,
+      "members": [
+        "alberta-ca",
+        "british-columbia-ca",
+        "manitoba-ca",
+        "new-brunswick-ca",
+        "newfoundland-and-labrador-ca",
+        "northwest-territories-ca",
+        "nova-scotia-ca",
+        "nunavut-ca",
+        "ontario-ca",
+        "prince-edward-island-ca",
+        "quebec-ca",
+        "saskatchewan-ca",
+        "yukon-ca"
+      ]
+    }
+  ]
+}
