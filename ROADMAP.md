@@ -132,6 +132,13 @@ name clashes, can be built. Mountains' Northeast 67, Northeast 115 and Catskills
 - **Countries of the World**: Georgia the country vs Georgia the state
 - **The Office** and other US/UK remakes in TV
 
+## Before promoting the catalog
+
+- **A real domain** for the site (it is on `pages.dev` today).
+- **Waitlist alerts by email**, once the domain is on Cloudflare. A push through ntfy.sh is
+  built into the activity Worker but can't work from there: ntfy's free tier limits by IP,
+  and Workers share theirs (`429 daily message quota reached`).
+
 ## Later, not scheduled
 
 Movies: sci-fi, Studio Ghibli, Pixar, MCU and Star Wars in viewing order. Albums (Grammy
