@@ -20,9 +20,17 @@ Add a one-line pointer to this file from `CLAUDE.md` when you next commit it.
 4. **The API changes additively** (expand, then contract). Old app builds read `title`;
    new ones read `name` + `keys`. Nothing has to land in a particular order.
 5. **Border cases:** a place on a state line takes its **summit's** (or main entrance's)
-   state. State and country values are **2-letter codes** (`NH`, `OR`; `CA` for Canada
-   outside the US). The app recognises a code in a task only when it's set off, as in
-   "(OR)" or ", OR", because a bare "or" or "me" is an English word.
+   state. **`state` is the subdivision code within its country** (`NH`, `OR`; `BC` for
+   British Columbia). **Never put a country code in `state`.** (An earlier version of this
+   file said "`CA` for Canada", but `CA` is also California, so a Canadian peak would have
+   matched the 12 California ones.) A place outside the US carries **`country`** (ISO
+   3166-1 alpha-2: `CA`, `MX`). The first time a domain gets a non-US item, add `country`
+   to its `identity` and give **every** item one, US ones `"US"` included, so `validate`
+   keeps requiring it. Adding a key field is safe for the app.
+   The app recognises a state code in a task only when it's set off, as in "(OR)" or ", OR",
+   because a bare "or" or "me" is an English word. It recognises a **country only by its
+   name** ("in Canada"), never by its code, because country and state codes collide (CA,
+   DE, IN, GA, CO, MA, ME…). So "(CA)" in a task always means California.
 6. **Alternate titles go in `aka`** and are matched like names. So they must not collide:
    *Tenebrae* was released in the US as *Unsane*, and Soderbergh's *Unsane* (2018) is a
    different film.
@@ -105,5 +113,8 @@ them straight from the API.
 
 - App phases C and D (showing the qualifier line, migrating "(1978)" titles, dropping
   them from `title`) happen in goalsetters.
-- Full state names in task text ("in New Hampshire") need an alias table. That gets
-  built with the mountains domain, on the app side.
+- Place names in task text: built on the app side (2026-10-26). "in New Hampshire", "in
+  British Columbia" and "in Canada" are understood from the codes, so **don't put state
+  names in `aka`**: `aka` is for other names of the thing itself. The app knows US states
+  and Canadian provinces; a domain with places in another country (Australia, where `WA`
+  is Western Australia) needs that country's table added in the app first. Tell TJ.
