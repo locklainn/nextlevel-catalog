@@ -1,7 +1,9 @@
 # NextLevel Catalog: working here as an agent
 
 Read `README.md` first for the layout, the API and the commands. This file is the
-rules: how to add to the catalog without breaking the app that reads it.
+rules: how to add to the catalog without breaking the app that reads it. How the app
+tells items apart (`name` + `keys` + `aka`, and what the API must send) is `IDENTITY.md`.
+What to build next, in order, is `ROADMAP.md`.
 
 **What this repo is now.** The public catalog at https://nextlevel-collections.pages.dev.
 The NextLevel app downloads `/api/v1/` and lets the user **follow** a collection as a
@@ -62,6 +64,13 @@ already has it or does it. So the job here is: curate the data, rebuild the site
   that could fit. The existing ones run 5–52 (franchises small, eras and the canon large). A collection that is a subset of another
   with no point of view of its own shouldn't exist.
 - **Every item must be in at least one collection.** None is orphaned today; keep it so.
+- **Metadata check, before adding items.** Ask: could two items in this domain share a
+  title, now or with the next list (a remake, a second Mount Washington, an album named
+  after its band)? If the domain's `identity` fields in `domain.json` wouldn't separate
+  them, propose a new key field to TJ before adding the items. `validate` fails when two
+  items match on every identity field. Adding a key field is safe; renaming or removing
+  one is not. The title stays the bare name; key fields carry the rest (the app-side
+  design lives in goalsetters).
 - Changing a collection's title, description, icon or members changes its `version`,
   and the app re-syncs followers on that. Expected. Just don't churn it for nothing.
 
@@ -74,8 +83,8 @@ node tools/catalog.mjs review movies horror         # regenerates horror.md; rea
 node tools/build-site.mjs && node tools/site-check.mjs   # must end with 0 failed
 ```
 
-`validate` also lists "pairs the app would flag as possible duplicates" (6 today, e.g.
-Psycho ~ American Psycho). Those are fine: the app asks the user Same/Separate. Only add
+`validate` also lists "pairs the app would flag as possible duplicates" (2 today: La
+Llorona ~ The Curse of La Llorona, same year; Hausu's alternate title "House" ~ His House). Those are fine: the app asks the user Same/Separate. Only add
 to that list knowingly. Anything `verify-wikidata` can't match, check by hand and record in
 `domains/<domain>/FACT-CHECK.md`, as the 13 already there are. Then commit. Commit
 messages say what changed for a reader of the catalog ("Add Giallo: 14 films"), not the mechanics.
@@ -110,7 +119,10 @@ refreshes it at most every 12 h (sooner after a Follow). Check live:
 ## A new domain (mountains, books, beers…)
 
 Make `domains/<domain>/domain.json` with its `libraryType`, which must match a NextLevel
-Library type title exactly ("Mountains"), plus a `refPrefix` and an `identity`. Then
+Library type title exactly ("Mountains"; games is "Video Games"), plus a `refPrefix` and an
+`identity`: the key fields that tell two same-titled items apart (movies: title + year;
+mountains: title + state; books: title + author). Name the ambiguous case they solve
+when you propose them to TJ. Then
 `items.json` and a collections file. The app side matches by `libraryType`. Ask TJ before
 starting one: the site's design and the app's suggestions have only been checked on movies.
 

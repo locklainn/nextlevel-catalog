@@ -13,7 +13,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { compareTitles, titleKey } from './identity.mjs';
+import { compareItems, compareTitles, titleKey } from './identity.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ENDPOINT = process.env.NEXTLEVEL_ENDPOINT || 'https://activity-worker.tj-locklainn.workers.dev';
@@ -35,11 +35,17 @@ function loadDomain(domain) {
   return { dir, meta, items, groups };
 }
 
-// The title an item carries into the app. When two items in a domain are the same
-// title to the app (remakes: Halloween 1978 / 2007 / 2018; "The Evil Dead" and
-// "Evil Dead", since a leading "The" doesn't count), each gets " (year)" so the
-// app never treats them as one thing.
-function libraryTitles(items) {
+// An item's key fields: the domain's identity minus the title ({ year: 1978 }, { state: 'NH' }).
+// The app reads these as `keys`; see IDENTITY.md.
+export function keysFor(meta, it) {
+  return Object.fromEntries((meta.identity || []).filter((f) => f !== 'title' && it[f] != null).map((f) => [f, it[f]]));
+}
+
+// The legacy title, for app builds that predate `keys`. When two items in a domain are
+// the same title to the app (remakes: Halloween 1978 / 2007 / 2018; "The Evil Dead" and
+// "Evil Dead", since a leading "The" doesn't count), each gets its keys in parentheses,
+// " (1978)" or " (NH)", so an older app never treats them as one thing.
+function libraryTitles(items, meta = {}) {
   const byTitle = new Map();
   for (const it of items) {
     const k = titleKey(it.title).core;
@@ -47,7 +53,8 @@ function libraryTitles(items) {
   }
   const out = new Map();
   for (const it of items) {
-    out.set(it.id, byTitle.get(titleKey(it.title).core) > 1 && it.year ? `${it.title} (${it.year})` : it.title);
+    const keys = Object.values(meta.identity ? keysFor(meta, it) : { year: it.year }).filter((v) => v != null);
+    out.set(it.id, byTitle.get(titleKey(it.title).core) > 1 && keys.length ? `${it.title} (${keys.join(', ')})` : it.title);
   }
   return out;
 }
@@ -66,7 +73,7 @@ function validate(domain, { quiet = false } = {}) {
     ids.add(it.id);
     for (const f of d.meta.identity || []) if (it[f] == null) errors.push(`${it.id}: missing identity field "${f}"`);
   }
-  const titles = libraryTitles(d.items);
+  const titles = libraryTitles(d.items, d.meta);
   const used = new Set();
   for (const [g, file] of Object.entries(d.groups)) {
     const cids = new Set();
@@ -84,14 +91,38 @@ function validate(domain, { quiet = false } = {}) {
   }
   for (const it of d.items) if (!used.has(it.id)) warnings.push(`item "${it.id}" is in no collection`);
 
-  // Every pair of items, judged by the app's own matcher. "same" would collapse two
-  // of ours into one Library item; "candidate" means the app would ask.
+  // Two items equal on every identity field are one item as far as the domain can say.
+  // Either it's a duplicate, or the domain needs another key field.
+  const keyOf = (it) => (d.meta.identity || ['title']).map((f) => f === 'title' ? titleKey(it.title).core : String(it[f] ?? '').toLowerCase()).join('|');
+  const byKey = new Map();
+  for (const it of d.items) {
+    const k = keyOf(it);
+    if (byKey.has(k)) errors.push(`"${it.id}" and "${byKey.get(k)}" match on every identity field (${(d.meta.identity || ['title']).join(' + ')}): a duplicate, or domain.json needs another key field`);
+    else byKey.set(k, it.id);
+  }
+
+  // Every pair of items, judged by the app's own matcher: by name + keys as the app reads
+  // them now, and by the legacy title as older builds do. "same" would collapse two of
+  // ours into one Library item; "candidate" means the app would ask.
   const hazards = [];
+  const ident = (it) => ({ title: it.title, keys: keysFor(d.meta, it) });
   for (let i = 0; i < d.items.length; i++) for (let j = i + 1; j < d.items.length; j++) {
     const a = d.items[i], b = d.items[j];
-    const m = compareTitles(titles.get(a.id), titles.get(b.id));
-    if (m.verdict === 'same') errors.push(`the app would treat "${titles.get(a.id)}" (${a.id}) and "${titles.get(b.id)}" (${b.id}) as one item`);
+    const m = compareItems(ident(a), ident(b)), old = compareTitles(titles.get(a.id), titles.get(b.id));
+    if (m.verdict === 'same' || old.verdict === 'same') errors.push(`the app would treat "${titles.get(a.id)}" (${a.id}) and "${titles.get(b.id)}" (${b.id}) as one item${m.verdict === 'same' ? '' : ' (older app builds)'}`);
     else if (m.verdict === 'candidate') hazards.push([a.id, b.id, m.reason]);
+  }
+
+  // Alternate titles are matched like names, without keys (a task rarely states a year):
+  // an aka must not be another item's title or aka. Tenebrae's US title "Unsane" vs
+  // Soderbergh's Unsane (2018) is the case this exists for.
+  const names = d.items.flatMap((it) => [it.title, ...(it.aka || [])].map((t, k) => ({ id: it.id, t, aka: k > 0 })));
+  for (let i = 0; i < names.length; i++) for (let j = i + 1; j < names.length; j++) {
+    const a = names[i], b = names[j];
+    if (a.id === b.id || !(a.aka || b.aka)) continue;
+    const m = compareTitles(a.t, b.t);
+    if (m.verdict === 'same') errors.push(`alternate title "${a.aka ? a.t : b.t}" (${a.aka ? a.id : b.id}) matches "${a.aka ? b.t : a.t}" (${a.aka ? b.id : a.id})`);
+    else if (m.verdict === 'candidate') hazards.push([a.id, b.id, `${m.reason}: "${a.t}" ~ "${b.t}"`]);
   }
 
   if (!quiet) {

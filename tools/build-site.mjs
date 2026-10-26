@@ -34,13 +34,48 @@ const domains = readdirSync(join(ROOT, 'domains')).filter((d) => existsSync(join
   const items = readJSON(join(dir, 'items.json'));
   const groups = readdirSync(join(dir, 'collections')).filter((f) => f.endsWith('.json')).map((f) => ({ key: f.slice(0, -5), ...readJSON(join(dir, 'collections', f)) }));
   return { ...meta, items, groups };
-});
+}).sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+const domainOf = new Map(domains.map((d) => [d.domain, d]));
 
-// The title a thing carries (remakes get their year), same rule as catalog.mjs.
-function displayTitles(items) {
+// Categories on the roadmap that aren't built yet: shown as "next shelves" until they are.
+const PLANNED = [
+  ['mountains', '⛰️', 'Mountains', 'the NH 48, the Adirondack 46, every state high point'],
+  ['games', '🎮', 'Video Games', 'Game of the Year winners, FromSoftware, indie darlings'],
+  ['national-parks', '🏞️', 'National Parks', "all 63, Utah's Mighty 5, Alaska's 8"],
+  ['places', '🗺️', 'States & Provinces', 'all 50 states, the 7 continents'],
+  ['venues', '🏟️', 'Ballparks & Arenas', 'every MLB ballpark, NFL, NBA and NHL'],
+  ['books', '📚', 'Books', 'horror classics, Stephen King, the Hugo winners'],
+  ['tv', '📺', 'TV', 'prestige drama, comedy, the Emmy winners'],
+  ['trails', '🥾', 'Trails & Hikes', 'the great treks and the best day hikes'],
+  ['cocktails', '🍸', 'Cocktails', 'the classics, tiki, every IBA official cocktail'],
+  ['board-games', '🎲', 'Board Games', 'gateway games, co-op, Spiel des Jahres winners'],
+  ['theme-parks', '🎢', 'Theme Parks', 'every Disney park, legendary roller coasters'],
+].filter(([d]) => !domainOf.has(d));
+
+// The line under an item's title ("1978 · John Carpenter"), from the domain's template.
+const noteFor = (d, it) => (d.note || '').replace(/\{(\w+)\}/g, (_, k) => (typeof it[k] === 'number' && k !== 'year' ? it[k].toLocaleString('en-US') : it[k] ?? '')).replace(/^[\s·]+|[\s·]+$/g, '');
+// The range a collection covers on its domain's span field: "1931–2023", "3,500–6,288 ft".
+function spanOf(d, items) {
+  const f = d.span?.field; if (!f) return '';
+  const v = items.map((m) => m[f]).filter((x) => typeof x === 'number');
+  if (!v.length) return '';
+  const fmt = (x) => (f === 'year' ? String(x) : x.toLocaleString('en-US'));
+  const lo = Math.min(...v), hi = Math.max(...v);
+  return (lo === hi ? fmt(lo) : `${fmt(lo)}–${fmt(hi)}`) + (d.span.unit ? ` ${d.span.unit}` : '');
+}
+const nounFor = (d, n) => (n === 1 ? d.noun || 'item' : d.nouns || 'items');
+
+// An item's key fields (the domain's identity minus the title), and the legacy title older
+// app builds read: a name shared within the domain gets its keys, "Halloween (1978)",
+// "Saddleback Mountain (ME)". Same rules as catalog.mjs; see IDENTITY.md.
+const keysFor = (d, it) => Object.fromEntries((d.identity || []).filter((f) => f !== 'title' && it[f] != null).map((f) => [f, it[f]]));
+function displayTitles(d) {
   const n = new Map();
-  for (const it of items) n.set(titleKey(it.title).core, (n.get(titleKey(it.title).core) || 0) + 1);
-  return new Map(items.map((it) => [it.id, n.get(titleKey(it.title).core) > 1 && it.year ? `${it.title} (${it.year})` : it.title]));
+  for (const it of d.items) n.set(titleKey(it.title).core, (n.get(titleKey(it.title).core) || 0) + 1);
+  return new Map(d.items.map((it) => {
+    const keys = Object.values(keysFor(d, it));
+    return [it.id, n.get(titleKey(it.title).core) > 1 && keys.length ? `${it.title} (${keys.join(', ')})` : it.title];
+  }));
 }
 
 // A collection's accent: picked from a palette by a hash of its id, so it never
@@ -51,12 +86,12 @@ const accentOf = (id) => PALETTE[hash(id)[0] % PALETTE.length];
 const versionOf = (obj) => hash(JSON.stringify(obj)).toString('hex').slice(0, 12);
 
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const plural = (n, w) => `${n} ${w}${n === 1 ? '' : 's'}`;
+const plural = (n, w, ws = w + 's') => `${n} ${n === 1 ? w : ws}`;
 
 const catalog = [];   // every collection, flattened
 const itemsById = new Map();   // defId → item + where it appears
 for (const d of domains) {
-  const titles = displayTitles(d.items);
+  const titles = displayTitles(d);
   for (const it of d.items) itemsById.set(`${d.domain}:${it.id}`, { ...it, domain: d.domain, displayTitle: titles.get(it.id), collections: [] });
   for (const g of d.groups) for (const c of g.collections) {
     const members = c.members.map((m) => itemsById.get(`${d.domain}:${m}`));
@@ -70,7 +105,12 @@ const totalItems = itemsById.size;
 
 // ---- API --------------------------------------------------------------------------
 
-const memberJSON = (m) => ({ defId: `${m.domain}:${m.id}`, id: m.id, title: m.displayTitle, year: m.year, director: m.director, ...(m.wikidata ? { wikidata: m.wikidata } : {}) });
+// Every field the domain declares, so a peak carries its state and elevation as a film carries its year.
+// `title` is the legacy title; `name` + `keys` are what the app matches on (IDENTITY.md).
+const memberJSON = (m) => {
+  const { id, title, displayTitle, domain, collections, wikidata, aka, ...fields } = m;
+  return { defId: `${domain}:${id}`, id, title: displayTitle, name: title, keys: keysFor(domainOf.get(domain), m), ...(aka?.length ? { aka } : {}), ...fields, ...(wikidata ? { wikidata } : {}) };
+};
 const collSummary = (c) => ({
   defId: `col:${c.domain}:${c.id}`, id: c.id, domain: c.domain, libraryType: c.libraryType, group: c.group,
   title: c.title, icon: c.icon, description: c.description, ordered: !!c.ordered, size: c.members.length,
@@ -111,7 +151,7 @@ ${body}
 ${waitlist()}
 <footer class="foot">
   <p><strong>NextLevel</strong> turns the things you do into a record you keep: goals, streaks, and a Legacy of everything you've finished.</p>
-  <p class="foot-small">Film facts checked against <a href="https://www.wikidata.org/">Wikidata</a>. Built ${BUILT.slice(0, 10)}. Developers: the catalog is a free JSON API at <a href="/api/v1/index.json">/api/v1</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; credit “NextLevel Catalog”. Source on <a href="https://github.com/locklainn/nextlevel-catalog">GitHub</a>.</p>
+  <p class="foot-small">Facts checked against <a href="https://www.wikidata.org/">Wikidata</a>. Built ${BUILT.slice(0, 10)}. Developers: the catalog is a free JSON API at <a href="/api/v1/index.json">/api/v1</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; credit “NextLevel Catalog”. Source on <a href="https://github.com/locklainn/nextlevel-catalog">GitHub</a>.</p>
 </footer>
 <script src="/assets/site.js" defer></script>
 </body>
@@ -143,34 +183,39 @@ function poster(c, { big = false } = {}) {
   const want = big ? 2800 : 2200, parts = [];
   for (let i = 0, n = 0; n < want; i++) { const t = names[i % names.length]; parts.push(t); n += t.length + 3; }
   const wall = parts.join(' <i>/</i> ');
-  const years = c.members.map((m) => m.year).filter(Boolean);
-  const span = years.length ? `${Math.min(...years)}–${Math.max(...years)}` : '';
+  const d = domainOf.get(c.domain), span = spanOf(d, c.members);
   return `<div class="poster${big ? ' poster-big' : ''}" style="--accent:${c.accent}">
     <div class="poster-wall" aria-hidden="true">${wall}</div>
     <div class="poster-icon" aria-hidden="true">${esc(c.icon)}</div>
-    <div class="poster-meta"><span>${plural(c.members.length, c.libraryType === 'Movies' ? 'film' : 'item')}</span>${span ? `<span>${span}</span>` : ''}</div>
+    <div class="poster-meta"><span>${c.members.length} ${nounFor(d, c.members.length)}</span>${span ? `<span>${span}</span>` : ''}</div>
   </div>`;
 }
 
+// Search text for a card: its own words plus every member's title and text fields (a director, a state).
+const searchText = (c) => [c.title, c.description, ...c.members.flatMap((m) => [m.title, ...Object.entries(m).filter(([k, v]) => typeof v === 'string' && !['id', 'domain', 'displayTitle', 'wikidata', 'title'].includes(k)).map(([, v]) => v)])].join(' ').toLowerCase();
+
 function card(c) {
-  return `<a class="card" href="/c/${c.id}/" data-group="${esc(c.group)}" data-search="${esc((c.title + ' ' + c.description + ' ' + c.members.map((m) => m.title + ' ' + (m.director || '')).join(' ')).toLowerCase())}">
+  return `<a class="card" href="/c/${c.id}/" data-group="${esc(c.group)}" data-search="${esc(searchText(c))}">
     ${poster(c)}
     <h3>${esc(c.title)}</h3>
     <p>${esc(c.description)}</p>
   </a>`;
 }
 
+const domainColls = (d) => catalog.filter((c) => c.domain === d.domain);
+const domainItems = (d) => [...itemsById.values()].filter((m) => m.domain === d.domain).length;
+
+// The hub: one tile per category, a short shelf from each, and what's coming.
 function landing() {
-  const featured = catalog.find((c) => c.id === 'horror-essentials') || catalog[0];
-  const kinds = [...new Set(catalog.map((c) => c.group))];
+  const featured = catalog.find((c) => c.id === domains[0].featured) || catalog[0];
   const body = `<main>
 <section class="hero">
   <div class="hero-copy">
-    <p class="eyebrow">The collections · ${plural(catalog.length, 'list')} · ${totalItems} ${domains.length === 1 ? domains[0].libraryType.toLowerCase() : 'things'}</p>
+    <p class="eyebrow">The collections · ${plural(domains.length, 'category', 'categories')} · ${plural(catalog.length, 'list')} · ${totalItems.toLocaleString('en-US')} things</p>
     <h1>Collect the things<br>worth doing.</h1>
-    <p class="lede">Hand-picked lists of what's worth your time, starting with ${totalItems} horror films. Follow a list in NextLevel, check things off as you go, and everything you finish becomes part of your Legacy.</p>
+    <p class="lede">Hand-picked lists of what's worth your time: films to watch, peaks to climb, places to go. Follow a list in NextLevel, check things off as you go, and everything you finish becomes part of your Legacy.</p>
     <div class="hero-actions">
-      <a class="btn" href="#browse">Browse the collections</a>
+      <a class="btn" href="#categories">Browse the categories</a>
       <a class="btn btn-ghost" href="#join">Get early access</a>
     </div>
   </div>
@@ -186,90 +231,129 @@ function landing() {
   <div class="how-step"><span class="how-n">3</span><h2>Keep the record</h2><p>Finished things land in your Legacy, with the date you did them. Your Library holds what you've done, not what you've meant to.</p></div>
 </section>
 
-<section class="browse" id="browse">
-  <div class="browse-head">
-    <h2>Horror, collected</h2>
-    <div class="browse-tools">
-      <label class="sr" for="q">Search</label>
-      <input id="q" type="search" placeholder="Search ${totalItems} films or ${catalog.length} lists" data-search-input>
-    </div>
+<section class="cats" id="categories">
+  <h2>The categories</h2>
+  <div class="cat-grid">
+    ${domains.map((d) => `<a class="cat" href="/${d.domain}/"><span class="cat-icon" aria-hidden="true">${esc(d.icon)}</span><strong>${esc(d.label)}</strong><em>${plural(domainColls(d).length, 'list')} · ${domainItems(d).toLocaleString('en-US')} ${nounFor(d, 2)}</em></a>`).join('\n    ')}
+    ${PLANNED.map(([, icon, label, what]) => `<div class="cat cat-soon"><span class="cat-icon" aria-hidden="true">${icon}</span><strong>${esc(label)}</strong><em>Coming: ${esc(what)}</em></div>`).join('\n    ')}
   </div>
-  <div class="chips" role="group" aria-label="Filter">
-    <button class="chip on" data-filter="">All</button>
-    ${[['Eras', ['horror-before-1970', 'horror-70s', 'horror-80s', 'horror-90s', 'horror-2000s', 'horror-modern']], ['Every film', catalog.filter((c) => c.ordered).map((c) => c.id)]].map(([label, ids]) => `<button class="chip" data-filter-ids="${ids.join(' ')}">${label}</button>`).join('')}
-  </div>
-  <div class="grid" data-grid>
-    ${catalog.map(card).join('\n    ')}
-  </div>
-  <p class="empty" data-empty hidden>No list has that. Try a title, a director, or a kind of horror.</p>
 </section>
 
-<section class="soon">
-  <h2>Next shelves</h2>
-  <ul>
-    <li><span>⛰️</span>Mountains<em>the 48 New Hampshire 4,000-footers, the Colorado 14ers</em></li>
-    <li><span>🥾</span>Trails<em>the long ones, and the best day hikes</em></li>
-    <li><span>📚</span>Books<em>the canon, one genre at a time</em></li>
-    <li><span>🍺</span>Beers<em>the styles worth knowing</em></li>
-  </ul>
-</section>
+${domains.map((d) => {
+  const picks = (d.shelf || []).map((id) => catalog.find((c) => c.id === id)).filter(Boolean);
+  const shelf = (picks.length ? picks : domainColls(d)).slice(0, 4);
+  return `<section class="shelf">
+  <div class="shelf-head"><h2>${esc(d.icon)} ${esc(d.label)}</h2><a href="/${d.domain}/">All ${plural(domainColls(d).length, 'list')} →</a></div>
+  <div class="grid grid-small">${shelf.map(card).join('')}</div>
+</section>`;
+}).join('\n')}
 </main>`;
   return page({
     title: 'NextLevel Collections — collect the things worth doing',
-    description: `Hand-picked lists of what's worth your time, starting with ${totalItems} horror films in ${catalog.length} collections. Follow one in NextLevel and keep a record of everything you finish.`,
+    description: `Hand-picked lists of what's worth your time: ${catalog.length} collections across ${domains.map((d) => d.label.toLowerCase()).join(', ')}. Follow one in NextLevel and keep a record of everything you finish.`,
     path: '/', body,
     jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: 'NextLevel Collections', url: SITE },
   });
 }
 
+// A category's own page: every list in it, with search and the domain's filter chips.
+function categoryPage(d) {
+  const colls = domainColls(d), n = domainItems(d);
+  const groups = [...new Set(colls.map((c) => c.group))];
+  const chips = [
+    ...(groups.length > 1 ? groups.map((g) => ({ label: g, ids: colls.filter((c) => c.group === g).map((c) => c.id) })) : []),
+    ...(d.chips || []).map((ch) => ({ label: ch.label, ids: ch.ordered ? colls.filter((c) => c.ordered).map((c) => c.id) : ch.ids })),
+  ];
+  const body = `<main>
+<section class="browse cat-page" id="browse">
+  <p class="eyebrow"><a href="/#categories">Categories</a> · ${plural(colls.length, 'list')} · ${n.toLocaleString('en-US')} ${nounFor(d, n)}</p>
+  <h1>${esc(d.icon)} ${esc(d.label)}</h1>
+  ${d.blurb ? `<p class="lede">${esc(d.blurb)}</p>` : ''}
+  <div class="browse-head">
+    <div class="browse-tools">
+      <label class="sr" for="q">Search</label>
+      <input id="q" type="search" placeholder="Search ${n.toLocaleString('en-US')} ${nounFor(d, n)} or ${colls.length} lists" data-search-input>
+    </div>
+  </div>
+  ${chips.length ? `<div class="chips" role="group" aria-label="Filter">
+    <button class="chip on" data-filter="">All</button>
+    ${chips.map((ch) => `<button class="chip" data-filter-ids="${ch.ids.join(' ')}">${esc(ch.label)}</button>`).join('')}
+  </div>` : ''}
+  <div class="grid" data-grid>
+    ${colls.map(card).join('\n    ')}
+  </div>
+  <p class="empty" data-empty hidden>No list has that. Try another name.</p>
+</section>
+</main>`;
+  return page({
+    title: `${d.label} — ${plural(colls.length, 'list')} · NextLevel Collections`,
+    description: `${d.blurb || ''} ${colls.length} collections, ${n} ${nounFor(d, n)}. Follow one in NextLevel and check them off as you go.`.trim(),
+    path: `/${d.domain}/`, body,
+    jsonld: { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${d.label} — NextLevel Collections`, url: `${SITE}/${d.domain}/` },
+  });
+}
+
+// Structured data for one item, in its domain's schema.org type.
+const itemLD = (m) => {
+  const d = domainOf.get(m.domain);
+  return {
+    '@type': d.schemaType || 'Thing', name: m.title,
+    ...(m.year ? { dateCreated: String(m.year) } : {}),
+    ...(m.director ? { director: { '@type': 'Person', name: m.director } } : {}),
+    ...(m.wikidata ? { sameAs: `https://www.wikidata.org/wiki/${m.wikidata}` } : {}),
+  };
+};
+
 function collectionPage(c) {
   const related = catalog.filter((x) => x !== c && x.group === c.group)
     .map((x) => ({ x, shared: x.members.filter((m) => c.members.includes(m)).length }))
     .sort((a, b) => b.shared - a.shared).slice(0, 4).map((r) => r.x);
+  const d = domainOf.get(c.domain), nouns = `${c.members.length} ${nounFor(d, c.members.length)}`;
   const body = `<main class="coll">
 <section class="coll-hero">
   ${poster(c, { big: true })}
   <div class="coll-copy">
-    <p class="eyebrow"><a href="/#browse">${esc(c.group)}</a> · ${plural(c.members.length, 'film')}</p>
+    <p class="eyebrow"><a href="/${d.domain}/">${esc(d.label)}</a> · ${esc(c.group)} · ${nouns}</p>
     <h1>${esc(c.title)}</h1>
     <p class="lede">${esc(c.description)}</p>
     <div class="hero-actions">
       <a class="btn" href="#join">Follow in NextLevel</a>
       <button class="btn btn-ghost" data-share>Share</button>
     </div>
-    <p class="coll-note">Following keeps this list in your app. A film only joins your Library once you've watched it.</p>
+    <p class="coll-note">Following keeps this list in your app. A${/^[aeiou]/i.test(d.noun || 'item') ? 'n' : ''} ${esc(d.noun || 'item')} only joins your Library once you've ${esc(d.done || 'done')} it.</p>
   </div>
 </section>
 <ol class="members${c.ordered ? ' members-ordered' : ''}">
-  ${c.members.map((m, i) => `<li><a href="/i/${m.domain}/${m.id}/"><span class="m-n">${c.ordered ? i + 1 : ''}</span><span class="m-t">${esc(m.displayTitle)}</span><span class="m-d">${m.year} · ${esc(m.director)}</span></a></li>`).join('\n  ')}
+  ${c.members.map((m, i) => `<li><a href="/i/${m.domain}/${m.id}/"><span class="m-n">${c.ordered ? i + 1 : ''}</span><span class="m-t">${esc(m.displayTitle)}</span><span class="m-d">${esc(noteFor(d, m))}</span></a></li>`).join('\n  ')}
 </ol>
 ${related.length ? `<section class="related"><h2>More like this</h2><div class="grid grid-small">${related.map(card).join('')}</div></section>` : ''}
 </main>`;
   return page({
-    title: `${c.title} — ${c.members.length} films · NextLevel Collections`,
+    title: `${c.title} — ${nouns} · NextLevel Collections`,
     description: `${c.description} ${c.members.slice(0, 6).map((m) => m.displayTitle).join(', ')}, and ${c.members.length - 6 > 0 ? c.members.length - 6 + ' more' : 'more'}.`,
     path: `/c/${c.id}/`, body, accent: c.accent,
     jsonld: {
       '@context': 'https://schema.org', '@type': 'ItemList', name: c.title, description: c.description,
       itemListOrder: c.ordered ? 'https://schema.org/ItemListOrderAscending' : 'https://schema.org/ItemListUnordered', numberOfItems: c.members.length,
-      itemListElement: c.members.map((m, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'Movie', name: m.title, dateCreated: String(m.year), director: { '@type': 'Person', name: m.director }, ...(m.wikidata ? { sameAs: `https://www.wikidata.org/wiki/${m.wikidata}` } : {}) } })),
+      itemListElement: c.members.map((m, i) => ({ '@type': 'ListItem', position: i + 1, item: itemLD(m) })),
     },
   });
 }
 
 function itemPage(m) {
+  const d = domainOf.get(m.domain), note = noteFor(d, m);
   const body = `<main class="item">
-  <p class="eyebrow"><a href="/#browse">Horror</a> · ${m.year}</p>
+  <p class="eyebrow"><a href="/${d.domain}/">${esc(d.label)}</a></p>
   <h1>${esc(m.displayTitle)}</h1>
-  <p class="lede">${m.year} · directed by ${esc(m.director)}${m.wikidata ? ` · <a href="https://www.wikidata.org/wiki/${m.wikidata}">Wikidata</a>` : ''}</p>
+  <p class="lede">${esc(note)}${m.wikidata ? `${note ? ' · ' : ''}<a href="https://www.wikidata.org/wiki/${m.wikidata}">Wikidata</a>` : ''}</p>
   <h2 class="item-h">On ${plural(m.collections.length, 'list')}</h2>
   <div class="grid grid-small">${m.collections.map(card).join('')}</div>
 </main>`;
   return page({
-    title: `${m.displayTitle} (${m.year}) — on ${plural(m.collections.length, 'list')} · NextLevel Collections`,
-    description: `${m.title}, ${m.year}, directed by ${m.director}. It's on ${m.collections.map((c) => c.title).join(', ')}.`,
+    title: `${m.displayTitle}${note ? ` · ${note}` : ''} — on ${plural(m.collections.length, 'list')} · NextLevel Collections`,
+    description: `${m.title}${note ? `, ${note}` : ''}. It's on ${m.collections.map((c) => c.title).join(', ')}.`,
     path: `/i/${m.domain}/${m.id}/`, body, accent: m.collections[0]?.accent,
-    jsonld: { '@context': 'https://schema.org', '@type': 'Movie', name: m.title, dateCreated: String(m.year), director: { '@type': 'Person', name: m.director }, ...(m.wikidata ? { sameAs: `https://www.wikidata.org/wiki/${m.wikidata}` } : {}) },
+    jsonld: { '@context': 'https://schema.org', ...itemLD(m) },
   });
 }
 
@@ -281,13 +365,14 @@ rmSync(OUT, { recursive: true, force: true });
 write('api/v1/index.json', JSON.stringify({
   version: 1, generatedAt: BUILT, site: SITE,
   license: { data: 'CC BY 4.0', url: 'https://creativecommons.org/licenses/by/4.0/', attribution: `"NextLevel Catalog" (${SITE}), CC BY 4.0` },
-  domains: domains.map((d) => ({ domain: d.domain, libraryType: d.libraryType, items: d.items.length, collections: catalog.filter((c) => c.domain === d.domain).length })),
+  domains: domains.map((d) => ({ domain: d.domain, libraryType: d.libraryType, items: d.items.length, collections: catalog.filter((c) => c.domain === d.domain).length, identity: (d.identity || []).filter((f) => f !== 'title'), qualifier: d.note || '' })),
   collections: catalog.map(collSummary),
 }, null, 1));
 for (const c of catalog) write(`api/v1/collections/${c.id}.json`, JSON.stringify({ ...collSummary(c), members: c.members.map(memberJSON) }, null, 1));
 for (const d of domains) write(`api/v1/items/${d.domain}.json`, JSON.stringify({ domain: d.domain, libraryType: d.libraryType, items: [...itemsById.values()].filter((m) => m.domain === d.domain).map((m) => ({ ...memberJSON(m), collections: m.collections.map((c) => c.id) })) }, null, 1));
 
 write('index.html', landing());
+for (const d of domains) write(`${d.domain}/index.html`, categoryPage(d));
 for (const c of catalog) write(`c/${c.id}/index.html`, collectionPage(c));
 for (const m of itemsById.values()) write(`i/${m.domain}/${m.id}/index.html`, itemPage(m));
 write('404.html', page({ title: 'Not here — NextLevel Collections', description: 'That page is not in the collection.', path: '/404', body: `<main class="item"><h1>Not in the collection.</h1><p class="lede"><a href="/">Back to every list</a></p></main>` }));
@@ -302,6 +387,6 @@ write('_headers', `/api/*
   Cache-Control: public, max-age=3600
 `);
 write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
-write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${['/', ...catalog.map((c) => `/c/${c.id}/`), ...[...itemsById.values()].map((m) => `/i/${m.domain}/${m.id}/`)].map((p) => `<url><loc>${SITE}${p}</loc></url>`).join('\n')}\n</urlset>\n`);
+write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${['/', ...domains.map((d) => `/${d.domain}/`), ...catalog.map((c) => `/c/${c.id}/`), ...[...itemsById.values()].map((m) => `/i/${m.domain}/${m.id}/`)].map((p) => `<url><loc>${SITE}${p}</loc></url>`).join('\n')}\n</urlset>\n`);
 
 console.log(`built dist/: ${catalog.length} collection pages, ${itemsById.size} item pages, API v1 → ${SITE}`);

@@ -150,14 +150,23 @@ h2 { font-size: clamp(28px, 4vw, 44px); line-height: 1; font-weight: 800; }
 .card[hidden] { display: none; }
 .empty { color: var(--muted); }
 
-.soon { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter) clamp(50px, 8vw, 100px); }
-.soon ul { list-style: none; padding: 0; margin: 22px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
-.soon li {
-  display: flex; flex-direction: column; gap: 4px; padding: 22px; border-radius: 18px;
-  border: 1px dashed var(--line); font: 700 20px/1.2 var(--display);
+/* ---- categories: the hub's tiles, and a shelf per category ---- */
+.cats, .shelf { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter) clamp(50px, 8vw, 100px); }
+.cat-grid { margin-top: 22px; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.cat {
+  display: flex; flex-direction: column; gap: 4px; padding: 22px; border-radius: 18px; text-decoration: none;
+  background: var(--bg-2); border: 1px solid var(--line); font: 700 20px/1.2 var(--display);
+  transition: border-color 0.15s ease, transform 0.15s ease;
 }
-.soon li span { font-size: 30px; margin-bottom: 6px; }
-.soon li em { font: 400 14px/1.4 var(--body); color: var(--muted); font-style: normal; }
+a.cat:hover { border-color: var(--lime); transform: translateY(-2px); }
+.cat-icon { font-size: 30px; margin-bottom: 6px; }
+.cat em { font: 400 14px/1.4 var(--body); color: var(--muted); font-style: normal; }
+.cat-soon { background: transparent; border-style: dashed; color: var(--muted); }
+.shelf-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 22px; }
+.shelf-head a { color: var(--lime); font-weight: 600; text-decoration: none; }
+.cat-page { padding-top: clamp(40px, 7vw, 90px); }
+.cat-page .browse-head { margin-top: 30px; }
+.cat-page .browse-tools { justify-content: flex-start; }
 
 /* ---- collection page ---- */
 .coll { max-width: var(--max); margin: 0 auto; padding: clamp(32px, 6vw, 80px) var(--gutter) 40px; }

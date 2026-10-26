@@ -19,12 +19,17 @@ const DIST = join(ROOT, 'dist');
 const SRC = (() => {
   const doms = readdirSync(join(ROOT, 'domains')).filter((d) => existsSync(join(ROOT, 'domains', d, 'domain.json')));
   let colls = 0, items = 0;
+  const order = (d) => JSON.parse(readFileSync(join(ROOT, 'domains', d, 'domain.json'), 'utf8')).order ?? 99;
+  doms.sort((a, b) => order(a) - order(b));
+  const per = {};
   for (const d of doms) {
+    const before = colls;
     items += JSON.parse(readFileSync(join(ROOT, 'domains', d, 'items.json'), 'utf8')).length;
     const cdir = join(ROOT, 'domains', d, 'collections');
     for (const f of readdirSync(cdir).filter((f) => f.endsWith('.json'))) colls += JSON.parse(readFileSync(join(cdir, f), 'utf8')).collections.length;
+    per[d] = colls - before;
   }
-  return { colls, items, firstDomainItems: JSON.parse(readFileSync(join(ROOT, 'domains', doms.sort()[0], 'items.json'), 'utf8')).length };
+  return { colls, items, doms, per, firstDomainItems: JSON.parse(readFileSync(join(ROOT, 'domains', doms[0], 'items.json'), 'utf8')).length };
 })();
 const SHOTS = process.argv[2] || join(ROOT, '.shots');
 const PORT = 8899, WL = 8898, CDP = 9277;
@@ -107,20 +112,34 @@ try {
     await open('/', w);
     check('landing: no sideways scroll', await noSideScroll(), JSON.stringify(await overflowers()));
     check('landing: the display font loaded', await evl(`document.fonts.check('800 40px "Bricolage Grotesque"')`));
-    const counts = await evl(`({ cards:document.querySelectorAll('.grid .card').length, walls:[...document.querySelectorAll('.grid .poster-wall')].filter(e=>e.textContent.length>40).length, h1:document.querySelector('h1').textContent })`);
-    check('landing: a poster for every collection, each drawn from its titles', counts.cards === SRC.colls && counts.walls === SRC.colls, JSON.stringify({ ...counts, expected: SRC.colls }));
-    // How far down each poster its title wall reaches (0..1). A wall that stops halfway reads as an empty card.
-    const fill = await evl(`[...document.querySelectorAll('.grid .poster')].map(p => {
-      const b = p.getBoundingClientRect(), r = document.createRange(); r.selectNodeContents(p.querySelector('.poster-wall'));
-      const rects = [...r.getClientRects()].filter(x => x.right > b.left && x.left < b.right && x.bottom > b.top && x.top < b.bottom);
-      const low = Math.max(b.top, ...rects.map(x => Math.min(x.bottom, b.bottom)));
-      const w = p.querySelector('.poster-wall').getBoundingClientRect(); return { wt: Math.round(w.top-b.top), wb: Math.round(w.bottom-b.top), n: rects.length, all: r.getClientRects().length, t: p.closest('.card').querySelector('h3').textContent, f: +((low - b.top) / b.height).toFixed(2), h: Math.round(b.height) };
-    }).sort((a, b) => a.f - b.f)`);
-    check('landing: every poster wall reaches the bottom of its card (≥ 0.9)', fill[0].f >= 0.9, JSON.stringify(fill.slice(0, 4)) + " all=" + fill.map(x=>x.f).join(","));
-    await shot(`${label}-landing`); await shot(`${label}-landing-full`, true);
+    const hub = await evl(`({ tiles:document.querySelectorAll('a.cat').length, shelves:document.querySelectorAll('.shelf').length, cards:document.querySelectorAll('.shelf .card').length, walls:[...document.querySelectorAll('.shelf .poster-wall')].filter(e=>e.textContent.length>40).length })`);
+    check(`landing: a tile and a shelf for each of the ${SRC.doms.length} categories, every shelf card a poster`, hub.tiles === SRC.doms.length && hub.shelves === SRC.doms.length && hub.cards > 0 && hub.walls === hub.cards, JSON.stringify(hub));
     if (label === 'phone') {
-      const tgt = await evl(`[...document.querySelectorAll('a.btn, button.chip, .top-cta, .join-form button, .join-form input[type=email]')].map(e=>e.getBoundingClientRect()).filter(r=>r.height && r.height < 38).length`);
+      const tgt = await evl(`[...document.querySelectorAll('a.btn, a.cat, .top-cta, .join-form button, .join-form input[type=email]')].map(e=>e.getBoundingClientRect()).filter(r=>r.height && r.height < 38).length`);
       check('phone: every button is a comfortable tap target (≥ 38px)', tgt === 0, `${tgt} small`);
+    }
+    await shot(`${label}-landing`); await shot(`${label}-landing-full`, true);
+
+    for (const dom of SRC.doms) {
+      await open(`/${dom}/`, w);
+      check(`/${dom}/: no sideways scroll`, await noSideScroll(), JSON.stringify(await overflowers()));
+      const counts = await evl(`({ cards:document.querySelectorAll('.grid .card').length, walls:[...document.querySelectorAll('.grid .poster-wall')].filter(e=>e.textContent.length>40).length })`);
+      check(`/${dom}/: a poster for each of its ${SRC.per[dom]} collections, each drawn from its titles`, counts.cards === SRC.per[dom] && counts.walls === SRC.per[dom], JSON.stringify(counts));
+      // How far down each poster its title wall reaches (0..1). A wall that stops halfway reads as an empty card.
+      const fill = await evl(`[...document.querySelectorAll('.grid .poster')].map(p => {
+        const b = p.getBoundingClientRect(), r = document.createRange(); r.selectNodeContents(p.querySelector('.poster-wall'));
+        const rects = [...r.getClientRects()].filter(x => x.right > b.left && x.left < b.right && x.bottom > b.top && x.top < b.bottom);
+        const low = Math.max(b.top, ...rects.map(x => Math.min(x.bottom, b.bottom)));
+        return { t: p.closest('.card').querySelector('h3').textContent, f: +((low - b.top) / b.height).toFixed(2) };
+      }).sort((a, b) => a.f - b.f)`);
+      check(`/${dom}/: every poster wall reaches the bottom of its card (≥ 0.9)`, fill[0].f >= 0.9, JSON.stringify(fill.slice(0, 4)));
+      await shot(`${label}-${dom}`);
+    }
+
+    await open('/movies/', w);
+    if (label === 'phone') {
+      const tgt = await evl(`[...document.querySelectorAll('button.chip')].map(e=>e.getBoundingClientRect()).filter(r=>r.height && r.height < 38).length`);
+      check('phone: every filter chip is a comfortable tap target (≥ 38px)', tgt === 0, `${tgt} small`);
     }
     await evl(`(()=>{ const i=document.querySelector('[data-search-input]'); i.value='carpenter'; i.dispatchEvent(new Event('input')); return 1; })()`);
     const carp = await evl(`[...document.querySelectorAll('.grid .card')].filter(c=>!c.hidden).map(c=>c.querySelector('h3').textContent)`);

@@ -1,6 +1,7 @@
 // GENERATED from goalsetters src/app/nlcommon/definitions/library-identity.ts — the
 // app's own matcher, so `validate` predicts what the app will do. Re-copy it when
 // that file changes; do not edit here.
+//   cd ~/goalsetters && ./node_modules/.bin/esbuild src/app/nlcommon/definitions/library-identity.ts --format=esm --target=es2022
 const ARTICLES = /* @__PURE__ */ new Set(["the", "a", "an"]);
 const STOP = /* @__PURE__ */ new Set(["the", "a", "an", "of", "and", "in", "on", "at", "to", "for", "from", "with", "by"]);
 const ROMAN = /^(ii|iii|iv|v|vi|vii|viii|ix|x|xi|xii|xiii|xiv|xv|xvi|xvii|xviii|xix|xx)$/;
@@ -55,13 +56,15 @@ function isInstallmentToken(tok) {
 function jaccard(a, b) {
   let shared = 0;
   a.forEach((x) => {
-    if (b.has(x)) shared++;
+    if (b.has(x))
+      shared++;
   });
   const union = a.size + b.size - shared;
   return { j: union ? shared / union : 0, shared };
 }
 function editDistance(a, b) {
-  if (Math.abs(a.length - b.length) > 2) return 3;
+  if (Math.abs(a.length - b.length) > 2)
+    return 3;
   const row = Array.from({ length: b.length + 1 }, (_, i) => i);
   for (let i = 1; i <= a.length; i++) {
     let prev = row[0];
@@ -76,31 +79,69 @@ function editDistance(a, b) {
 }
 const verdict = (v, score, reason) => ({ verdict: v, score, reason });
 function compareTitles(a, b) {
-  const A = titleKey(a), B = titleKey(b);
-  if (!A.core || !B.core) return verdict("different", 0, "empty title");
+  return compareItems({ title: a }, { title: b });
+}
+function keysOf(x) {
+  const out = {};
+  const y = titleKey(x.title).year;
+  if (y)
+    out.year = y;
+  for (const k of Object.keys(x.keys || {})) {
+    const v = x.keys[k];
+    if (v !== void 0 && v !== null && v !== "")
+      out[k] = v;
+  }
+  return out;
+}
+const keyNorm = (v) => typeof v === "number" ? String(v) : fold(String(v)).trim();
+const differWord = (k) => k === "year" ? "different years" : `different ${k}`;
+function compareKeys(a, b) {
+  const shared = Object.keys(a).filter((k) => k in b);
+  for (const k of shared)
+    if (keyNorm(a[k]) !== keyNorm(b[k]))
+      return { v: "different", key: k };
+  if (shared.length)
+    return { v: "same", key: shared[0] };
+  return Object.keys(a).length || Object.keys(b).length ? { v: "unknown", key: Object.keys(a)[0] || Object.keys(b)[0] } : { v: "none" };
+}
+function compareItems(a, b) {
+  const A = titleKey(a.title), B = titleKey(b.title);
+  if (!A.core || !B.core)
+    return verdict("different", 0, "empty title");
+  const K = compareKeys(keysOf(a), keysOf(b));
   if (A.core === B.core) {
-    if (A.year && B.year) return A.year === B.year ? verdict("same", 1, "same title and year") : verdict("different", 0, "different years");
-    if (A.year || B.year) return verdict("candidate", 0.9, "same title; one has no year");
+    if (K.v === "same")
+      return verdict("same", 1, K.key === "year" ? "same title and year" : `same title and ${K.key}`);
+    if (K.v === "different")
+      return verdict("different", 0, differWord(K.key));
+    if (K.v === "unknown")
+      return verdict("candidate", 0.9, `same title; one has no ${K.key}`);
     return verdict("same", 1, "same title");
   }
-  if (A.year && B.year && A.year !== B.year) return verdict("different", 0, "different years");
+  if (K.v === "different")
+    return verdict("different", 0, differWord(K.key));
   const sa = new Set(A.tokens), sb = new Set(B.tokens);
   const diff = [...A.tokens.filter((x2) => !sb.has(x2)), ...B.tokens.filter((x2) => !sa.has(x2))];
-  if (diff.some(isInstallmentToken)) return verdict("different", 0, "a numbered installment");
+  if (diff.some(isInstallmentToken))
+    return verdict("different", 0, "a numbered installment");
   if (A.hasSubtitle && A.head === B.core || B.hasSubtitle && B.head === A.core) {
     return verdict("different", 0, "a subtitled installment");
   }
   const [short, long] = A.tokens.length <= B.tokens.length ? [A, B] : [B, A];
-  if (short.tokens.every((x2, k) => long.tokens[k] === x2)) return verdict("different", 0, "a later installment");
+  if (short.tokens.every((x2, k) => long.tokens[k] === x2))
+    return verdict("different", 0, "a later installment");
   const content = (t) => new Set(t.filter((x2) => !STOP.has(x2) && !isInstallmentToken(x2)));
   const cs = content(short.tokens), cl = content(long.tokens);
   const { j } = jaccard(cs, cl);
   let contained = cs.size > 0;
   cs.forEach((x2) => {
-    if (!cl.has(x2)) contained = false;
+    if (!cl.has(x2))
+      contained = false;
   });
-  if (contained && j >= 0.5) return verdict("candidate", j, "one title contains the other");
-  if (j >= 0.75) return verdict("candidate", j, "titles overlap");
+  if (contained && j >= 0.5)
+    return verdict("candidate", j, "one title contains the other");
+  if (j >= 0.75)
+    return verdict("candidate", j, "titles overlap");
   const x = A.tokens.join(" "), y = B.tokens.join(" ");
   if (A.tokens.length === B.tokens.length && Math.min(x.length, y.length) >= 8 && x.slice(-1) === y.slice(-1) && editDistance(x, y) === 1) {
     return verdict("candidate", 0.6, "spelled almost the same");
@@ -109,21 +150,27 @@ function compareTitles(a, b) {
 }
 function singular(tok) {
   let t = tok;
-  if (t.length > 3 && t.endsWith("s") && !t.endsWith("ss")) t = t.slice(0, -1);
-  if (t.endsWith("ie")) t = t.slice(0, -2) + "y";
-  else if (/(ch|sh|x|ss)e$/.test(t)) t = t.slice(0, -1);
+  if (t.length > 3 && t.endsWith("s") && !t.endsWith("ss"))
+    t = t.slice(0, -1);
+  if (t.endsWith("ie"))
+    t = t.slice(0, -2) + "y";
+  else if (/(ch|sh|x|ss)e$/.test(t))
+    t = t.slice(0, -1);
   return t;
 }
 function compareTypeTitles(a, b) {
   const A = tokensOf(fold(a)).map(singular), B = tokensOf(fold(b)).map(singular);
-  if (!A.length || !B.length) return verdict("different", 0, "empty");
-  if (A.join(" ") === B.join(" ")) return verdict("same", 1, "same type");
+  if (!A.length || !B.length)
+    return verdict("different", 0, "empty");
+  if (A.join(" ") === B.join(" "))
+    return verdict("same", 1, "same type");
   const { j } = jaccard(new Set(A.filter((x) => !STOP.has(x))), new Set(B.filter((x) => !STOP.has(x))));
   return j >= 0.5 ? verdict("candidate", j, "type names overlap") : verdict("different", 0, "");
 }
 function compareCollections(a, b, sharedMembers = 0) {
   const A = titleKey(a.title), B = titleKey(b.title);
-  if (A.core && A.core === B.core) return verdict("same", 1, "same title");
+  if (A.core && A.core === B.core)
+    return verdict("same", 1, "same title");
   const ca = new Set(A.tokens.filter((x) => !STOP.has(x) && !GENERIC_COLLECTION.has(x)));
   const cb = new Set(B.tokens.filter((x) => !STOP.has(x) && !GENERIC_COLLECTION.has(x)));
   const { j } = jaccard(ca, cb);
@@ -131,7 +178,8 @@ function compareCollections(a, b, sharedMembers = 0) {
   if (sharedMembers >= 3 && overlap >= 0.5) {
     return verdict("candidate", Math.max(overlap, j), `${sharedMembers} of the same members`);
   }
-  if (ca.size && cb.size && j >= 0.5) return verdict("candidate", j, "titles overlap");
+  if (ca.size && cb.size && j >= 0.5)
+    return verdict("candidate", j, "titles overlap");
   return verdict("different", 0, "");
 }
 const DID_VERBS = /* @__PURE__ */ new Set([
@@ -165,28 +213,51 @@ const DID_VERBS = /* @__PURE__ */ new Set([
   "heard"
 ]);
 const AFTER_NAME = /* @__PURE__ */ new Set(["with", "at", "on", "in", "again", "tonight", "today", "for", "w"]);
+function taskMentionsKey(taskTitle, value) {
+  const t = fold(taskTitle);
+  const v = keyNorm(value);
+  if (!v)
+    return false;
+  const esc = v.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  if (typeof value === "number" || /^\d+$/.test(v))
+    return new RegExp(`(^|[^0-9])${esc}([^0-9]|$)`).test(t);
+  if (v.length <= 2)
+    return new RegExp(`(\\(\\s*${esc}\\s*\\)|,\\s*${esc}\\b)`).test(t);
+  return new RegExp(`(^|[^a-z0-9])${esc}([^a-z0-9]|$)`).test(t);
+}
 function taskNamesThing(taskTitle, name) {
   const N = titleKey(name);
-  if (N.core.replace(/ /g, "").length < 3) return false;
+  if (N.core.replace(/ /g, "").length < 3)
+    return false;
   let t = tokensOf(fold(taskTitle).replace(/\s*\(\d{4}\)\s*$/, ""));
-  if (t.length > 1 && DID_VERBS.has(t[0])) t = t.slice(1);
-  if (t[0] === "to" && t.length > 1) t = t.slice(1);
-  if (t.length > 1 && ARTICLES.has(t[0])) t = t.slice(1);
+  if (t.length > 1 && DID_VERBS.has(t[0]))
+    t = t.slice(1);
+  if (t[0] === "to" && t.length > 1)
+    t = t.slice(1);
+  if (t.length > 1 && ARTICLES.has(t[0]))
+    t = t.slice(1);
   const n = N.tokens;
   for (let i = 0; i + n.length <= t.length; i++) {
-    if (n.some((tok, k) => t[i + k] !== tok)) continue;
+    if (n.some((tok, k) => t[i + k] !== tok))
+      continue;
     const next = t[i + n.length];
-    if (next && isInstallmentToken(next)) continue;
-    if (n.length >= 2) return true;
-    if (i === 0 && (!next || AFTER_NAME.has(next))) return true;
+    if (next && isInstallmentToken(next))
+      continue;
+    if (n.length >= 2)
+      return true;
+    if (i === 0 && (!next || AFTER_NAME.has(next)))
+      return true;
   }
   return false;
 }
 export {
   compareCollections,
+  compareItems,
   compareTitles,
   compareTypeTitles,
   isInstallmentToken,
+  keysOf,
+  taskMentionsKey,
   taskNamesThing,
   titleKey
 };

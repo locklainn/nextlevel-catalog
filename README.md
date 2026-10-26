@@ -46,7 +46,7 @@ A leading "The" doesn't count, so "The Evil Dead" and "Evil Dead" get years too.
 `validate` judges every pair of items with `tools/identity.mjs`, which is NextLevel's
 own matcher (`src/app/nlcommon/definitions/library-identity.ts`, compiled to JS). It
 fails on two items the app would treat as one, and lists the pairs the app would ask
-you about. Re-copy it when the app's matcher changes.
+you about. Re-copy it when the app's matcher changes (the command is in its header).
 
 ## Workflow
 

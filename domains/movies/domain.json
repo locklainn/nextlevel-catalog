@@ -1,9 +1,57 @@
 {
   "domain": "movies",
+  "label": "Movies",
+  "icon": "🎬",
+  "order": 1,
   "libraryType": "Movies",
   "refPrefix": "mv",
-  "identity": ["title", "year"],
+  "identity": [
+    "title",
+    "year"
+  ],
+  "noun": "film",
+  "nouns": "films",
+  "done": "watched",
+  "blurb": "Horror first: the canon, every era, the subgenres, and the franchises in viewing order.",
   "note": "{year} · {director}",
+  "span": {
+    "field": "year"
+  },
+  "schemaType": "Movie",
+  "featured": "horror-essentials",
+  "shelf": [
+    "horror-essentials",
+    "folk-horror",
+    "franchise-halloween",
+    "horror-80s"
+  ],
+  "chips": [
+    {
+      "label": "Eras",
+      "ids": [
+        "horror-before-1970",
+        "horror-70s",
+        "horror-80s",
+        "horror-90s",
+        "horror-2000s",
+        "horror-modern"
+      ]
+    },
+    {
+      "label": "Every film",
+      "ordered": true
+    }
+  ],
+  "wikidata": {
+    "classes": [
+      "Q11424",
+      "Q24869",
+      "Q506240",
+      "Q20650540",
+      "Q17123180"
+    ],
+    "label": "film"
+  },
   "fields": {
     "id": "stable slug, title + year (never changes once sent)",
     "title": "the title as it is commonly known in the US",
