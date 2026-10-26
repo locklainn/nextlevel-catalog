@@ -1,0 +1,13 @@
+{
+  "group": "Across the US",
+  "collections": [
+    {
+      "id": "us-state-high-points",
+      "title": "US State High Points",
+      "icon": "🇺🇸",
+      "description": "The highest point in every state: Denali's 20,310 feet, Florida's 345-foot Britton Hill, and 48 in between, some of them a short walk from the car.",
+      "ordered": false,
+      "members": ["denali-ak", "cheaha-mountain-al", "mount-magazine-ar", "humphreys-peak-az", "mount-whitney-ca", "mount-elbert-co", "mount-frissell-ct", "ebright-azimuth-de", "britton-hill-fl", "brasstown-bald-ga", "mauna-kea-hi", "hawkeye-point-ia", "borah-peak-id", "charles-mound-il", "hoosier-hill-in", "mount-sunflower-ks", "black-mountain-ky", "driskill-mountain-la", "mount-greylock-ma", "hoye-crest-md", "katahdin-me", "mount-arvon-mi", "eagle-mountain-mn", "taum-sauk-mountain-mo", "woodall-mountain-ms", "granite-peak-mt", "mount-mitchell-nc", "white-butte-nd", "panorama-point-ne", "mount-washington-nh", "high-point-nj", "wheeler-peak-nm", "boundary-peak-nv", "mount-marcy-ny", "campbell-hill-oh", "black-mesa-ok", "mount-hood-or", "mount-davis-pa", "jerimoth-hill-ri", "sassafras-mountain-sc", "black-elk-peak-sd", "kuwohi-tn", "guadalupe-peak-tx", "kings-peak-ut", "mount-rogers-va", "mount-mansfield-vt", "mount-rainier-wa", "timms-hill-wi", "spruce-knob-wv", "gannett-peak-wy"]
+    }
+  ]
+}

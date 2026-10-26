@@ -96,11 +96,8 @@
   "wikidata": [
    {
     "u": "http://www.wikidata.org/entity/Q224964",
-    "dirs": [
+    "director": [
      "Irvin Yeaworth"
-    ],
-    "years": [
-     1958
     ]
    }
   ]
@@ -177,13 +174,13 @@
  },
  {
   "id": "the-blood-on-satans-claw-1971",
-  "verdict": "notfound",
-  "ours": "1971 · Piers Haggard"
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q3425459"
  },
  {
   "id": "a-bay-of-blood-1971",
-  "verdict": "notfound",
-  "ours": "1971 · Mario Bava"
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1659350"
  },
  {
   "id": "the-exorcist-1973",
@@ -242,8 +239,8 @@
  },
  {
   "id": "hausu-1977",
-  "verdict": "notfound",
-  "ours": "1977 · Nobuhiko Obayashi"
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1132905"
  },
  {
   "id": "the-hills-have-eyes-1977",
@@ -713,13 +710,13 @@
   "wikidata": [
    {
     "u": "http://www.wikidata.org/entity/Q27696200",
-    "years": [
+    "year": [
      1963
     ]
    },
    {
     "u": "http://www.wikidata.org/entity/Q109464545",
-    "years": []
+    "year": []
    }
   ]
  },
@@ -870,12 +867,8 @@
   "wikidata": [
    {
     "u": "http://www.wikidata.org/entity/Q255260",
-    "dirs": [
+    "director": [
      "Kim Ji-woon"
-    ],
-    "years": [
-     2003,
-     2004
     ]
    }
   ]
@@ -937,12 +930,8 @@
   "wikidata": [
    {
     "u": "http://www.wikidata.org/entity/Q270410",
-    "dirs": [
+    "director": [
      "Darren Lynn Bouseman"
-    ],
-    "years": [
-     2005,
-     2006
     ]
    }
   ]
@@ -969,12 +958,8 @@
   "wikidata": [
    {
     "u": "http://www.wikidata.org/entity/Q276392",
-    "dirs": [
+    "director": [
      "Darren Lynn Bouseman"
-    ],
-    "years": [
-     2006,
-     2007
     ]
    }
   ]
@@ -1041,12 +1026,8 @@
   "wikidata": [
    {
     "u": "http://www.wikidata.org/entity/Q326319",
-    "dirs": [
+    "director": [
      "Darren Lynn Bouseman"
-    ],
-    "years": [
-     2007,
-     2008
     ]
    }
   ]
@@ -1073,10 +1054,7 @@
   "wikidata": [
    {
     "u": "http://www.wikidata.org/entity/Q6477009",
-    "dirs": [],
-    "years": [
-     2008
-    ]
+    "director": []
    }
   ]
  },
@@ -1172,12 +1150,9 @@
   "wikidata": [
    {
     "u": "http://www.wikidata.org/entity/Q1189580",
-    "dirs": [
-     "Colin Minihan",
-     "Stuart Ortiz"
-    ],
-    "years": [
-     2011
+    "director": [
+     "Stuart Ortiz",
+     "Colin Minihan"
     ]
    }
   ]
@@ -1400,12 +1375,9 @@
   "wikidata": [
    {
     "u": "http://www.wikidata.org/entity/Q15712110",
-    "dirs": [
+    "director": [
      "Michael Spierig",
      "Peter Spierig"
-    ],
-    "years": [
-     2017
     ]
    }
   ]
@@ -1567,12 +1539,8 @@
   "wikidata": [
    {
     "u": "http://www.wikidata.org/entity/Q64590532",
-    "dirs": [
+    "director": [
      "Darren Lynn Bouseman"
-    ],
-    "years": [
-     2020,
-     2021
     ]
    }
   ]

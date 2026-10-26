@@ -60,7 +60,7 @@ function libraryTitles(items, meta = {}) {
 }
 
 function noteFor(meta, it) {
-  return (meta.note || '').replace(/\{(\w+)\}/g, (_, k) => it[k] ?? '').replace(/^[\s·]+|[\s·]+$/g, '');
+  return (meta.note || '').replace(/\{(\w+)\}/g, (_, k) => (typeof it[k] === 'number' && k !== 'year' ? it[k].toLocaleString('en-US') : it[k] ?? '')).replace(/^[\s·]+|[\s·]+$/g, '');
 }
 
 function validate(domain, { quiet = false } = {}) {
@@ -113,6 +113,19 @@ function validate(domain, { quiet = false } = {}) {
     else if (m.verdict === 'candidate') hazards.push([a.id, b.id, m.reason]);
   }
 
+  // Other domains that land in the same Library type (National Parks, States and Theme
+  // Parks are all Destinations): the app matches within a type, so their pairs count too.
+  for (const other of readdirSync(join(ROOT, 'domains')).filter((o) => o !== domain && existsSync(join(ROOT, 'domains', o, 'domain.json')))) {
+    const o = loadDomain(other);
+    if (o.meta.libraryType !== d.meta.libraryType) continue;
+    const oid = (it) => ({ title: it.title, keys: keysFor(o.meta, it) });
+    for (const a of d.items) for (const b of o.items) {
+      const m = compareItems(ident(a), oid(b));
+      if (m.verdict === 'same') errors.push(`"${a.title}" (${a.id}) and ${other}'s "${b.title}" (${b.id}) are one item to the app: both are ${d.meta.libraryType}`);
+      else if (m.verdict === 'candidate') hazards.push([a.id, `${other}:${b.id}`, m.reason]);
+    }
+  }
+
   // Alternate titles are matched like names, without keys (a task rarely states a year):
   // an aka must not be another item's title or aka. Tenebrae's US title "Unsane" vs
   // Soderbergh's Unsane (2018) is the case this exists for.
@@ -130,7 +143,7 @@ function validate(domain, { quiet = false } = {}) {
     for (const w of warnings) console.log('warn   ' + w);
     console.log(`${domain}: ${d.items.length} items, ${Object.values(d.groups).reduce((n, g) => n + g.collections.length, 0)} collections, ${errors.length} errors, ${warnings.length} warnings`);
     console.log(`${hazards.length} pairs the app would flag as possible duplicates of each other:`);
-    for (const [a, b, why] of hazards) console.log(`  ${titles.get(a)}  ~  ${titles.get(b)}  (${why})`);
+    for (const [a, b, why] of hazards) console.log(`  ${titles.get(a)}  ~  ${titles.get(b) ?? b}  (${why})`);
   }
   return { ...d, titles, errors, warnings, hazards };
 }

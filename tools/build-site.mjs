@@ -32,7 +32,10 @@ const domains = readdirSync(join(ROOT, 'domains')).filter((d) => existsSync(join
   const dir = join(ROOT, 'domains', d);
   const meta = readJSON(join(dir, 'domain.json'));
   const items = readJSON(join(dir, 'items.json'));
-  const groups = readdirSync(join(dir, 'collections')).filter((f) => f.endsWith('.json')).map((f) => ({ key: f.slice(0, -5), ...readJSON(join(dir, 'collections', f)) }));
+  // Groups in the order domain.json lists them (quick wins first), any others after.
+  const rank = (k) => ((meta.groups || []).indexOf(k) + 1 || 99);
+  const groups = readdirSync(join(dir, 'collections')).filter((f) => f.endsWith('.json')).map((f) => ({ key: f.slice(0, -5), ...readJSON(join(dir, 'collections', f)) }))
+    .sort((a, b) => rank(a.key) - rank(b.key));
   return { ...meta, items, groups };
 }).sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
 const domainOf = new Map(domains.map((d) => [d.domain, d]));
@@ -179,7 +182,7 @@ function waitlist(source = '') {
 // A poster: the collection's own titles, set as a typographic wall behind its name.
 function poster(c, { big = false } = {}) {
   // Cycle the titles until the wall overfills the poster; a five-film franchise repeats as a pattern.
-  const names = c.members.map((m) => esc(m.displayTitle));
+  const names = c.members.map((m) => esc(m.title));
   const want = big ? 2800 : 2200, parts = [];
   for (let i = 0, n = 0; n < want; i++) { const t = names[i % names.length]; parts.push(t); n += t.length + 3; }
   const wall = parts.join(' <i>/</i> ');

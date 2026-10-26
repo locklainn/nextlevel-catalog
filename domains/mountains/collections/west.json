@@ -1,0 +1,13 @@
+{
+  "group": "West",
+  "collections": [
+    {
+      "id": "california-14ers",
+      "title": "California Fourteeners",
+      "icon": "🐻",
+      "description": "The 12 California summits over 14,000 feet with at least 300 feet of prominence, from Mount Whitney to the Palisades, plus Mount Shasta alone in the north.",
+      "ordered": false,
+      "members": ["mount-whitney-ca", "mount-williamson-ca", "white-mountain-peak-ca", "north-palisade-ca", "mount-shasta-ca", "mount-sill-ca", "mount-russell-ca", "split-mountain-ca", "mount-langley-ca", "mount-tyndall-ca", "middle-palisade-ca", "mount-muir-ca"]
+    }
+  ]
+}

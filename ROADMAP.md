@@ -26,8 +26,8 @@ commit. Nothing is deployed without TJ.
 
 | step | what | Library type | key fields | status |
 |---|---|---|---|---|
-| 1 | **Multi-category tooling** + ⛰️ **Mountains** (Northeast + California) | Mountains | title + state | next |
-| 2 | 🎮 Video Games | Video Games | title + year | |
+| 1 | **Multi-category tooling** + ⛰️ **Mountains** (Northeast + California) | Mountains | title + state | done 2026-10-26: 205 peaks, 8 lists |
+| 2 | 🎮 Video Games | Video Games | title + year | next |
 | 3 | 🏞️ National Parks | Destinations | title + state | |
 | 4 | 🗺️ States & Provinces | Destinations | title + country | |
 | 5 | 🏟️ Ballparks & Arenas | Destinations | title + city | |
@@ -39,7 +39,7 @@ commit. Nothing is deployed without TJ.
 | 11 | 🎢 Theme Parks | Destinations | title + country | |
 | 12 | 🎬 Movies beyond horror: Best Picture winners | Movies | title + year | |
 | 13 | 🎬 Finish horror (+17 collections) | Movies | title + year | |
-| later | **Metadata keys in the app** (goalsetters), which unblocks the clash list below | n/a | n/a | other agent |
+| done | **Metadata keys in the app** (goalsetters `f197e03d`; catalog half in `IDENTITY.md`) | n/a | n/a | done 2026-10-26 |
 
 Movies already counts as category 1 of 12, so the launch bar is reached at step 11. Steps 12 and 13
 deepen movies and can move earlier whenever TJ wants.
@@ -120,10 +120,11 @@ Quick win → core → long haul. Counts marked ~ are targets; the others are fi
   anthologies, Nature Strikes Back.
   None grows Folk Horror, so the app gate's pinned numbers hold.
 
-## Waiting on the app's metadata keys
+## Unblocked by the metadata keys (not yet scheduled)
 
-The app tells same-titled items apart only by a year in parentheses today. These lists
-have real clashes and wait until it reads key fields:
+The app now tells same-named items apart by key fields, so these lists, which have real
+name clashes, can be built. Mountains' Northeast 67, Northeast 115 and Catskills already were
+(two Saddlebacks, two Mount Abrahams, two Sugarloafs, two Eagle Mountains).
 
 - **Cascade Volcanoes**: Mount Adams and Mount Jefferson are also NH 48 peaks
 - **Colorado 14ers**: Mount Lincoln is also an NH 48 peak

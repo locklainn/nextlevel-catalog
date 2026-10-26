@@ -1,0 +1,1242 @@
+[
+ {
+  "id": "denali-ak",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q130018"
+ },
+ {
+  "id": "mount-whitney-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q235539"
+ },
+ {
+  "id": "mount-elbert-co",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q657225"
+ },
+ {
+  "id": "mount-rainier-wa",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q194057"
+ },
+ {
+  "id": "mount-williamson-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q822964"
+ },
+ {
+  "id": "white-mountain-peak-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4468440"
+ },
+ {
+  "id": "north-palisade-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4327485"
+ },
+ {
+  "id": "mount-shasta-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q748355"
+ },
+ {
+  "id": "mount-sill-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4419260"
+ },
+ {
+  "id": "mount-russell-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4390381"
+ },
+ {
+  "id": "split-mountain-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4437980"
+ },
+ {
+  "id": "mount-langley-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6921760"
+ },
+ {
+  "id": "mount-tyndall-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4457828"
+ },
+ {
+  "id": "middle-palisade-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4292810"
+ },
+ {
+  "id": "mount-muir-ca",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q831100"
+ },
+ {
+  "id": "gannett-peak-wy",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1493617"
+ },
+ {
+  "id": "mauna-kea-hi",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q131230"
+ },
+ {
+  "id": "kings-peak-ut",
+  "verdict": "unchecked",
+  "ours": "UT · 13534",
+  "missing": [
+   "state",
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q251274",
+  "candidates": 1
+ },
+ {
+  "id": "wheeler-peak-nm",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1505965"
+ },
+ {
+  "id": "boundary-peak-nv",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q573205"
+ },
+ {
+  "id": "granite-peak-mt",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q599777"
+ },
+ {
+  "id": "borah-peak-id",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q893312"
+ },
+ {
+  "id": "humphreys-peak-az",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1239004"
+ },
+ {
+  "id": "mount-hood-or",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q275662"
+ },
+ {
+  "id": "guadalupe-peak-tx",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q32793"
+ },
+ {
+  "id": "black-elk-peak-sd",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1585737"
+ },
+ {
+  "id": "mount-mitchell-nc",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q615337"
+ },
+ {
+  "id": "kuwohi-tn",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q685166"
+ },
+ {
+  "id": "mount-washington-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q572801"
+ },
+ {
+  "id": "mount-adams-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1840432"
+ },
+ {
+  "id": "mount-jefferson-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6921492"
+ },
+ {
+  "id": "mount-rogers-va",
+  "verdict": "elevation",
+  "ours": 5711,
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q688645",
+    "elevation": [
+     5988
+    ]
+   }
+  ]
+ },
+ {
+  "id": "panorama-point-ne",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q947553"
+ },
+ {
+  "id": "mount-monroe-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6922237"
+ },
+ {
+  "id": "mount-madison-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6921955"
+ },
+ {
+  "id": "mount-marcy-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1858227"
+ },
+ {
+  "id": "katahdin-me",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1858056"
+ },
+ {
+  "id": "mount-lafayette-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q8520336"
+ },
+ {
+  "id": "algonquin-peak-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4724340"
+ },
+ {
+  "id": "mount-lincoln-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6921845"
+ },
+ {
+  "id": "black-mesa-ok",
+  "verdict": "elevation",
+  "ours": 4975,
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q880398",
+    "elevation": [
+     5699
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mount-haystack-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6921097"
+ },
+ {
+  "id": "mount-skylight-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6923718"
+ },
+ {
+  "id": "south-twin-mountain-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7568685"
+ },
+ {
+  "id": "whiteface-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q3434515"
+ },
+ {
+  "id": "spruce-knob-wv",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1815535"
+ },
+ {
+  "id": "dix-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5284763"
+ },
+ {
+  "id": "gray-peak-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5598218"
+ },
+ {
+  "id": "iroquois-peak-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6073461"
+ },
+ {
+  "id": "carter-dome-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4216195"
+ },
+ {
+  "id": "basin-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4867492"
+ },
+ {
+  "id": "mount-moosilauke-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q3321961"
+ },
+ {
+  "id": "brasstown-bald-ga",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q842924"
+ },
+ {
+  "id": "mount-eisenhower-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q200690"
+ },
+ {
+  "id": "north-twin-mountain-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7057046"
+ },
+ {
+  "id": "hamlin-peak-me",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5645488"
+ },
+ {
+  "id": "gothics-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5587893"
+ },
+ {
+  "id": "mount-colden-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6920203"
+ },
+ {
+  "id": "mount-carrigain-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6920061"
+ },
+ {
+  "id": "mount-bond-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6919778"
+ },
+ {
+  "id": "giant-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q8524323"
+ },
+ {
+  "id": "nippletop-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7039599"
+ },
+ {
+  "id": "middle-carter-mountain-nh",
+  "verdict": "unchecked",
+  "ours": "NH · 4610",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q6841258",
+  "candidates": 1
+ },
+ {
+  "id": "santanoni-peak-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7420073"
+ },
+ {
+  "id": "mount-redfield-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6923164"
+ },
+ {
+  "id": "wright-peak-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q8038240"
+ },
+ {
+  "id": "west-bond-nh",
+  "verdict": "unchecked",
+  "ours": "NH · 4540",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q34819378",
+  "candidates": 1
+ },
+ {
+  "id": "saddleback-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7397752"
+ },
+ {
+  "id": "mount-garfield-nh",
+  "verdict": "unchecked",
+  "ours": "NH · 4500",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q6920864",
+  "candidates": 1
+ },
+ {
+  "id": "mount-liberty-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6921831"
+ },
+ {
+  "id": "panther-peak-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7131804"
+ },
+ {
+  "id": "south-carter-mountain-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7566729"
+ },
+ {
+  "id": "table-top-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7673183"
+ },
+ {
+  "id": "wildcat-mountain-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q8001021"
+ },
+ {
+  "id": "mount-hancock-nh",
+  "verdict": "unchecked",
+  "ours": "NH · 4420",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q6921046",
+  "candidates": 1
+ },
+ {
+  "id": "rocky-peak-ridge-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7355957"
+ },
+ {
+  "id": "macomb-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6724801"
+ },
+ {
+  "id": "armstrong-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4793955"
+ },
+ {
+  "id": "hough-peak-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5912859"
+ },
+ {
+  "id": "mount-mansfield-vt",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q573840"
+ },
+ {
+  "id": "seward-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7458181"
+ },
+ {
+  "id": "mount-marshall-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6922027"
+ },
+ {
+  "id": "south-kinsman-nh",
+  "verdict": "notfound",
+  "ours": "NH · 4358"
+ },
+ {
+  "id": "allen-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4731793"
+ },
+ {
+  "id": "mount-field-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q8523327"
+ },
+ {
+  "id": "mount-osceola-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6922609"
+ },
+ {
+  "id": "mount-flume-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q8520470"
+ },
+ {
+  "id": "south-hancock-nh",
+  "verdict": "unchecked",
+  "ours": "NH · 4319",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q34883685",
+  "candidates": 1
+ },
+ {
+  "id": "mount-pierce-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q749181"
+ },
+ {
+  "id": "north-kinsman-nh",
+  "verdict": "unchecked",
+  "ours": "NH · 4293",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q34886266",
+  "candidates": 1
+ },
+ {
+  "id": "mount-willey-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6924600"
+ },
+ {
+  "id": "bondcliff-nh",
+  "verdict": "unchecked",
+  "ours": "NH · 4265",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q34823632",
+  "candidates": 1
+ },
+ {
+  "id": "zealand-mountain-nh",
+  "verdict": "notfound",
+  "ours": "NH · 4260"
+ },
+ {
+  "id": "sugarloaf-mountain-me",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q3503069"
+ },
+ {
+  "id": "big-slide-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4906374"
+ },
+ {
+  "id": "esther-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5401250"
+ },
+ {
+  "id": "killington-peak-vt",
+  "verdict": "unchecked",
+  "ours": "VT · 4235",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q4220539",
+  "candidates": 1
+ },
+ {
+  "id": "crocker-mountain-me",
+  "verdict": "unchecked",
+  "ours": "ME · 4228",
+  "missing": [
+   "state",
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q5187323",
+  "candidates": 1
+ },
+ {
+  "id": "upper-wolfjaw-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7899016"
+ },
+ {
+  "id": "north-tripyramid-nh",
+  "verdict": "unchecked",
+  "ours": "NH · 4180",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q34927986",
+  "candidates": 1
+ },
+ {
+  "id": "slide-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 4180",
+  "missing": [
+   "elevation"
+  ],
+  "candidates": 4
+ },
+ {
+  "id": "lower-wolfjaw-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6693909"
+ },
+ {
+  "id": "mount-cabot-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6919942"
+ },
+ {
+  "id": "old-speck-mountain-me",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7085015"
+ },
+ {
+  "id": "street-mountain-ny",
+  "verdict": "elevation",
+  "ours": 4166,
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q7622887",
+    "elevation": [
+     4012
+    ]
+   }
+  ]
+ },
+ {
+  "id": "phelps-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7181274"
+ },
+ {
+  "id": "east-osceola-nh",
+  "verdict": "notfound",
+  "ours": "NH · 4156"
+ },
+ {
+  "id": "north-brother-me",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7054307"
+ },
+ {
+  "id": "bigelow-west-peak-me",
+  "verdict": "notfound",
+  "ours": "ME · 4145"
+ },
+ {
+  "id": "donaldson-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5295363"
+ },
+ {
+  "id": "middle-tripyramid-nh",
+  "verdict": "unchecked",
+  "ours": "NH · 4140",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q34927972",
+  "candidates": 1
+ },
+ {
+  "id": "black-mountain-ky",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q880428"
+ },
+ {
+  "id": "saddleback-mountain-me",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7397755"
+ },
+ {
+  "id": "seymour-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q8525969"
+ },
+ {
+  "id": "cannon-mountain-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5032778"
+ },
+ {
+  "id": "sawteeth-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7428687"
+ },
+ {
+  "id": "cascade-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5048152"
+ },
+ {
+  "id": "avery-peak-me",
+  "verdict": "unchecked",
+  "ours": "ME · 4090",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q33136291",
+  "candidates": 1
+ },
+ {
+  "id": "camels-hump-vt",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5025846"
+ },
+ {
+  "id": "mount-ellen-vt",
+  "verdict": "unchecked",
+  "ours": "VT · 4083",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q3321816",
+  "candidates": 1
+ },
+ {
+  "id": "wildcat-d-nh",
+  "verdict": "notfound",
+  "ours": "NH · 4070"
+ },
+ {
+  "id": "south-dix-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7567063"
+ },
+ {
+  "id": "porter-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7231640"
+ },
+ {
+  "id": "mount-colvin-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6920213"
+ },
+ {
+  "id": "mount-hale-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6921032"
+ },
+ {
+  "id": "mount-jackson-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1647347"
+ },
+ {
+  "id": "mount-tom-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6924141"
+ },
+ {
+  "id": "mount-abraham-me",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6919229"
+ },
+ {
+  "id": "south-crocker-mountain-me",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7566924"
+ },
+ {
+  "id": "mount-moriah-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6922268"
+ },
+ {
+  "id": "mount-passaconaway-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q8523440"
+ },
+ {
+  "id": "mount-sunflower-ks",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1587215"
+ },
+ {
+  "id": "saddleback-horn-me",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7397746"
+ },
+ {
+  "id": "hunter-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 4040",
+  "missing": [
+   "elevation"
+  ],
+  "candidates": 2
+ },
+ {
+  "id": "mount-emmons-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6920641"
+ },
+ {
+  "id": "owls-head-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7114830"
+ },
+ {
+  "id": "galehead-mountain-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4153212"
+ },
+ {
+  "id": "dial-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5270468"
+ },
+ {
+  "id": "mount-whiteface-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6924572"
+ },
+ {
+  "id": "grace-peak-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5328237"
+ },
+ {
+  "id": "mount-redington-me",
+  "verdict": "unchecked",
+  "ours": "ME · 4010",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q6923167",
+  "candidates": 1
+ },
+ {
+  "id": "spaulding-mountain-me",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7574132"
+ },
+ {
+  "id": "mount-abraham-vt",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6919231"
+ },
+ {
+  "id": "mount-waumbek-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6924524"
+ },
+ {
+  "id": "mount-isolation-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6921446"
+ },
+ {
+  "id": "mount-tecumseh-nh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6924064"
+ },
+ {
+  "id": "black-dome-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3980",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q4920677",
+  "candidates": 1
+ },
+ {
+  "id": "blake-peak-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4924459"
+ },
+ {
+  "id": "cliff-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5132708"
+ },
+ {
+  "id": "blackhead-mountain-ny",
+  "verdict": "notfound",
+  "ours": "NY · 3940"
+ },
+ {
+  "id": "thomas-cole-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3940",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q7788531",
+  "candidates": 1
+ },
+ {
+  "id": "nye-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7071055"
+ },
+ {
+  "id": "westkill-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3880",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q7985627",
+  "candidates": 1
+ },
+ {
+  "id": "graham-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5593091"
+ },
+ {
+  "id": "cornell-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3860",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q5171544",
+  "candidates": 1
+ },
+ {
+  "id": "doubletop-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3860",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q5300164",
+  "candidates": 1
+ },
+ {
+  "id": "table-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3847",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q7673141",
+  "candidates": 1
+ },
+ {
+  "id": "peekamoose-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3843",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q7160173",
+  "candidates": 1
+ },
+ {
+  "id": "plateau-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3840",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q7202220",
+  "candidates": 1
+ },
+ {
+  "id": "couchsachraga-peak-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5175966"
+ },
+ {
+  "id": "sugarloaf-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3800",
+  "missing": [
+   "elevation"
+  ],
+  "candidates": 16
+ },
+ {
+  "id": "wittenberg-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3780",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q8028568",
+  "candidates": 1
+ },
+ {
+  "id": "southwest-hunter-ny",
+  "verdict": "notfound",
+  "ours": "NY · 3740"
+ },
+ {
+  "id": "balsam-lake-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4852536"
+ },
+ {
+  "id": "lone-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6671314"
+ },
+ {
+  "id": "panther-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7131803"
+ },
+ {
+  "id": "big-indian-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3700",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q4905867",
+  "candidates": 1
+ },
+ {
+  "id": "friday-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q5503503"
+ },
+ {
+  "id": "rusk-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3680",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q7380934",
+  "candidates": 1
+ },
+ {
+  "id": "kaaterskill-high-peak-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6343625"
+ },
+ {
+  "id": "twin-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3640",
+  "missing": [
+   "elevation"
+  ],
+  "candidates": 3
+ },
+ {
+  "id": "balsam-cap-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4852530"
+ },
+ {
+  "id": "fir-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3620",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q5451209",
+  "candidates": 1
+ },
+ {
+  "id": "north-dome-ny",
+  "verdict": "state",
+  "ours": "NY",
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q49694432",
+    "state": [
+     "CA"
+    ]
+   },
+   {
+    "u": "http://www.wikidata.org/entity/Q8520071",
+    "state": [
+     "CA"
+    ]
+   },
+   {
+    "u": "http://www.wikidata.org/entity/Q49057302",
+    "state": [
+     "AK"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "balsam-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4852538"
+ },
+ {
+  "id": "bearpen-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3600",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q4876761",
+  "candidates": 1
+ },
+ {
+  "id": "eagle-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3600",
+  "missing": [
+   "elevation"
+  ],
+  "candidates": 4
+ },
+ {
+  "id": "indian-head-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q6020411"
+ },
+ {
+  "id": "sassafras-mountain-sc",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q2225722"
+ },
+ {
+  "id": "mount-sherrill-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q8526328"
+ },
+ {
+  "id": "halcott-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3537",
+  "missing": [
+   "elevation"
+  ],
+  "u": "http://www.wikidata.org/entity/Q5641168",
+  "candidates": 1
+ },
+ {
+  "id": "vly-mountain-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7939097"
+ },
+ {
+  "id": "windham-high-peak-ny",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q8024191"
+ },
+ {
+  "id": "rocky-mountain-ny",
+  "verdict": "unchecked",
+  "ours": "NY · 3508",
+  "missing": [
+   "elevation"
+  ],
+  "candidates": 4
+ },
+ {
+  "id": "white-butte-nd",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q590820"
+ },
+ {
+  "id": "mount-greylock-ma",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1587225"
+ },
+ {
+  "id": "hoye-crest-md",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q658808"
+ },
+ {
+  "id": "mount-davis-pa",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q3660"
+ },
+ {
+  "id": "mount-magazine-ar",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q515059"
+ },
+ {
+  "id": "cheaha-mountain-al",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q927744"
+ },
+ {
+  "id": "mount-frissell-ct",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1950492"
+ },
+ {
+  "id": "eagle-mountain-mn",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q252204"
+ },
+ {
+  "id": "mount-arvon-mi",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1164979"
+ },
+ {
+  "id": "timms-hill-wi",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1862687"
+ },
+ {
+  "id": "high-point-nj",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1587207"
+ },
+ {
+  "id": "taum-sauk-mountain-mo",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q948475"
+ },
+ {
+  "id": "hawkeye-point-ia",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1591692"
+ },
+ {
+  "id": "campbell-hill-oh",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1030445"
+ },
+ {
+  "id": "hoosier-hill-in",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1627481"
+ },
+ {
+  "id": "charles-mound-il",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1065571"
+ },
+ {
+  "id": "jerimoth-hill-ri",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q956395"
+ },
+ {
+  "id": "woodall-mountain-ms",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1701877"
+ },
+ {
+  "id": "driskill-mountain-la",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1665452"
+ },
+ {
+  "id": "ebright-azimuth-de",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1280075"
+ },
+ {
+  "id": "britton-hill-fl",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q921136"
+ }
+]

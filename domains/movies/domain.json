@@ -50,7 +50,19 @@
       "Q20650540",
       "Q17123180"
     ],
-    "label": "film"
+    "checks": [
+      {
+        "field": "year",
+        "type": "year",
+        "prop": "P577",
+        "tol": 1
+      },
+      {
+        "field": "director",
+        "type": "names",
+        "prop": "P57"
+      }
+    ]
   },
   "fields": {
     "id": "stable slug, title + year (never changes once sent)",

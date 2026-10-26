@@ -89,9 +89,13 @@ to that list knowingly. Anything `verify-wikidata` can't match, check by hand an
 `domains/<domain>/FACT-CHECK.md`, as the 13 already there are. Then commit. Commit
 messages say what changed for a reader of the catalog ("Add Giallo: 14 films"), not the mechanics.
 
-Domains and group files are discovered automatically by the site build. **Known snag:** the home page's "Eras" filter chip lists collection ids by hand
-(`tools/build-site.mjs`, search `Eras`). A new era collection, or a new group, needs that
-list updated or it gets no chip. "Every film" picks up `ordered` collections on its own.
+Domains and group files are discovered automatically by the site build. Each category's
+page and home-page shelf take their wording, filter chips and featured lists from its
+`domain.json` (`label`, `icon`, `noun`/`nouns`, `done`, `blurb`, `note`, `span`,
+`chips`, `shelf`, `featured`). **Known snag:** the movies "Eras" chip lists collection ids
+by hand (`chips` in `domains/movies/domain.json`); a new era collection needs adding there.
+A chip with `"ordered": true` ("Every film") picks up ordered collections on its own, and a
+category with more than one group gets a chip per group.
 
 **Then run the app's gate** (in the app repo, `~/goalsetters`). It serves this repo's `dist/`
 to the real app; from a checkout anywhere other than `~/nextlevel-catalog`, pass the path:
@@ -153,20 +157,17 @@ No external film database was scraped; titles, years and directors are curated a
 checked. Keep it that way: a smaller, correct catalog beats a big noisy one, because every
 title here is something the app may match a user's task against.
 
-## Where it stands (2026-10-25)
+## Where it stands (2026-10-26)
 
-- **One domain, movies; one group, `horror`: 317 films in 30 collections.** The 30:
-  the canon (Horror Essentials, 52), six eras (pre-1970 → modern), thirteen subgenres
-  (slashers, ghosts & possession, zombies, vampires, werewolves, creature features, body
-  horror, folk horror, horror comedy, found footage, world horror, Stephen King, Universal
-  Monsters), and ten franchises in viewing order (Halloween, Friday the 13th, Elm Street,
-  Scream, Evil Dead, Alien, Conjuring, Saw, Final Destination, Child's Play).
-- **Live** at https://nextlevel-collections.pages.dev, matching `dist/` (built from the data as of 2026-10-25).
-- **Natural next horror collections** (not started; TJ hasn't picked): giallo, cosmic /
-  Lovecraftian, home invasion, witches, killer dolls, Christmas horror, "elevated" A24-era
-  horror; franchises Texas Chain Saw, Hellraiser, Insidious, Romero's Dead, The Purge.
-- **Beyond horror** (a new group in `movies`, e.g. `sci-fi.json`) or a new domain: ask
-  TJ which first. The design/marketing site was only checked on horror.
+- **Two domains.** `movies`: one group, `horror`, 317 films in 30 collections (the canon,
+  six eras, thirteen subgenres, ten franchises in viewing order). `mountains`: 205 peaks in
+  8 collections over three groups: Northeast (NE state high points, Catskill 3500, NH 48,
+  Adirondack 46, NE 67, NE 115), West (California 14ers), Across the US (state high points).
+  Mountains' sources and hand checks are in `domains/mountains/FACT-CHECK.md`.
+- **The plan is `ROADMAP.md`**: 12 categories before the catalog is promoted, built one
+  step at a time, TJ confirming each. Next: Video Games.
+- **Live** at https://nextlevel-collections.pages.dev is the horror-only site of 2026-10-25.
+  The category hub and Mountains are built in `dist/` but **not deployed**; that's TJ's call.
 - **Open, not this repo's data:** link-preview images (og:image) and a custom domain for
   the site.
 - **Repo:** public at https://github.com/locklainn/nextlevel-catalog (`main`). Push only

@@ -1,0 +1,56 @@
+{
+  "domain": "mountains",
+  "label": "Mountains",
+  "icon": "⛰️",
+  "order": 2,
+  "libraryType": "Mountains",
+  "refPrefix": "mt",
+  "identity": [
+    "title",
+    "state"
+  ],
+  "noun": "peak",
+  "nouns": "peaks",
+  "done": "climbed",
+  "blurb": "The peak-bagging lists people actually finish: the New Hampshire 48, the Adirondack 46, the Catskills, every state's high point.",
+  "note": "{state} · {elevation} ft",
+  "span": {
+    "field": "elevation",
+    "unit": "ft"
+  },
+  "schemaType": "Mountain",
+  "featured": "nh-48",
+  "shelf": [
+    "new-england-high-points",
+    "nh-48",
+    "adirondack-46",
+    "us-state-high-points"
+  ],
+  "groups": [
+    "northeast",
+    "west",
+    "national"
+  ],
+  "wikidata": {
+    "batch": 20,
+    "checks": [
+      {
+        "field": "state",
+        "type": "usState"
+      },
+      {
+        "field": "elevation",
+        "type": "quantity",
+        "prop": "P2044",
+        "tol": 100
+      }
+    ]
+  },
+  "fields": {
+    "id": "stable slug, name + state (never changes once sent)",
+    "title": "the name the list's own club uses; other names go in aka",
+    "state": "two-letter state code of the summit (identity)",
+    "elevation": "summit elevation in feet, as the list's club publishes it (description, not identity)",
+    "aka": "other names a task might use"
+  }
+}

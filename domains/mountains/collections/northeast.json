@@ -1,0 +1,53 @@
+{
+  "group": "Northeast",
+  "collections": [
+    {
+      "id": "new-england-high-points",
+      "title": "New England State High Points",
+      "icon": "📍",
+      "description": "The top of all six New England states, from Mount Washington's 6,288 feet to Rhode Island's Jerimoth Hill, a short walk in the woods. A weekend each, or a road trip.",
+      "ordered": false,
+      "members": ["mount-washington-nh", "katahdin-me", "mount-mansfield-vt", "mount-greylock-ma", "mount-frissell-ct", "jerimoth-hill-ri"]
+    },
+    {
+      "id": "catskill-3500",
+      "title": "Catskill 3500 Club",
+      "icon": "🌲",
+      "description": "The 35 Catskill peaks over 3,500 feet, some of them trailless, finished by bushwhacking. The Catskill 3500 Club keeps the list.",
+      "ordered": false,
+      "members": ["slide-mountain-ny", "hunter-mountain-ny", "black-dome-ny", "blackhead-mountain-ny", "thomas-cole-mountain-ny", "westkill-mountain-ny", "graham-mountain-ny", "cornell-mountain-ny", "doubletop-mountain-ny", "table-mountain-ny", "peekamoose-mountain-ny", "plateau-mountain-ny", "sugarloaf-mountain-ny", "wittenberg-mountain-ny", "southwest-hunter-ny", "balsam-lake-mountain-ny", "lone-mountain-ny", "panther-mountain-ny", "big-indian-mountain-ny", "friday-mountain-ny", "rusk-mountain-ny", "kaaterskill-high-peak-ny", "twin-mountain-ny", "balsam-cap-ny", "fir-mountain-ny", "north-dome-ny", "balsam-mountain-ny", "bearpen-mountain-ny", "eagle-mountain-ny", "indian-head-mountain-ny", "mount-sherrill-ny", "halcott-mountain-ny", "vly-mountain-ny", "windham-high-peak-ny", "rocky-mountain-ny"]
+    },
+    {
+      "id": "nh-48",
+      "title": "New Hampshire 4,000-Footers",
+      "icon": "🏔️",
+      "description": "The 48 White Mountains peaks over 4,000 feet, the Appalachian Mountain Club's list and the Northeast's best-known peak-bagging goal.",
+      "ordered": false,
+      "members": ["mount-washington-nh", "mount-adams-nh", "mount-jefferson-nh", "mount-monroe-nh", "mount-madison-nh", "mount-lafayette-nh", "mount-lincoln-nh", "south-twin-mountain-nh", "carter-dome-nh", "mount-moosilauke-nh", "mount-eisenhower-nh", "north-twin-mountain-nh", "mount-carrigain-nh", "mount-bond-nh", "middle-carter-mountain-nh", "west-bond-nh", "mount-garfield-nh", "mount-liberty-nh", "south-carter-mountain-nh", "wildcat-mountain-nh", "mount-hancock-nh", "south-kinsman-nh", "mount-field-nh", "mount-osceola-nh", "mount-flume-nh", "south-hancock-nh", "mount-pierce-nh", "north-kinsman-nh", "mount-willey-nh", "bondcliff-nh", "zealand-mountain-nh", "north-tripyramid-nh", "mount-cabot-nh", "east-osceola-nh", "middle-tripyramid-nh", "cannon-mountain-nh", "wildcat-d-nh", "mount-hale-nh", "mount-jackson-nh", "mount-tom-nh", "mount-moriah-nh", "mount-passaconaway-nh", "owls-head-nh", "galehead-mountain-nh", "mount-whiteface-nh", "mount-waumbek-nh", "mount-isolation-nh", "mount-tecumseh-nh"]
+    },
+    {
+      "id": "adirondack-46",
+      "title": "Adirondack 46 High Peaks",
+      "icon": "🌄",
+      "description": "The 46 High Peaks, all once measured at over 4,000 feet, first climbed as a set by Bob and George Marshall and Herb Clark in 1925. Four turned out lower; they still count.",
+      "ordered": false,
+      "members": ["mount-marcy-ny", "algonquin-peak-ny", "mount-haystack-ny", "mount-skylight-ny", "whiteface-mountain-ny", "dix-mountain-ny", "gray-peak-ny", "iroquois-peak-ny", "basin-mountain-ny", "gothics-ny", "mount-colden-ny", "giant-mountain-ny", "nippletop-ny", "santanoni-peak-ny", "mount-redfield-ny", "wright-peak-ny", "saddleback-mountain-ny", "panther-peak-ny", "table-top-mountain-ny", "rocky-peak-ridge-ny", "macomb-mountain-ny", "armstrong-mountain-ny", "hough-peak-ny", "seward-mountain-ny", "mount-marshall-ny", "allen-mountain-ny", "big-slide-mountain-ny", "esther-mountain-ny", "upper-wolfjaw-mountain-ny", "lower-wolfjaw-mountain-ny", "street-mountain-ny", "phelps-mountain-ny", "donaldson-mountain-ny", "seymour-mountain-ny", "sawteeth-ny", "cascade-mountain-ny", "south-dix-ny", "porter-mountain-ny", "mount-colvin-ny", "mount-emmons-ny", "dial-mountain-ny", "grace-peak-ny", "blake-peak-ny", "cliff-mountain-ny", "nye-mountain-ny", "couchsachraga-peak-ny"]
+    },
+    {
+      "id": "new-england-67",
+      "title": "New England 4,000-Footers",
+      "icon": "🍁",
+      "description": "The AMC's 67: New Hampshire's 48, Maine's 14 and Vermont's 5, from the Presidentials to Katahdin.",
+      "ordered": false,
+      "members": ["mount-washington-nh", "mount-adams-nh", "mount-jefferson-nh", "mount-monroe-nh", "mount-madison-nh", "katahdin-me", "mount-lafayette-nh", "mount-lincoln-nh", "south-twin-mountain-nh", "carter-dome-nh", "mount-moosilauke-nh", "mount-eisenhower-nh", "north-twin-mountain-nh", "hamlin-peak-me", "mount-carrigain-nh", "mount-bond-nh", "middle-carter-mountain-nh", "west-bond-nh", "mount-garfield-nh", "mount-liberty-nh", "south-carter-mountain-nh", "wildcat-mountain-nh", "mount-hancock-nh", "mount-mansfield-vt", "south-kinsman-nh", "mount-field-nh", "mount-osceola-nh", "mount-flume-nh", "south-hancock-nh", "mount-pierce-nh", "north-kinsman-nh", "mount-willey-nh", "bondcliff-nh", "zealand-mountain-nh", "sugarloaf-mountain-me", "killington-peak-vt", "crocker-mountain-me", "north-tripyramid-nh", "mount-cabot-nh", "old-speck-mountain-me", "east-osceola-nh", "north-brother-me", "bigelow-west-peak-me", "middle-tripyramid-nh", "saddleback-mountain-me", "cannon-mountain-nh", "avery-peak-me", "camels-hump-vt", "mount-ellen-vt", "wildcat-d-nh", "mount-hale-nh", "mount-jackson-nh", "mount-tom-nh", "mount-abraham-me", "south-crocker-mountain-me", "mount-moriah-nh", "mount-passaconaway-nh", "saddleback-horn-me", "owls-head-nh", "galehead-mountain-nh", "mount-whiteface-nh", "mount-redington-me", "spaulding-mountain-me", "mount-abraham-vt", "mount-waumbek-nh", "mount-isolation-nh", "mount-tecumseh-nh"]
+    },
+    {
+      "id": "northeast-115",
+      "title": "Northeast 4,000-Footers",
+      "icon": "🧭",
+      "description": "The AMC's Northeast 115: New England's 67, the Adirondack 46, and the Catskills' Slide and Hunter.",
+      "ordered": false,
+      "members": ["mount-washington-nh", "mount-adams-nh", "mount-jefferson-nh", "mount-monroe-nh", "mount-madison-nh", "mount-marcy-ny", "katahdin-me", "mount-lafayette-nh", "algonquin-peak-ny", "mount-lincoln-nh", "mount-haystack-ny", "mount-skylight-ny", "south-twin-mountain-nh", "whiteface-mountain-ny", "dix-mountain-ny", "gray-peak-ny", "iroquois-peak-ny", "carter-dome-nh", "basin-mountain-ny", "mount-moosilauke-nh", "mount-eisenhower-nh", "north-twin-mountain-nh", "hamlin-peak-me", "gothics-ny", "mount-colden-ny", "mount-carrigain-nh", "mount-bond-nh", "giant-mountain-ny", "nippletop-ny", "middle-carter-mountain-nh", "santanoni-peak-ny", "mount-redfield-ny", "wright-peak-ny", "west-bond-nh", "saddleback-mountain-ny", "mount-garfield-nh", "mount-liberty-nh", "panther-peak-ny", "south-carter-mountain-nh", "table-top-mountain-ny", "wildcat-mountain-nh", "mount-hancock-nh", "rocky-peak-ridge-ny", "macomb-mountain-ny", "armstrong-mountain-ny", "hough-peak-ny", "mount-mansfield-vt", "seward-mountain-ny", "mount-marshall-ny", "south-kinsman-nh", "allen-mountain-ny", "mount-field-nh", "mount-osceola-nh", "mount-flume-nh", "south-hancock-nh", "mount-pierce-nh", "north-kinsman-nh", "mount-willey-nh", "bondcliff-nh", "zealand-mountain-nh", "sugarloaf-mountain-me", "big-slide-mountain-ny", "esther-mountain-ny", "killington-peak-vt", "crocker-mountain-me", "upper-wolfjaw-mountain-ny", "north-tripyramid-nh", "slide-mountain-ny", "lower-wolfjaw-mountain-ny", "mount-cabot-nh", "old-speck-mountain-me", "street-mountain-ny", "phelps-mountain-ny", "east-osceola-nh", "north-brother-me", "bigelow-west-peak-me", "donaldson-mountain-ny", "middle-tripyramid-nh", "saddleback-mountain-me", "seymour-mountain-ny", "cannon-mountain-nh", "sawteeth-ny", "cascade-mountain-ny", "avery-peak-me", "camels-hump-vt", "mount-ellen-vt", "wildcat-d-nh", "south-dix-ny", "porter-mountain-ny", "mount-colvin-ny", "mount-hale-nh", "mount-jackson-nh", "mount-tom-nh", "mount-abraham-me", "south-crocker-mountain-me", "mount-moriah-nh", "mount-passaconaway-nh", "saddleback-horn-me", "hunter-mountain-ny", "mount-emmons-ny", "owls-head-nh", "galehead-mountain-nh", "dial-mountain-ny", "mount-whiteface-nh", "grace-peak-ny", "mount-redington-me", "spaulding-mountain-me", "mount-abraham-vt", "mount-waumbek-nh", "mount-isolation-nh", "mount-tecumseh-nh", "blake-peak-ny", "cliff-mountain-ny", "nye-mountain-ny", "couchsachraga-peak-ny"]
+    }
+  ]
+}
