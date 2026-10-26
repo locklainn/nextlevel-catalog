@@ -1,0 +1,33 @@
+{
+  "domain": "games",
+  "label": "Video Games",
+  "icon": "🎮",
+  "order": 3,
+  "libraryType": "Video Games",
+  "refPrefix": "vg",
+  "identity": ["title", "year"],
+  "noun": "game",
+  "nouns": "games",
+  "done": "played",
+  "blurb": "Modern first: the Game of the Year winners, the indie darlings, the horror canon, and the games everyone is playing online.",
+  "note": "{year} · {developer}",
+  "span": { "field": "year" },
+  "schemaType": "VideoGame",
+  "featured": "game-awards-goty",
+  "shelf": ["finish-in-a-weekend", "game-awards-goty", "indie-darlings", "horror-games"],
+  "groups": ["modern", "franchises", "online"],
+  "wikidata": {
+    "classes": ["Q7889"],
+    "checks": [
+      { "field": "year", "type": "year", "prop": "P577", "tol": 1 },
+      { "field": "developer", "type": "org", "prop": "P178" }
+    ]
+  },
+  "fields": {
+    "id": "stable slug, title + year (never changes once sent)",
+    "title": "the title it's sold under, full subtitle included; short names go in aka",
+    "year": "the 1.0 release, anywhere (a game still in early access: its early-access launch)",
+    "developer": "the lead developer studio",
+    "aka": "other names a task might use"
+  }
+}

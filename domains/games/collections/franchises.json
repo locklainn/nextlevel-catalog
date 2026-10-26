@@ -1,0 +1,13 @@
+{
+  "group": "Franchises",
+  "collections": [
+    {
+      "id": "fromsoftware-souls",
+      "title": "FromSoftware: Demon's Souls to Elden Ring",
+      "icon": "🗡️",
+      "description": "FromSoftware's seven punishing action RPGs in release order, Demon's Souls to Elden Ring, via Bloodborne and Sekiro.",
+      "ordered": true,
+      "members": ["demons-souls-2009", "dark-souls-2011", "dark-souls-ii-2014", "bloodborne-2015", "dark-souls-iii-2016", "sekiro-shadows-die-twice-2019", "elden-ring-2022"]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "group": "Modern",
+  "collections": [
+    {
+      "id": "finish-in-a-weekend",
+      "title": "Finish in a Weekend",
+      "icon": "🛋️",
+      "description": "Short, complete and unforgettable: each one finishes in a weekend or less, from Portal to Unpacking.",
+      "ordered": false,
+      "members": ["portal-2007", "limbo-2010", "portal-2-2011", "journey-2012", "firewatch-2016", "inside-2016", "what-remains-of-edith-finch-2017", "gris-2018", "return-of-the-obra-dinn-2018", "a-short-hike-2019", "untitled-goose-game-2019", "unpacking-2021"]
+    },
+    {
+      "id": "indie-darlings",
+      "title": "Indie Darlings",
+      "icon": "💎",
+      "description": "Small teams, huge games: from Braid to Hollow Knight: Silksong, the independent games that changed what games could be.",
+      "ordered": false,
+      "members": ["braid-2008", "super-meat-boy-2010", "terraria-2011", "fez-2012", "papers-please-2013", "shovel-knight-2014", "undertale-2015", "stardew-valley-2016", "cuphead-2017", "hollow-knight-2017", "celeste-2018", "dead-cells-2018", "return-of-the-obra-dinn-2018", "disco-elysium-2019", "outer-wilds-2019", "slay-the-spire-2019", "hades-2020", "tunic-2022", "vampire-survivors-2022", "animal-well-2024", "balatro-2024", "hades-ii-2025", "hollow-knight-silksong-2025"]
+    },
+    {
+      "id": "horror-games",
+      "title": "Horror Games",
+      "icon": "🕯️",
+      "description": "The scariest games you can play today, with the modern remakes of Resident Evil, Dead Space and Silent Hill 2.",
+      "ordered": false,
+      "members": ["amnesia-the-dark-descent-2010", "outlast-2013", "alien-isolation-2014", "five-nights-at-freddys-2014", "soma-2015", "until-dawn-2015", "resident-evil-7-biohazard-2017", "resident-evil-2-2019", "phasmophobia-2020", "resident-evil-village-2021", "signalis-2022", "alan-wake-2-2023", "dead-space-2023", "lethal-company-2023", "resident-evil-4-2023", "silent-hill-2-2024"]
+    },
+    {
+      "id": "game-awards-goty",
+      "title": "Game of the Year Winners",
+      "icon": "🏆",
+      "description": "Every Game of the Year at The Game Awards, from Dragon Age: Inquisition in 2014 to Clair Obscur: Expedition 33.",
+      "ordered": true,
+      "members": ["dragon-age-inquisition-2014", "the-witcher-3-wild-hunt-2015", "overwatch-2016", "the-legend-of-zelda-breath-of-the-wild-2017", "god-of-war-2018", "sekiro-shadows-die-twice-2019", "the-last-of-us-part-ii-2020", "it-takes-two-2021", "elden-ring-2022", "baldurs-gate-3-2023", "astro-bot-2024", "clair-obscur-expedition-33-2025"]
+    },
+    {
+      "id": "modern-canon",
+      "title": "The Modern Canon, 2015–Now",
+      "icon": "🎮",
+      "description": "The decade's essential games, from The Witcher 3 to Death Stranding 2: the ones everyone ends up talking about.",
+      "ordered": false,
+      "members": ["bloodborne-2015", "metal-gear-solid-v-the-phantom-pain-2015", "the-witcher-3-wild-hunt-2015", "undertale-2015", "doom-2016", "inside-2016", "persona-5-2016", "stardew-valley-2016", "uncharted-4-a-thiefs-end-2016", "hollow-knight-2017", "horizon-zero-dawn-2017", "nier-automata-2017", "super-mario-odyssey-2017", "the-legend-of-zelda-breath-of-the-wild-2017", "celeste-2018", "god-of-war-2018", "marvels-spider-man-2018", "red-dead-redemption-2-2018", "control-2019", "disco-elysium-2019", "outer-wilds-2019", "resident-evil-2-2019", "sekiro-shadows-die-twice-2019", "animal-crossing-new-horizons-2020", "final-fantasy-vii-remake-2020", "ghost-of-tsushima-2020", "hades-2020", "the-last-of-us-part-ii-2020", "it-takes-two-2021", "metroid-dread-2021", "elden-ring-2022", "god-of-war-ragnarok-2022", "baldurs-gate-3-2023", "the-legend-of-zelda-tears-of-the-kingdom-2023", "astro-bot-2024", "balatro-2024", "metaphor-refantazio-2024", "clair-obscur-expedition-33-2025", "death-stranding-2-on-the-beach-2025", "hades-ii-2025", "hollow-knight-silksong-2025", "kingdom-come-deliverance-ii-2025"]
+    }
+  ]
+}

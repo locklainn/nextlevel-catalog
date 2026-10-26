@@ -1,0 +1,541 @@
+[
+ {
+  "id": "world-of-warcraft-2004",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q131007"
+ },
+ {
+  "id": "portal-2007",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q274897"
+ },
+ {
+  "id": "braid-2008",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q897376"
+ },
+ {
+  "id": "demons-souls-2009",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1153708"
+ },
+ {
+  "id": "league-of-legends-2009",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q223341"
+ },
+ {
+  "id": "amnesia-the-dark-descent-2010",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q22986"
+ },
+ {
+  "id": "limbo-2010",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1339030"
+ },
+ {
+  "id": "super-meat-boy-2010",
+  "verdict": "developer",
+  "ours": "Team Meat",
+  "wikidata": [
+   {
+    "u": "http://www.wikidata.org/entity/Q1784048",
+    "developer": [
+     "Edmund McMillen"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "dark-souls-2011",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q1166232"
+ },
+ {
+  "id": "minecraft-2011",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q49740"
+ },
+ {
+  "id": "portal-2-2011",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q279446"
+ },
+ {
+  "id": "terraria-2011",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q332697"
+ },
+ {
+  "id": "fez-2012",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q2581523"
+ },
+ {
+  "id": "journey-2012",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q677274"
+ },
+ {
+  "id": "dota-2-2013",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q771541"
+ },
+ {
+  "id": "grand-theft-auto-v-2013",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q17452"
+ },
+ {
+  "id": "outlast-2013",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q14838050"
+ },
+ {
+  "id": "papers-please-2013",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q14565978"
+ },
+ {
+  "id": "alien-isolation-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q15613717"
+ },
+ {
+  "id": "dark-souls-ii-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q3702740"
+ },
+ {
+  "id": "dragon-age-inquisition-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4037583"
+ },
+ {
+  "id": "five-nights-at-freddys-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q17618314"
+ },
+ {
+  "id": "shovel-knight-2014",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q13427374"
+ },
+ {
+  "id": "bloodborne-2015",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q17154554"
+ },
+ {
+  "id": "metal-gear-solid-v-the-phantom-pain-2015",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q717600"
+ },
+ {
+  "id": "rocket-league-2015",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q20031743"
+ },
+ {
+  "id": "soma-2015",
+  "verdict": "notfound",
+  "ours": "2015 · Frictional Games"
+ },
+ {
+  "id": "the-witcher-3-wild-hunt-2015",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q4267401"
+ },
+ {
+  "id": "undertale-2015",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q21039924"
+ },
+ {
+  "id": "until-dawn-2015",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q7897632"
+ },
+ {
+  "id": "dark-souls-iii-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q20112508"
+ },
+ {
+  "id": "doom-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q513867"
+ },
+ {
+  "id": "firewatch-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q19627426"
+ },
+ {
+  "id": "inside-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q22019785"
+ },
+ {
+  "id": "overwatch-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q18515944"
+ },
+ {
+  "id": "persona-5-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q15225985"
+ },
+ {
+  "id": "stardew-valley-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q23013817"
+ },
+ {
+  "id": "uncharted-4-a-thiefs-end-2016",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q16681843"
+ },
+ {
+  "id": "cuphead-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q18149495"
+ },
+ {
+  "id": "destiny-2-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q29045915"
+ },
+ {
+  "id": "fortnite-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q349375"
+ },
+ {
+  "id": "hollow-knight-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q29300592"
+ },
+ {
+  "id": "horizon-zero-dawn-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q20155528"
+ },
+ {
+  "id": "nier-automata-2017",
+  "verdict": "notfound",
+  "ours": "2017 · PlatinumGames"
+ },
+ {
+  "id": "pubg-battlegrounds-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q28937399"
+ },
+ {
+  "id": "resident-evil-7-biohazard-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q24577667"
+ },
+ {
+  "id": "super-mario-odyssey-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q28234671"
+ },
+ {
+  "id": "the-legend-of-zelda-breath-of-the-wild-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q17185964"
+ },
+ {
+  "id": "what-remains-of-edith-finch-2017",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q28451186"
+ },
+ {
+  "id": "among-us-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q96417649"
+ },
+ {
+  "id": "celeste-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q28451532"
+ },
+ {
+  "id": "dead-cells-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q30639210"
+ },
+ {
+  "id": "god-of-war-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q18345138"
+ },
+ {
+  "id": "gris-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q59769284"
+ },
+ {
+  "id": "marvels-spider-man-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q25340029"
+ },
+ {
+  "id": "red-dead-redemption-2-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q27438121"
+ },
+ {
+  "id": "return-of-the-obra-dinn-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q48987695"
+ },
+ {
+  "id": "sea-of-thieves-2018",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q20113718"
+ },
+ {
+  "id": "a-short-hike-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q66035140"
+ },
+ {
+  "id": "apex-legends-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q61478103"
+ },
+ {
+  "id": "control-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q54935655"
+ },
+ {
+  "id": "disco-elysium-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q71693825"
+ },
+ {
+  "id": "outer-wilds-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q19631660"
+ },
+ {
+  "id": "resident-evil-2-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q54920200"
+ },
+ {
+  "id": "sekiro-shadows-die-twice-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q54906424"
+ },
+ {
+  "id": "slay-the-spire-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q48078440"
+ },
+ {
+  "id": "untitled-goose-game-2019",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q59618073"
+ },
+ {
+  "id": "animal-crossing-new-horizons-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q64566657"
+ },
+ {
+  "id": "call-of-duty-warzone-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q87416343"
+ },
+ {
+  "id": "fall-guys-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q85760410"
+ },
+ {
+  "id": "final-fantasy-vii-remake-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q20155152"
+ },
+ {
+  "id": "genshin-impact-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q65059474"
+ },
+ {
+  "id": "ghost-of-tsushima-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q42564798"
+ },
+ {
+  "id": "hades-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q59756366"
+ },
+ {
+  "id": "phasmophobia-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q99990957"
+ },
+ {
+  "id": "the-last-of-us-part-ii-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q27950674"
+ },
+ {
+  "id": "valorant-2020",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q86919275"
+ },
+ {
+  "id": "it-takes-two-2021",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q105038239"
+ },
+ {
+  "id": "metroid-dread-2021",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q17006956"
+ },
+ {
+  "id": "resident-evil-village-2021",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q96216515"
+ },
+ {
+  "id": "unpacking-2021",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q105063670"
+ },
+ {
+  "id": "elden-ring-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q64826862"
+ },
+ {
+  "id": "god-of-war-ragnarok-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q99397916"
+ },
+ {
+  "id": "overwatch-2-2022",
+  "verdict": "ok",
+  "note": "Wikidata's earliest year 2023",
+  "u": "http://www.wikidata.org/entity/Q73163646"
+ },
+ {
+  "id": "signalis-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q109828410"
+ },
+ {
+  "id": "tunic-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q55636303"
+ },
+ {
+  "id": "vampire-survivors-2022",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q110726215"
+ },
+ {
+  "id": "alan-wake-2-2023",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q108417001"
+ },
+ {
+  "id": "baldurs-gate-3-2023",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q64441774"
+ },
+ {
+  "id": "counter-strike-2-2023",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q111165107"
+ },
+ {
+  "id": "dead-space-2023",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q107616212"
+ },
+ {
+  "id": "lethal-company-2023",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q123404756"
+ },
+ {
+  "id": "resident-evil-4-2023",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q112231148"
+ },
+ {
+  "id": "the-legend-of-zelda-tears-of-the-kingdom-2023",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q64577191"
+ },
+ {
+  "id": "animal-well-2024",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q116149653"
+ },
+ {
+  "id": "astro-bot-2024",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q126199700"
+ },
+ {
+  "id": "balatro-2024",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q124357469"
+ },
+ {
+  "id": "helldivers-2-2024",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q118645527"
+ },
+ {
+  "id": "marvel-rivals-2024",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q125175413"
+ },
+ {
+  "id": "metaphor-refantazio-2024",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q119362054"
+ },
+ {
+  "id": "silent-hill-2-2024",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q114770599"
+ },
+ {
+  "id": "clair-obscur-expedition-33-2025",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q126462072"
+ },
+ {
+  "id": "death-stranding-2-on-the-beach-2025",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q115641709"
+ },
+ {
+  "id": "hades-ii-2025",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q115641620"
+ },
+ {
+  "id": "hollow-knight-silksong-2025",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q63294487"
+ },
+ {
+  "id": "kingdom-come-deliverance-ii-2025",
+  "verdict": "ok",
+  "u": "http://www.wikidata.org/entity/Q125430996"
+ }
+]

@@ -27,8 +27,8 @@ commit. Nothing is deployed without TJ.
 | step | what | Library type | key fields | status |
 |---|---|---|---|---|
 | 1 | **Multi-category tooling** + ⛰️ **Mountains** (Northeast + California) | Mountains | title + state | done 2026-10-26: 205 peaks, 8 lists |
-| 2 | 🎮 Video Games | Video Games | title + year | next |
-| 3 | 🏞️ National Parks | Destinations | title + state | |
+| 2 | 🎮 Video Games | Video Games | title + year | done 2026-10-26: 106 games, 7 lists |
+| 3 | 🏞️ National Parks | Destinations | title + state | next |
 | 4 | 🗺️ States & Provinces | Destinations | title + country | |
 | 5 | 🏟️ Ballparks & Arenas | Destinations | title + city | |
 | 6 | 📚 Books | Books | title + author | |

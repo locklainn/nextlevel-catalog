@@ -1,0 +1,13 @@
+{
+  "group": "Online",
+  "collections": [
+    {
+      "id": "big-online-games",
+      "title": "The Big Online Games",
+      "icon": "🌐",
+      "description": "The games millions play every night, from World of Warcraft to Marvel Rivals. They never end, so playing one counts.",
+      "ordered": false,
+      "members": ["world-of-warcraft-2004", "league-of-legends-2009", "minecraft-2011", "dota-2-2013", "grand-theft-auto-v-2013", "rocket-league-2015", "destiny-2-2017", "fortnite-2017", "pubg-battlegrounds-2017", "among-us-2018", "sea-of-thieves-2018", "apex-legends-2019", "call-of-duty-warzone-2020", "fall-guys-2020", "genshin-impact-2020", "valorant-2020", "overwatch-2-2022", "counter-strike-2-2023", "helldivers-2-2024", "marvel-rivals-2024"]
+    }
+  ]
+}

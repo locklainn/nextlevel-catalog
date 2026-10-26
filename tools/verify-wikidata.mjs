@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Cross-check a domain against Wikidata: for every item, find entities with that English
-// title (label or alias), then apply the domain's checks in order, each narrowing the
+// (or all-language) title, label or alias, then apply the domain's checks in order, each narrowing the
 // candidates: for movies the year (±1, release dates vary by country), then the director;
 // for mountains the state, then the elevation. Writes a report; with --apply, also records
 // each matched entity's Wikidata id (Q-number) as `wikidata` in items.json. Nothing else
@@ -14,6 +14,7 @@
 //   checks   [{ field, type, prop?, tol? }], applied in order. Types:
 //     year      a date property's year, within ±tol
 //     names     a person property; matched on last names ("various" always passes)
+//     org       a company property; matched on any distinctive word (not "Studio", "Games")
 //     quantity  a number in feet against the property's value in metres, within ±tol feet
 //     usState   a two-letter state code against the ISO code of any containing state
 //
@@ -34,32 +35,41 @@ const SPARQL = 'https://query.wikidata.org/sparql';
 const UA = 'nextlevel-catalog/0.1 (catalog fact-check; https://nextlevel-collections.pages.dev)';
 const FT = 0.3048;
 
+// A company's distinctive words: "Nintendo EPD" and "Nintendo Entertainment Planning &
+// Development" share "nintendo"; "Team Cherry" and "Team Asobi" share nothing.
+const GENERIC = new Set(['team', 'studio', 'studios', 'games', 'game', 'entertainment', 'interactive', 'inc', 'llc', 'ltd', 'the', 'digital', 'productions', 'software', 'co', 'and', 'company']);
+const orgWords = (s) => (s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').split(/[^a-z0-9]+/).filter((w) => w && !GENERIC.has(w));
 const lastNames = (s) => (s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '')
   .split(/\s*(?:&|,| and )\s*/).map((n) => n.trim().split(/\s+/).pop()).filter(Boolean);
 
 // One OPTIONAL clause per check, binding ?c<i>.
 const clause = (c, i) => ({
   year: `OPTIONAL { ?x wdt:${c.prop} ?c${i}. }`,
-  names: `OPTIONAL { ?x wdt:${c.prop} ?p${i}. ?p${i} rdfs:label ?c${i}. FILTER(LANG(?c${i}) = "en") }`,
+  names: `OPTIONAL { ?x wdt:${c.prop} ?p${i}. ?p${i} rdfs:label ?c${i}. FILTER(LANG(?c${i}) IN ("en", "mul")) }`,
+  org: `OPTIONAL { ?x wdt:${c.prop} ?p${i}. ?p${i} rdfs:label ?c${i}. FILTER(LANG(?c${i}) IN ("en", "mul")) }`,
   quantity: `OPTIONAL { ?x p:${c.prop}/psn:${c.prop}/wikibase:quantityAmount ?c${i}. }`,
   usState: `OPTIONAL { ?x wdt:P131+ ?s${i}. ?s${i} wdt:P300 ?c${i}. FILTER(STRSTARTS(?c${i}, "US-")) }`,
 }[c.type]);
 const valueOf = (c, b) => ({
   year: () => +b.value.slice(0, 4),
   names: () => b.value,
+  org: () => b.value,
   quantity: () => +b.value / FT,          // metres → feet
   usState: () => b.value.slice(3),
 }[c.type])();
 const passes = (c, ours, theirs) => ({
   year: () => theirs.some((y) => Math.abs(y - ours) <= (c.tol ?? 1)),
   names: () => ours === 'various' || theirs.some((d) => lastNames(ours).includes(lastNames(d)[0])),
+  org: () => theirs.some((d) => orgWords(d).some((w) => orgWords(ours).includes(w))),
   quantity: () => theirs.some((v) => Math.abs(v - ours) <= (c.tol ?? 100)),
   usState: () => theirs.includes(ours),
 }[c.type])();
 const show = (c, v) => (c.type === 'quantity' ? Math.round(v) : v);
 
 async function query(titles) {
-  const values = titles.map((t) => JSON.stringify(t) + '@en').join(' ');
+  // English labels, and "mul" ones: Wikidata now often stores a single label for all
+  // languages instead of an English one (Elden Ring's game entity has only "mul").
+  const values = titles.map((t) => `${JSON.stringify(t)}@en ${JSON.stringify(t)}@mul`).join(' ');
   const q = `SELECT ?title ?x ${checks.map((_, i) => `?c${i}`).join(' ')} WHERE {
     VALUES ?title { ${values} }
     { ?x rdfs:label ?title } UNION { ?x skos:altLabel ?title }

@@ -159,15 +159,18 @@ title here is something the app may match a user's task against.
 
 ## Where it stands (2026-10-26)
 
-- **Two domains.** `movies`: one group, `horror`, 317 films in 30 collections (the canon,
+- **Three domains.** `movies`: one group, `horror`, 317 films in 30 collections (the canon,
   six eras, thirteen subgenres, ten franchises in viewing order). `mountains`: 205 peaks in
   8 collections over three groups: Northeast (NE state high points, Catskill 3500, NH 48,
   Adirondack 46, NE 67, NE 115), West (California 14ers), Across the US (state high points).
-  Mountains' sources and hand checks are in `domains/mountains/FACT-CHECK.md`.
+  Mountains' sources and hand checks are in `domains/mountains/FACT-CHECK.md`. `games`:
+  106 games in 7 collections (Finish in a Weekend, Indie Darlings, Horror Games, Game of the
+  Year winners, the Modern Canon, FromSoftware in order, The Big Online Games); its rules
+  (year = 1.0 release, remakes are their own items) are in `domains/games/FACT-CHECK.md`.
 - **The plan is `ROADMAP.md`**: 12 categories before the catalog is promoted, built one
-  step at a time, TJ confirming each. Next: Video Games.
+  step at a time, TJ confirming each. Next: National Parks.
 - **Live** at https://nextlevel-collections.pages.dev is the horror-only site of 2026-10-25.
-  The category hub and Mountains are built in `dist/` but **not deployed**; that's TJ's call.
+  The category hub, Mountains and Video Games are built in `dist/` but **not deployed**; that's TJ's call.
 - **Open, not this repo's data:** link-preview images (og:image) and a custom domain for
   the site.
 - **Repo:** public at https://github.com/locklainn/nextlevel-catalog (`main`). Push only
