@@ -88,12 +88,47 @@ changes when its title, description, icon or members do — the app re-syncs on 
 
 ## The waitlist
 
-The site's form posts to the activity Worker (`POST /waitlist`). There is no read
-endpoint on purpose. Read it with your Cloudflare login, from `goalsetters/activity-worker`:
+Every page ends with a "Join the waitlist" form (the header's "Get early access" jumps to
+it). It posts to the activity Worker, `POST /waitlist`, which lives in the app repo
+(`goalsetters/activity-worker/src/index.js`), not here.
+
+**What it stores.** One record per address in the Worker's `ACTIVITY` KV namespace:
+key `waitlist:<email>` (lowercased), value `{ email, joinedAt, source }`. `joinedAt` is
+milliseconds since the epoch; `source` is the page they signed up from (`/mountains/`),
+filled in by `site/site.js`. Signing up twice answers "already on the list" and changes nothing.
+
+**What keeps bots out.** A hidden `website` field that people never see: a bot that fills
+it gets "ok" and nothing is saved. And at most 10 sign-ups per IP address per hour
+(`wlip:<ip>` keys that expire after an hour).
+
+**What it doesn't do.** It doesn't email anyone, notify anyone or send invites; the copy
+promises an invite, and sending it is a manual step. There is no unsubscribe: to remove
+someone, delete their key.
+
+**Reading the list.** There is deliberately no read endpoint, because anyone can register
+a token on that Worker. Read it with your Cloudflare login, from `goalsetters/activity-worker`
+(the first run may ask you to `npx wrangler@3 login`):
 
 ```sh
-npx wrangler@3 kv key list --binding ACTIVITY --prefix waitlist:
+# just the emails
+npx wrangler@3 kv key list --binding ACTIVITY --prefix waitlist: \
+  | node -pe 'JSON.parse(require("fs").readFileSync(0)).map(k=>k.name.slice(9)).join("\n")'
+
+# email, date joined, page, one line each (about a second per person)
+for k in $(npx wrangler@3 kv key list --binding ACTIVITY --prefix waitlist: \
+  | node -pe 'JSON.parse(require("fs").readFileSync(0)).map(k=>k.name).join("\n")'); do
+  npx wrangler@3 kv key get --binding ACTIVITY "$k" \
+    | node -pe 'const r=JSON.parse(require("fs").readFileSync(0)); [r.email, new Date(r.joinedAt).toISOString().slice(0,10), r.source].join("\t")'
+done
+
+# remove someone
+npx wrangler@3 kv key delete --binding ACTIVITY "waitlist:<email>"
 ```
+
+The addresses are personal data: never paste them into this repo, a commit or an issue.
+
+**Testing.** `tools/site-check.mjs` rebuilds the site against a local stand-in for the
+Worker, submits the form, then rebuilds with the real address. It never touches the real list.
 
 ## License
 
